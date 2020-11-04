@@ -1,0 +1,11 @@
+let a = prompt('Nhập điểm môn Lý');
+let b = prompt('Nhập điểm môn Hóa');
+let c = prompt('Nhập điểm môn Sinh');
+a = parseInt(a);
+b = parseInt(b);
+c = parseInt(c);
+let d = a + b + c ;
+let e = d/3;
+document.write('Tổng 3 môn: ' + d + ' điểm');
+document.write('<br/>');
+document.write('Điểm trung bình: ' + e + ' điểm');

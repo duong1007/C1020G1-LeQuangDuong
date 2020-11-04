@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+    <style>
+        .bang {
+            width: 50%;
+            text-align: center;
+        }
+        .bang2 {
+            background: #9393ee;
+        }
+    </style>
+</head>
+<body>
+<form method="post">
+    <table class="bang">
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td>
+                <label for="money"><input type="number" id="money" name="Money"></label>
+            </td>
+            <td>
+                <select name="country" id="sun">
+                    <option name="country" >VietNam</option>
+                    <option name="country" >USD</option>
+                </select>
+            </td>
+            <td>
+                <select name="country2" id="sun2">
+                    <option name="country2">USD</option>
+                    <option name="country2">VietNam</option>
+                </select>
+            </td>
+            <td>
+                <input type="button" onclick="convert()" value="Convert" class="bang2">
+            </td>
+        </tr>
+    </table>
+    <p id="result"></p>
+</form>
+<script src="ung_dung_chuyen_doi_tien_te.js"></script>
+</body>
+</html>

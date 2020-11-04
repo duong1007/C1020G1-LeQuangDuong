@@ -1,0 +1,13 @@
+table {
+    background-color: bisque;
+    width: 50%;
+    height: 500px;
+    border-collapse: collapse;
+}
+form {
+    width: 39%;
+    background-color: gray;
+}
+table tr:hover {
+    background-color: #ff9e99;
+}
