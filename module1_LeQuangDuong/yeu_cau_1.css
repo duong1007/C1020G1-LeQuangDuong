@@ -7,6 +7,7 @@ table {
 form {
     width: 39%;
     background-color: gray;
+    margin: auto;
 }
 table tr:hover {
     background-color: #ff9e99;

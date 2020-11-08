@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="myCss.css">
+</head>
+
+<body>
+
+</body>
+<div class="toggle">
+    <label class="switch">
+        <input type="checkbox" class="good" value="good" onclick="check(this.value)" id="good">
+        <span class="slider round"></span>
+    </label>
+    <label>Good</label>
+</div>
+<div class="toggle">
+    <label class="switch">
+        <input type="checkbox" class="fast" onclick="check(this.value)" value="fast" id="fast">
+        <span class="slider round"></span>
+    </label>
+    <label>Fast</label>
+</div>
+
+<div class="toggle">
+    <label class="switch">
+        <input type="checkbox" class="cheap" onclick="check(this.value)" value="cheap" id="cheap">
+        <span class="slider round"></span>
+    </label>
+    <label>Cheap</label>
+</div>
+<script>
+    function check(value) {
+        let good = document.getElementById("good");
+        let fast = document.getElementById("fast");
+        let cheap = document.getElementById("cheap");
+        switch (value) {
+            case "good":
+                if (fast.checked === true && cheap.checked === true) {
+                    fast.checked = false;
+                }
+                break;
+            case "fast":
+                if (good.checked === true && cheap.checked === true) {
+                    cheap.checked = false;
+                }
+                break;
+            case "cheap":
+                if (fast.checked === true && good.checked === true) {
+                    good.checked = false;
+                }
+                break;
+        }
+    }
+</script>
+</html>
