@@ -150,7 +150,7 @@ function bank() {
             interest = 'thế bạn có vay tiền không?';
             break;
         default:
-            interest = "tổng lãi suất là " + (money*0.1*month) + 'vnđ';
+            interest = "tổng lãi suất là " + ( Math.pow(1.1,month)*money - money ) + 'vnđ';
     }
     document.getElementById('con12').innerHTML= interest  ;
 }
