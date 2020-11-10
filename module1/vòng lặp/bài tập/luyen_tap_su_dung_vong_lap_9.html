@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a0 = -1;
+    let a1 = -1;
+    let an = 1;
+    let count = 0;
+    let number = prompt('nhập số số fibonacci bạn muốn hiển thị');
+    for(;count < number; count++ ){
+        a0 = a1;
+        a1 = an;
+        an = a0 + a1;
+        document.write(an + '<br>');
+    }
+</script>
+</body>
+</html>

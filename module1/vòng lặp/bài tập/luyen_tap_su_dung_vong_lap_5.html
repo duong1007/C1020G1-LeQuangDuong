@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a0 = -1;
+    let a1 = -1;
+    let an = 1;
+    let count = 0;
+    let sum = 0;
+    for(;count < 20; count++ ){
+        a0 = a1;
+        a1 = an;
+        an = a0 + a1;
+        sum += an;
+    }
+    alert(sum)
+</script>
+</body>
+</html>

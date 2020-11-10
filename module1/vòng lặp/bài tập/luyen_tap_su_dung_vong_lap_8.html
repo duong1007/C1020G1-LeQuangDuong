@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<heade
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Play Game" onclick="play()">
+<script>
+    function play() {
+        let a1 = prompt('nhập số nhỏ: ');
+        let a2 = prompt('nhập số lớn: ');
+        let random = parseInt(Math.random()*(a2 - a1) + a1);
+        let b;
+        let count = 1;
+        do {
+            b = prompt('đoán số random trong khoảng vừa chọn');
+            if (b > random) {
+                alert('lớn hơn rồi');
+            } else if (b < random) {
+                alert('nhỏ hơn rồi');
+            } else {
+                alert('perfect');
+                break;
+            }
+            count ++;
+        } while (count <= 3);
+        if (count > 3) {
+            alert('you are loser')
+        }
+    }
+</script>
+</body>
+</html>

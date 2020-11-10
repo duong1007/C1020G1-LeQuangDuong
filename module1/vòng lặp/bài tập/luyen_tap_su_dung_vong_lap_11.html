@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i;
+    let j;
+    let a;
+    let b;
+    for (i = 1; i <=5; i++) {
+        for ( j = 1; j <= i; j++){
+            document.write('*');
+        }
+        document.write('<br>');
+    }
+    document.write('<br>' + '<br>');
+    for (i = 5;i >= 1; i--) {
+        for (j = 1;j <= i; j++){
+            document.write('*');
+        }
+        document.write('<br>');
+    }
+    document.write('<br>' + '<br>');
+   for (i = 1; i <= 5; i++){
+       for (a = 6-i; a >= 1; a--) {
+           document.write('*');
+       }
+       document.write('<br>');
+       for (j = 1; j <= i; j++){
+           document.write('&nbsp' + '&nbsp');
+       }
+   }
+    document.write('<br>' + '<br>');
+   for (i = 1; i <= 5; i++){
+       for (b = 5-i;b > 0; b--){
+           document.write('&nbsp'+ '&nbsp');
+       }
+       for (j = 1; j <= i; j++){
+           document.write('*');
+       }
+       document.write('<br>');
+   }
+    document.write('<br>' + '<br>');
+   // chữ nhật
+   for (i = 1; i < 7 ; i++){
+       for(j = 1; j < 21 ; j++) {
+           if (i == 1 || j == 1 || j == 20 || i == 6) {
+               document.write('*');
+           } else {
+               document.write('&nbsp' + '&nbsp');
+           }
+       }
+       document.write('<br>');
+   }
+   //trái tim
+    document.write('<br>' + '<br>');
+   document.write('<table>');
+    for (i = 1; i < 7 ; i++){
+        document.write('<tr>');
+        for(j = 1; j <= 7 ; j++) {
+            document.write('<td>');
+            switch (true) {
+                case (i == 1 && (j == 1 || j == 4 || j == 7 )):
+                case (i == 4 && (j == 1 || j == 7 )):
+                case (i == 5 && (j <= 2 || j >= 6)):
+                case (i == 6 && (j <= 3 || j >= 5)):
+                    document.write('&nbsp');
+                    break
+                default:
+                    document.write('*');
+            }
+            document.write('<td>');
+        }
+        document.write('</tr>');
+    }
+    document.write('</table>');
+</script>
+</body>
+</html>

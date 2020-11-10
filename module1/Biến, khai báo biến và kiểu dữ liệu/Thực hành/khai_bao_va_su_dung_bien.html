@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khai báo và sử dụng biến</title>
+</head>
+<body>
+<script>
+    let i = 10;
+    let f = 20.5;
+    let c = true;
+    let s = "Hà Nội";
+    document.write('i =' + i);
+    document.write('<br/>');
+    document.write('f =' + f);
+    document.write('<br/>');
+    document.write('b =' + c);
+    document.write('<br/>');
+    document.write('s =' + s);
+    document.write('<br/>');
+    let width = 20;
+    let height = 30;
+    document.write('area =' + width * height );
+    let a = prompt('nhập số a');
+    let b = prompt('nhập số b');
+    // đổi sang kiểu number
+    a = parseInt(a);
+    b = parseInt(b)
+    if (a % b == 0) {
+        alert('a là bội số của b');
+    } else {
+        alert('a không là bội số của b');
+    }
+</script>
+</body>
+</html>

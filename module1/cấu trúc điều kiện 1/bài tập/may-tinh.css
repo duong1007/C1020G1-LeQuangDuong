@@ -1,0 +1,40 @@
+form {
+    background: #ccc;
+    margin: 0 auto;
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+form * {
+    box-sizing: border-box;
+}
+
+form table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+form table tr, form table td {
+    border: 1px solid #eee;
+}
+
+form table tr:first-child input {
+    height: 50px;
+    padding: 0 10px;
+    font-weight: 700;
+}
+form table input {
+    width: 100%;
+    display: block;
+    border: 0;
+    font-size: 16px;
+    height: 60px;
+}
+form table tr:nth-child(5) input {
+background-color: #ffcc00;
+}
+form table th:nth-child(4) input {
+    background-color: #ffd738;
+}

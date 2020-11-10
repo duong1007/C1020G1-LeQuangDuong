@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin khách hàng</title>
+    <style>
+        table th {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th>Name: </th>
+            <td >
+               <input id="name1" value="Leonardo Da Vinci" disabled>
+            </td>
+            <th>Số CMND: </th>
+            <td>
+                <input id="cmnd1" value="1902 ngày mai mới có" disabled>
+            </td>
+        </tr>
+        <tr>
+            <th>Date of Birth:</th>
+            <td>
+                <input id="birth1" value="15/04/1452" disabled>
+            </td>
+            <th>Email:</th>
+            <td>
+                <input value=" thientaitoannang@gmail.com" id="email1" disabled>
+            </td>
+        </tr>
+        <tr>
+            <th>Address:</th>
+            <td>
+               <textarea id="add1" disabled style="width: 300px">thị trấn Vinci vùng Tuscan, sông Arno, cộng hòa Florence</textarea>
+            </td>
+            <th>Customer Card:</th>
+            <td>
+                <input id="card1" value="Diamond" disabled>
+            </td>
+        </tr>
+        <tr>
+            <th>Amount:</th>
+            <td>
+                <input id="people1" value="1" disabled>
+            </td>
+            <th>RentDay:</th>
+            <td>
+                <input id="rent1" value="7" disabled>
+            </td>
+        </tr>
+        <tr>
+            <th>Room:</th>
+            <td>
+                <input id="room1" value="Villa" disabled>
+            </td>
+            <th>Address Room:</th>
+            <td>
+                <input id="level1" value="Hải Phòng" disabled>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="4" id="pay1"></th>
+        </tr>
+    </table>
+    <input type="button" value="Edit" onclick="edit()">
+    <input type="button" value="Pay" onclick="pay()">
+    <div id="sun" style="display: none; border: solid 1px; padding: 20px; background: #ddd;">
+        <table>
+            <tr>
+                <th>Name: </th>
+                <td>
+                    <input type="text" id="name">
+                </td>
+                <td>
+                    <input type="button" value="Update" onclick="update1()">
+                </td>
+                <th>Số CMND: </th>
+                <td>
+                    <input type="number" id="cmnd">
+                </td>
+                <td>
+                    <input type="button" value="Update" onclick="update2()">
+                </td>
+            </tr>
+            <tr>
+                <th>Date of Birth:</th>
+                <td>
+                    <input type="date" id="birth">
+                </td>
+                <td>
+                    <input type="button" value="Update" onclick="update3()">
+                </td>
+                <th>Email:</th>
+                <td>
+                    <input type="text" id="email">
+                </td>
+                <td>
+                    <input type="button" value="Update" onclick="update4()">
+                </td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td>
+                    <input type="text" id="add">
+                </td>
+                <td>
+                    <input type="button" value="Update" onclick="update5()">
+                </td>
+                <th>Customer Card:</th>
+                <td>
+                    <select id="card">
+                        <option>Diamond</option>
+                        <option>Platinum</option>
+                        <option>Gold</option>
+                        <option>Silver</option>
+                        <option>Member</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="button" value="Update" onclick="update6()">
+                </td>
+            </tr>
+            <tr>
+                <th>Amount:</th>
+                <td>
+                    <input type="number" id="people">
+                </td>
+                <td>
+                    <input type="button" value="Update" onclick="update7()">
+                </td>
+                <th>RentDay:</th>
+                <td>
+                    <input type="number" id="rent">
+                </td>
+                <td>
+                    <input type="button" value="Update" onclick="update8()">
+                </td>
+            </tr>
+            <tr>
+                <th>Room:</th>
+                <td>
+                    <select id="room">
+                        <option>Villa</option>
+                        <option>House</option>
+                        <option>Room</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="button" value="Update" onclick="update9()">
+                </td>
+                <th>Address Room:</th>
+                <td>
+                    <select id="level">
+                        <option>Hải Phòng</option>
+                        <option>Đà nẵng</option>
+                        <option>Huê</option>
+                        <option>Quảng Nam</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="button" value="Update" onclick="update10()">
+                </td>
+            </tr>
+        </table>
+        <input type="button" value="Close" onclick="close1()">
+    </div>
+</form>
+<script src="yeu_cau_2.js" ></script>
+</body>
+</html>

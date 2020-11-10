@@ -1,0 +1,3 @@
+function puton(){
+    alert('Cút');
+}
