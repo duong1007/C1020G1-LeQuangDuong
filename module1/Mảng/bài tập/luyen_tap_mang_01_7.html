@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i;
+    let a;
+    let array = [];
+    for (i = 0; i < 10; i++) {
+        do {
+            a = prompt('nhập số nguyên thứ ' + (i + 1));
+        } while (Math.floor(a) - a != 0);
+        array.push(a);
+    }
+    let v =prompt('nhập 1 số: ');
+    let j;
+    for (i = 0; i < 10; i++) {
+        if (v == array[i]) {
+           for (j = i; j < 9; j++){
+               array[j] = array[j + 1]
+           }
+            array.pop();
+           alert(array.join());
+           break;
+        }
+    }
+    if (i == 10) {
+        alert('this number is not in the array')
+    }
+
+</script>
+</body>
+</html>

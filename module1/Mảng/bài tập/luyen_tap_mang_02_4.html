@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt('nhập 1 chuỗi');
+    let a = " ";
+    let i;
+    let count = 1;
+    for (i = 1;i < string.length; i ++) {
+        if (string[i] == a && string[i - 1] !== a) {
+            count++
+        }
+    }
+    alert('có ' + count + ' từ');
+</script>
+</body>
+</html>

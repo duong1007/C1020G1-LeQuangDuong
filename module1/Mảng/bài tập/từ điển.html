@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="english" placeholder="English">
+    <input type="button" value="Convert" onclick="convert()">
+    <p id="result"></p>
+</form>
+<script>
+    let a = document.getElementById('english');
+    let eng = ['one','two','three','four','five','six','seven', 'eight','nine','ten'];
+    let vn = ['một','hai','ba','bốn','năm','sáu','bảy', 'tám','chín','mười'];
+    let i = 0;
+    function convert() {
+        for (; i < eng.length; i++) {
+            if (a.value == eng[i]) {
+                document.getElementById('result').innerHTML = vn[i];
+                break;
+            } else {
+                document.getElementById('result').innerHTML = 'nhập lại'
+            }
+        }
+    }
+</script>
+</body>
+</html>

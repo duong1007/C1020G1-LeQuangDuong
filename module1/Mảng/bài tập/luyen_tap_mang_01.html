@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i;
+    let a;
+    let array = [];
+    let count = 0;
+    for (i = 0; i < 10; i++) {
+        a = prompt('nhập số thứ ' + (i + 1));
+        array.push(a);
+    }
+    for (i = 0; i < 10; i++) {
+        if ( array[i] - 10 >= 0 ) {
+            count++;
+        }
+    }
+    alert('có ' + count + ' số lớn hơn hoặc bằng 10' );
+</script>
+</body>
+</html>

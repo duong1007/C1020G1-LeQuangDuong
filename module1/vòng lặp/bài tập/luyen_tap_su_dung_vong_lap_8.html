@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<heade
+<head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -8,17 +8,17 @@
 <input type="button" value="Play Game" onclick="play()">
 <script>
     function play() {
-        let a1 = prompt('nhập số nhỏ: ');
-        let a2 = prompt('nhập số lớn: ');
-        let random = parseInt(Math.random()*(a2 - a1) + a1);
+        let a1 = parseInt(prompt('small number: '));
+        let a2 = parseInt(prompt('big number: '));
+        let random = parseInt((Math.random() * (a2 - a1)) + a1);
         let b;
         let count = 1;
         do {
-            b = prompt('đoán số random trong khoảng vừa chọn');
+            b = prompt('choose one');
             if (b > random) {
-                alert('lớn hơn rồi');
+                alert('smaller');
             } else if (b < random) {
-                alert('nhỏ hơn rồi');
+                alert('bigger');
             } else {
                 alert('perfect');
                 break;

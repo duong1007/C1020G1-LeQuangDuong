@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i;
+    let a;
+    let array = [];
+    let j;
+    for (i = 0; i < 10; i++) {
+        a = prompt('nhập số thứ ' + (i + 1));
+        for (j = 0; j < array.length; j++) {
+            if (a == array[j]) {
+                alert('nhập các số khác nhau');
+                a = prompt('nhập số thứ ' + (i + 1));
+            }
+        }
+        array.push(a);
+    }
+    let max = array[0];
+    for (i = 0; i < 10; i++) {
+        if ( array[i] - max > 0 ) {
+            max = array[i];
+        }
+    }
+    alert('số lớn nhất là : ' + max);
+</script>
+</body>
+</html>

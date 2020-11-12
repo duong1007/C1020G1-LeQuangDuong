@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = prompt('nhập sô phần tử trong mảng ký tự');
+    let array = [];
+    let num = '0123456789';
+    let i;
+    let j;
+    let count= 0;
+    for (i = 0; i < number; i++){
+        array[i] = prompt('nhập phần tử ' + (i + 1));
+    }
+    for (i = 0; i < number; i++) {
+            if (num.indexOf(array[i][j]) !== -1) {
+                count++
+            }
+    }
+    alert('có ' + count + ' ký tự số')
+</script>
+</body>
+</html>

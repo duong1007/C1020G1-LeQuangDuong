@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = prompt('nhập độ dài mảng');
+    let a =[];
+    let i = 0;
+    for(;i < number.length; i++ ) {
+        a[i]= prompt('nhập ký tự ' + (i + 1));
+    }
+    for (i = 0; i < number.length;i++){
+        if (a[i] === '-') {
+            a[i] = '_';
+        }
+    }
+    alert(a.join(''));
+</script>
+</body>
+</html>

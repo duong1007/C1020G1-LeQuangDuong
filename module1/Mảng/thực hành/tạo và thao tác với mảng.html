@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="sun"/>
+<input type="button" id="Add" value="Add" onclick="add();"/>
+<input type="button" id="Display" value="Display" onclick="display();"/>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let array = Array();
+    function add() {
+        array[x] = document.getElementById('sun').value;
+        alert(array[x] + ' đã được thêm vào mảng');
+        x++;
+        document.getElementById('sun').value ="";
+    }
+    function display() {
+        let e = '<hr>';
+        for (let i = 0; i < array.length; i++) {
+            e = e + 'Element : ' + i + '=' + array[i] +'<br>';
+        }
+        document.getElementById('result').innerHTML = e;
+    }
+</script>
+</body>
+</html>

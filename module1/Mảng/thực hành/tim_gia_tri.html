@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhập 1 số')
+    let numbers = [-3, 5, 1, 3, 2, 10];
+    let i = 0
+    for (; i < numbers.length; i++) {
+        if (a == numbers[i]) {
+            alert("Value " + numbers[i] + " found at " + i);
+            break;
+        }
+    }
+    if (a != numbers[i]) {
+        alert('wrong number');
+    }
+</script>
+</body>
+</html>

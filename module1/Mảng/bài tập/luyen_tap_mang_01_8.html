@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i;
+    let a;
+    let array = [];
+    let j;
+    let check;
+    for (i = 0; i < 10; i++) {
+        do {
+            a = prompt('nhập số nguyên thứ ' + (i + 1));
+        } while (Math.floor(a) - a !== 0);
+        array.push(a);
+    }
+    for (i = 0; i < 9; i++) {
+        for (j = i + 1; j < 10; j++)
+        {
+            if (array[j] - array[i] > 0 ) {
+                check = array[i];
+                array[i] = array[j];
+                array[j] = check;
+            }
+        }
+    }
+    alert(array.join());
+</script>
+</body>
+</html>

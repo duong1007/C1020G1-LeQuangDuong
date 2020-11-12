@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i;
+    let a;
+    let array = [];
+    let number= prompt('khởi tạo mảng có ');
+    for (i = 0; i < number; i++) {
+        do {
+            a = prompt('nhập số nguyên thứ ' + (i + 1));
+        } while (Math.floor(a) - a != 0);
+        array.push(a);
+    }
+    let last = array.length - 1;
+    let first = 0;
+    while (first < last) {
+        let b = array[first];
+        array[first] = array[last];
+        array[last] = b;
+        first++;
+        last--;
+    }
+    document.write(array);
+</script>
+</body>
+</html>

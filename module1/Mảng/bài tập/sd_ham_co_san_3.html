@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = prompt('nhập vào 1 chuỗi : ');
+    let up = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let low = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+    let x;
+    for (x = 0; x < array.length; x++) {
+        if (up.indexOf(array[x]) !== -1) {
+            result.push(array[x].toLowerCase());
+        } else if (low.indexOf(array[x]) !== -1) {
+            result.push(array[x].toUpperCase());
+        } else {
+            result.push(array[x]);
+        }
+    }
+    alert(result.join(''))
+</script>
+</body>
+</html>

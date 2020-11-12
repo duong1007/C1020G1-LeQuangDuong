@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt('tạo 1 mảng có bao nhiêu element?');
+    let array = [];
+    let result = [array[0]];
+    let i = 0;
+    while (i < a) {
+        array[i] = prompt('nhập element ' + i);
+        i++
+    }
+    for (i = 1; i < array.length; i++) {
+        if (array[i] % 2 == 0 && array[i-1] % 2 == 0){
+            result.push('-', array[i]);
+        } else {
+            result.push(array[i]);
+        }
+    }
+    alert(result.join(""));
+</script>
+</body>
+</html>

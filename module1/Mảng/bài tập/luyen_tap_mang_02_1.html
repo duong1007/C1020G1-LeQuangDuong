@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+    ];
+    let i;
+    let j;
+    let e = '<br>';
+    for (i =0 ; i < a.length;i++){
+        e += 'row ' + i + '<br>';
+        for (j = 0; j < a[i].length;j++){
+            e += a[i][j] + '<br>';
+        }
+    }
+    document.write(e);
+</script>
+</body>
+</html>
