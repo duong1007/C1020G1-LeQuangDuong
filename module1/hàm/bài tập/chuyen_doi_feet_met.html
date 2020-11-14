@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Feet"  oninput="footToMeter(this.value)"
+       onchange="footToMeter(this.value)" id="sun" >
+<p id="meter"></p>
+<input type="number" placeholder="Meter"  oninput="meterToFoot(this.value)"
+       onchange="meterToFoot(this.value)" id="duong" >
+<p id="food"></p>
+<script>
+    let meter;
+    let food;
+    function footToMeter(food) {
+        if (food < 0) {
+            alert('không hợp lệ');
+            document.getElementById('sun').value ='';
+        } else {
+            meter = 0.305*food;
+            document.getElementById('meter').innerHTML = meter + 'm'
+        }
+    }
+    function meterToFoot(meter) {
+        if (meter < 0) {
+            alert('không hợp lệ');
+            document.getElementById('duong').value ='';
+        } else {
+            food = 3.279 * meter;
+            document.getElementById('food').innerHTML = food + 'f'
+        }
+    }
+</script>
+</body>
+</html>

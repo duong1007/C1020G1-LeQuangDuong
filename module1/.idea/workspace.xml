@@ -2,40 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c966e1d6-e262-4cdb-a3e0-caef1dd12eba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/bant_caro_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_01_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_01_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_01_4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_01_5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_01_6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_01_7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_01_8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_01_9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_02_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_02_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_02_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_02_4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_02_5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_02_6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/sd_cac_ham_co_san_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/sd_cac_ham_co_san_cua_mang.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/sd_ham_co_san_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/tìm giá trị max.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/từ điển.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/thực hành/bảng caro.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/thực hành/dao_nguoc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/thực hành/tim_gia_tri.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mảng/thực hành/tạo và thao tác với mảng.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hàm/bài tập/chuyen_doi_feet_met.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hàm/bài tập/ham_xac_dinh_so_nguyen_to.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hàm/bài tập/luyen_tao_1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hàm/bài tập/luyen_tap_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hàm/bài tập/luyện_tap_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hàm/thực hành/chuyển đổi độ c.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hàm/thực hành/tìm giá trị nhỏ nhất của mảng.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hàm/thực hành/tạo và sử dụng hàm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cấu trúc điều kiện 1/bài tập/game_puzzle.html" beforeDir="false" afterPath="$PROJECT_DIR$/cấu trúc điều kiện 1/bài tập/game_puzzle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vòng lặp/bài tập/bang_cuu_chuong.html" beforeDir="false" afterPath="$PROJECT_DIR$/vòng lặp/bài tập/bang_cuu_chuong.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vòng lặp/bài tập/luyen_tap_su_dung_vong_lap_11.html" beforeDir="false" afterPath="$PROJECT_DIR$/vòng lặp/bài tập/luyen_tap_su_dung_vong_lap_11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vòng lặp/bài tập/luyen_tap_su_dung_vong_lap_8.html" beforeDir="false" afterPath="$PROJECT_DIR$/vòng lặp/bài tập/luyen_tap_su_dung_vong_lap_8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vòng lặp/bài tập/luyen_tap_vong_lap_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/vòng lặp/bài tập/luyen_tap_vong_lap_1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vòng lặp/bài tập/so_nguyen_to.html" beforeDir="false" afterPath="$PROJECT_DIR$/vòng lặp/bài tập/so_nguyen_to.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_01_5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_01_5.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -74,6 +56,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\C1020G1_LeQuangDuong\module1\hàm\thực hành" />
       <recent name="D:\C1020G1_LeQuangDuong\module1\Mảng\bài tập" />
     </key>
   </component>
@@ -92,7 +75,11 @@
       <workItem from="1605064428534" duration="11071000" />
       <workItem from="1605095339966" duration="464000" />
       <workItem from="1605143372601" duration="22357000" />
-      <workItem from="1605173876428" duration="718000" />
+      <workItem from="1605173876428" duration="3156000" />
+      <workItem from="1605237618586" duration="13704000" />
+      <workItem from="1605262525995" duration="150000" />
+      <workItem from="1605328151834" duration="1434000" />
+      <workItem from="1605338629265" duration="9230000" />
     </task>
     <servers />
   </component>

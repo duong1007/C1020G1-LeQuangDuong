@@ -6,21 +6,14 @@
 </head>
 <body>
 <script>
-    let i;
-    let a;
-    let array = [];
-    let number= prompt('khởi tạo mảng có ');
-    let count = 0;
-    for (i = 0; i < number; i++) {
-        a = prompt('nhập số thứ ' + (i + 1));
-        array.push(a);
-    }
-    for (i = 0; i < array.length;i++){
-        if ((Math.floor(array[i]) - array[i]) == 0 && array[i] < 0) {
-            count++
+    let chuoi = prompt("nhập những giá trị cho chuỗi");
+    let nguyenam = 0;
+    for (let i =0 ;i < chuoi.length ; i++) {
+        if ( chuoi[i] =='u' ||  chuoi[i] =='e' ||  chuoi[i] =='o' || chuoi[i] =='a' ||  chuoi[i] =='i') {
+            nguyenam++
         }
     }
-    alert('có ' +count+ 'số nguyên âm');
+    alert(nguyenam);
 </script>
 </body>
 </html>
