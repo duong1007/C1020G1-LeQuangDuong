@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dce2012-5830-4da2-a445-e4d26ab56406" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../module1/Mảng/bài tập/Tic Tac Toe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module1/hàm/bài tập/ung_dung_quan_ly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeu_cau_4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../module1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module1/hàm/bài tập/luyen_tap_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/hàm/bài tập/luyen_tap_2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module1/hàm/bài tập/ung_dung_quan_ly.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/hàm/bài tập/ung_dung_quan_ly.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +62,8 @@
       <workItem from="1605237242089" duration="348000" />
       <workItem from="1605354399554" duration="68000" />
       <workItem from="1605360754694" duration="31000" />
+      <workItem from="1605428004638" duration="146000" />
+      <workItem from="1605441159666" duration="4206000" />
     </task>
     <servers />
   </component>

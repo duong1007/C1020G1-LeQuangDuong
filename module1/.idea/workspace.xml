@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c966e1d6-e262-4cdb-a3e0-caef1dd12eba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/Tic Tac Toe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hàm/bài tập/kiem_tra_tu_doi_xung.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hàm/bài tập/ung_dung_quan_ly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hàm/bài tập/luyen_tap_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/hàm/bài tập/luyen_tap_2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hàm/bài tập/ung_dung_quan_ly.html" beforeDir="false" afterPath="$PROJECT_DIR$/hàm/bài tập/ung_dung_quan_ly.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +69,9 @@
       <workItem from="1605262525995" duration="150000" />
       <workItem from="1605328151834" duration="1434000" />
       <workItem from="1605338629265" duration="20777000" />
-      <workItem from="1605407419545" duration="9883000" />
+      <workItem from="1605407419545" duration="10157000" />
+      <workItem from="1605440835126" duration="319000" />
+      <workItem from="1605441271857" duration="1067000" />
     </task>
     <servers />
   </component>

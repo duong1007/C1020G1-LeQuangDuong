@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table tr:nth-child(odd) {
+            background-color: #ffdef2;
+        }
+        table {
+            border-collapse: collapse;
+            width: auto;
+        }
+        td {
+            text-align: center;
+            width: 100px;
+        }
+        th {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <input type="button" value="List Customer" onclick="listcustomer()">
+    <input type="button" value="Add Name Customer" onclick="add()">
+    <input type="button" value="Delete Custommer" onclick="deletecustomer()">
+    <br><br>
+    <table id="sun">
+
+    </table>
+</form>
+<script>
+    let i;
+    let arrNameCustomers = [];
+    function add() {
+        let number = prompt('nhập số lượng muốn thêm');
+        if (0 - number < 0) {
+            for (i = 0; i < number; i++) {
+                let name = prompt('Name Customer ' + (i + 1));
+                arrNameCustomers.push(name);
+            }
+            alert('Done')
+        } else {
+            alert('nhập dữ liệu số lớn hơn 0')
+        }
+    }
+    function deletecustomer() {
+        let name = prompt('nhập tên cần xóa');
+        let index = arrNameCustomers.indexOf(name);
+        if (index != -1){
+            arrNameCustomers.splice(index,1);
+        }
+        listcustomer();
+    }
+    function listcustomer() {
+        document.getElementById('sun').innerHTML = '';
+        let e = '<tr>' + '<th>Number</th>' + '<th>Name Customer</th>';
+        arrNameCustomers.sort();
+        for (i = 0;i < arrNameCustomers.length; i++) {
+            e += '<tr>' + '<th>' + (i + 1) + '</th>' + '<td>' + arrNameCustomers[i] + '</td>' + '</tr>';
+        }
+        document.getElementById('sun').innerHTML = e;
+    }
+</script>
+</body>
+</html>
