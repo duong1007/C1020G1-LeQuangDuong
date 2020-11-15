@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt('nhập 1 từ: ');
+    let string2=[];
+    let i = 0;
+    let j;
+    for (j = 0; j < string.length; j++) {
+        string[j] = string[j].toLowerCase();
+        string2.push(string[j])
+    }
+    function isPalindrome(s) {
+        if (i >= (s.length - (i + 1) )) {
+            return 'là chuỗi Palindrome'
+        }
+        if (s[i] != s[s.length - (i + 1)]) {
+            return 'không phải Palindrome'
+        } else {
+            i++;
+            return isPalindrome(s);
+        }
+    }
+    alert(isPalindrome(string2));
+</script>
+</body>
+</html>

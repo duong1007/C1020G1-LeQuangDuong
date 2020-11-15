@@ -106,11 +106,14 @@ function launch() {
 }
 function indexofByDuong(array,a) {
     for (i = 0; i < array.length; i++) {
+        let count = 0;
         if (a == array[i]) {
-            return i;
-            break
-        } else {
+            count++;
+        }
+        if (count == 0) {
             return -1;
+        } else {
+            return count;
         }
     }
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+       textarea {
+        width: 300px;
+        height: 200px;
+        }
+    </style>
+</head>
+<body >
+<fieldset style="text-align: center" >
+    <h1 >Type anthing slowly</h1>
+    <textarea id="troll" oninput="one()" ></textarea>
+</fieldset>
+</body>
+<script>
+    let a = ['','T','Ô','I',' ','L','À',' ','M','Ộ','T',' ','Đ','Ứ','A',' ','N','G','Ố','C','!','!'];
+    let n ='';
+    function one() {
+     let t=document.getElementById('troll').value;
+     let j= t.length;
+        if(j>0) {
+            for(let i=1;i<=j;i++) {
+                n=n+a[i];
+                if(i == 22) {
+                    document.getElementById('troll').value="";
+                    n="";
+                }
+            }
+        }
+        document.getElementById('troll').value= n;
+        n="";
+    }
+</script>
+</html>

@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c966e1d6-e262-4cdb-a3e0-caef1dd12eba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hàm/bài tập/chuyen_doi_feet_met.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hàm/bài tập/ham_xac_dinh_so_nguyen_to.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hàm/bài tập/luyen_tao_1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hàm/bài tập/luyen_tap_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hàm/bài tập/luyện_tap_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hàm/thực hành/chuyển đổi độ c.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hàm/thực hành/tìm giá trị nhỏ nhất của mảng.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hàm/thực hành/tạo và sử dụng hàm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mảng/bài tập/Tic Tac Toe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hàm/bài tập/kiem_tra_tu_doi_xung.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hàm/bài tập/ung_dung_quan_ly.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_01_5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mảng/bài tập/luyen_tap_mang_01_5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hàm/bài tập/luyen_tap_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/hàm/bài tập/luyen_tap_2.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -79,7 +70,8 @@
       <workItem from="1605237618586" duration="13704000" />
       <workItem from="1605262525995" duration="150000" />
       <workItem from="1605328151834" duration="1434000" />
-      <workItem from="1605338629265" duration="9230000" />
+      <workItem from="1605338629265" duration="20777000" />
+      <workItem from="1605407419545" duration="9883000" />
     </task>
     <servers />
   </component>

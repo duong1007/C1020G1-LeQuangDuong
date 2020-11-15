@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<form>
+    <input type="text" placeholder="New Product:" id="name">
+    <input type="button" value ="Add" onclick="add()" id="duong">
+    <table>
+        <thead>
+        <tr>
+            <th width="100px">Tên</th>
+            <th>Sửa</th>
+            <th>Xóa</th>
+        </tr>
+        </thead>
+        <tbody id="sun"></tbody>
+    </table>
+</form>
+</body>
+<script>
+    let a = document.getElementById('name');
+    let b = document.getElementById('sun');
+    let datalist = [];
+    let reset = -1;
+    let i;
+    function add() {
+        if (reset == -1) {
+            datalist.push(a.value);
+            add2();
+        } else {
+            datalist[reset] = a.value ;
+            document.getElementById('duong').value = 'Add';
+            update();
+            reset = -1;
+        }
+    }
+    function update() {
+        b.innerHTML= '';
+        for (i = 0; i < datalist.length; i++) {
+            let name = datalist[i];
+            b.innerHTML += "<tr>" +
+                "<td>" + name + "</td>" +
+                "<td>" + "<input type='button' value='Edit' onclick='edit("+(i)+")'>" + "</td>" +
+                "<td>" + "<input type='button' value='Delete' onclick='deletea("+(i)+")'>" + "</td>" + "</tr>";
+            a.value = '';
+        }
+    }
+    function add2() {
+        b.innerHTML += "<tr>" +
+            "<td>" + a.value + "</td>" +
+            "<td>" + "<input type='button' value='Edit' onclick='edit("+(datalist.length - 1)+")'>" + "</td>" +
+            "<td>" + "<input type='button' value='Delete' onclick='deletea("+(datalist.length - 1)+")'>" + "</td>" + "</tr>";
+        a.value = '';
+    }
+    function edit(data) {
+        reset = data;
+        let name = datalist[data];
+        document.getElementById('name').value = name;
+        document.getElementById('duong').value = 'Update';
+    }
+    function deletea(datadelete) {
+        datalist.splice(datadelete,1);
+        update();
+    }
+</script>
+</html>
