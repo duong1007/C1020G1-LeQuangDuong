@@ -7,39 +7,39 @@
 <body>
 <script>
     // Mở RỘNG
-    function isPrime(number) {
-        let i;
-        if (number == 10000) {
-            return 'Done';
-        }
-        for (i = 2; i < number; i++){
-            if (number % i == 0) {
-                return isPrime(number*1 + 1);
-            }
-        }
-        if (i == number) {
-            return number + '<br>' + isPrime(number*1 + 1);
-        }
-    }
-    document.write(isPrime(2));
-    // let i;
-    // for (j = 2; j <= 10000;j++) {
-    //     if (isPrime(j) == 'a') {
-    //         continue;
-    //     } else {
-    //         document.write (isPrime(j))
-    //     }
-    // }
     // function isPrime(number) {
-    //     for (i = 2; i < number;i++){
+    //     let i;
+    //     if (number == 10000) {
+    //         return 'Done';
+    //     }
+    //     for (i = 2; i < number; i++){
     //         if (number % i == 0) {
-    //             return 'a';
+    //             return isPrime(number*1 + 1);
     //         }
     //     }
     //     if (i == number) {
-    //         return number + '<br>';
+    //         return number + '<br>' + isPrime(number*1 + 1);
     //     }
     // }
+    // document.write(isPrime(2));
+    let i;
+    for (j = 2; j <= 10000;j++) {
+        if (isPrime(j) == 'a') {
+            continue;
+        } else {
+            document.write (isPrime(j))
+        }
+    }
+    function isPrime(number) {
+        for (i = 2; i < number;i++){
+            if (number % i == 0) {
+                return 'a';
+            }
+        }
+        if (i == number) {
+            return number + '<br>';
+        }
+    }
 </script>
 </body>
 </html>

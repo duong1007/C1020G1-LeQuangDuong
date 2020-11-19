@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+        }
+        table tr:nth-child(odd) {
+            background-color: #ffbab7;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="Menu" onclick="menu()">
+<table id="sun">
+
+</table>
+<script>
+    let arrListCustomers = [['Lê Quang Dương','0348267','10/07/1998','maybi@gmail.com','singapore','gold','4','4','house','vip']];
+    let customer = [];
+    let i;
+    let j;
+    let name;
+    let id;
+    let birth;
+    let email;
+    let address;
+    let card;
+    let among;
+    let rentday;
+    let room;
+    let level;
+    function menu() {
+        let a = prompt('1.Add New Customer.\n' +
+            '2.Display Information Customer.\n' +
+            '3.Edit Information Customer.\n' +
+            '4.Delete Customer.\n' +
+            '5.Exit.\n');
+         switch (a*1) {
+             case 1:
+                 addNewCustomer();
+                 break;
+             case 2:
+                 displayCustomers();
+                 break;
+             case 3:
+                 editCustomer();
+                 break;
+             case 4:
+                 deleteCustomer();
+                 break;
+             case 5:
+                 alert('Done');
+                 break;
+             default:
+                 alert('Nhập lại');
+                 menu();
+         }
+    }
+    function addNewCustomer() {
+        name = prompt('Customer Name');
+        customer.push(name);
+        id = prompt('Customer ID');
+        customer.push(id);
+        birth = prompt('Date of Birth');
+        customer.push(birth);
+        email = prompt('Email');
+        customer.push(email);
+        address = prompt('Address');
+        customer.push(address);
+        card = prompt('Customer Card');
+        customer.push(card);
+        among = prompt('Customer Family');
+        customer.push(among);
+        rentday = prompt('RentDay');
+        customer.push(rentday);
+        room = prompt('Room');
+        customer.push(room);
+        level = prompt('Room Level');
+        customer.push(level);
+        arrListCustomers.push(customer);
+        customer = [];
+        menu();
+    }
+    function displayCustomers() {
+        let e = '<tr>' + '<th>STT</th>' + '<th>Customer Name</th>' + '<th>Customer ID</th>' +
+            '<th>Date of Birth</th>' + '<th>Email</th>' + '<th>Address</th>' +
+            '<th>Customer Card</th>' + '<th>Customer Family</th>' +' <th>RentDay</th>' +
+            '<th>Room</th>' + '<th>Room Level</th>' + '</tr>';
+        for (i = 0;i < arrListCustomers.length;i++ ) {
+                e += '<tr>' + '<th>' + (i +1) +'</th>' ;
+                for (j = 0; j < 10;j++) {
+                    e +='<td>'+ arrListCustomers[i][j] +'</td>'
+                }
+                e +='</tr>'
+        }
+        document.getElementById('sun').innerHTML = e;
+    }
+    function editCustomer() {
+        let a = prompt('STT');
+        if (a > arrListCustomers.length) {
+            alert('không có khách hàng này');
+            editCustomer();
+        }
+        let b = prompt('1.Customer Name.\n' +
+            '2.Customer ID.\n' +
+            '3.Email.\n' +
+            '4.Address.\n' +
+            '6.Customer Card.\n'+
+            '7.Customer Family.\n'+
+            '8.RentDay.\n'+
+            '9.Room.\n'+
+            '10.Room Level.');
+        switch (b*1) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+                edit((a - 1),(b - 1));
+                break;
+            default:
+                alert('nhập lại');
+                editCustomer();
+        }
+    }
+    function edit(data1,data2) {
+        let edited = prompt('nhập chỉnh sửa');
+        arrListCustomers[data1].splice(data2,1,edited);
+        document.getElementById('sun').innerHTML = '';
+        displayCustomers();
+    }
+    function deleteCustomer() {
+        let a = prompt('STT');
+        if (a > arrListCustomers.length) {
+            alert('không có khách hàng này');
+            deleteCustomer();
+        }
+        arrListCustomers.splice((a-1),1);
+        document.getElementById('sun').innerHTML = '';
+        displayCustomers();
+    }
+</script>
+</body>
+</html>

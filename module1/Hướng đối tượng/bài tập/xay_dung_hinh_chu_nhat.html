@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500px" height="500px" style="border:1px solid #d3d3d3;"></canvas>
+<p id="sun"></p>
+</body>
+<script>
+    class Rectangle {
+        constructor(length,width) {
+            this.length = length;
+            this.width = width;
+        }
+        getlength() {
+            return this.length
+        }
+        getwidth() {
+            return this.width
+        }
+        getArea() {
+            let s = this.length*this.width;
+            return s;
+        }
+        getPerimeter() {
+            let c = (this.length + this.width)*2;
+            return c;
+        }
+        setlength(length) {
+            this.length = length;
+            return this.length
+        }
+        setwidth(width) {
+            this.width = width;
+            return this.width
+        }
+        creatrectangle () {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle ="#4CAF50";
+            ctx.fillRect(200,200,this.getlength(),this.getwidth())
+        }
+    }
+    let rectangle = new Rectangle(100,200);
+    rectangle.creatrectangle();
+    rectangle.setlength(40);
+    rectangle.getwidth(30);
+    let s = rectangle.getArea();
+    let c = rectangle.getPerimeter();
+    document.getElementById('sun').innerHTML= 'diện tích là ' + s + ' chu vi là ' + c;
+</script>
+</html>

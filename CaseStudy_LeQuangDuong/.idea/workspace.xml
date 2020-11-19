@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dce2012-5830-4da2-a445-e4d26ab56406" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Yeu_cau_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeu_cau_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yeu_cau_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Yeu_cau_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yeu_cau_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Yeu_cau_4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../module1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module1/hàm/bài tập/ham_xac_dinh_so_nguyen_to.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/hàm/bài tập/ham_xac_dinh_so_nguyen_to.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../module1/hàm/bài tập/ung_dung_quan_ly.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/hàm/bài tập/ung_dung_quan_ly.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../module1/hàm/bài tập/ung_dung_quan_ly.html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,10 +69,18 @@
       <workItem from="1605360754694" duration="31000" />
       <workItem from="1605428004638" duration="146000" />
       <workItem from="1605441159666" duration="4206000" />
+      <workItem from="1605489579575" duration="1601000" />
+      <workItem from="1605491589527" duration="13663000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1605490056839">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605490056839" />
   </component>
 </project>

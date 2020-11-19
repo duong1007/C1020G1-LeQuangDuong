@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" style="width: 180px; height: 80px" disabled id="display1" onblur="save1()">
+    <table>
+        <tr>
+            <td>
+                <input type="button" value="Check" onclick="check1()">
+            </td>
+            <td>
+                <input type="button" value="On/Off" onclick="On1()" >
+            </td>
+            <td>
+                <input type="button" value="Charging" onclick="charging1()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Take" onclick="take1()" id="Take1">
+            </td>
+            <td>
+                <input type="button" value="Send" onclick="send1()">
+            </td>
+            <td>
+                <input type="button" value="Cho Đẹp" >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Sent" onclick="sent1()">
+            </td>
+            <td>
+                <input type="button" value="Received" onclick="received1()">
+            </td>
+            <td>
+                <input type="button" value="Entering" onclick="entering1()">
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <input type="text" style="width: 180px; height: 80px" disabled id="display2">
+    <table>
+        <tr>
+            <td>
+                <input type="button" value="Check" onclick="check2()">
+            </td>
+            <td>
+                <input type="button" value="On/Off" onclick="On2()" >
+            </td>
+            <td>
+                <input type="button" value="Charging" onclick="charging2()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Take" onclick="take2()" id="Take2" onblur="save1()">
+            </td>
+            <td>
+                <input type="button" value="Send" onclick="send2()">
+            </td>
+            <td>
+                <input type="button" value="Cho đẹp">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Sent" onclick="sent2()">
+            </td>
+            <td>
+                <input type="button" value="Received" onclick="received2()">
+            </td>
+            <td>
+                <input type="button" value="Entering" onclick="entering2()">
+            </td>
+        </tr>
+    </table>
+</form>
+<script src="xay_dung_mobile.js">
+
+</script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #gameCaro{
+            position: relative;
+            margin-top: 50px;
+        }
+        .cell{
+            border: solid 1px black;
+            text-align: center;
+            font-size:20pt;
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="Replay" onclick="start()">
+<div id="gameCaro"></div>
+<script>
+    let value0 = 0;
+    let valueX = 1;
+    let valueO = 2;
+    let i;
+    let j;
+    let chessBoard;
+    let count;
+    class Cell {
+        constructor(x,y) {
+            this.x = x;
+            this.y = y;
+            this.value = value0;
+        }
+        draw() {
+            let top = this.x*40;
+            let left = this.y*40;
+            let draw = '<div id="cell-'+this.x+'-'+this.y+'" onclick="play('+this.x+','+this.y+')" class="cell" style="position: absolute; width: '+
+                40+'px; height:'+
+                40+'px; left:'+
+                left+'px; top:'+
+                top+'px; line-height: '+
+                40+'px;"></div>';
+            return draw
+        }
+         drawXO() {
+             let drawXO = document.getElementById('cell-'+this.x+'-'+this.y);
+             switch(this.value) {
+                 case valueX:
+                     drawXO.innerHTML='X';
+                     break;
+                 case valueO:
+                     drawXO.innerHTML='O';
+                     break;
+                 default:
+                     drawXO.innerHTML='';
+             }
+         }
+     }
+     class Chessboard {
+         constructor(rows,cols,id) {
+             this.rows= rows;
+             this.cols=cols;
+             this.id = id;
+             this.arrCells = [];
+             this.turn = valueO;
+             this.over = true
+         }
+         drawBoard() {
+            let drawBoard = document.getElementById(this.id);
+             for (i = 0; i < this.rows;i++){
+                 this.arrRows = [];
+                 for (j = 0; j < this.cols;j++){
+                     let cell = new Cell(i,j);
+                     this.arrRows.push(cell);
+                     drawBoard.innerHTML += cell.draw();
+                 }
+                 this.arrCells.push(this.arrRows);
+             }
+         }
+         play(x,y) {
+             if (this.over) {
+                 let cell = this.arrCells[x][y];
+                 if (cell.value === value0) {
+                     cell.value = this.turn;
+                     cell.drawXO();
+                     this.check(x, y);
+                     if (this.turn === valueO) {
+                         this.turn = valueX;
+                     } else {
+                         this.turn = valueO;
+                     }
+                 } else {
+                     alert("Cell is not empty");
+                 }
+             }
+         }
+         check(x,y) {
+             let cell = this.arrCells[x][y];
+             count = 1;
+             i = 1;
+             while((y + i < this.cols) && this.arrCells[x][y + i].value ===  cell.value){
+                 count++;
+                 i++;
+             }
+              i = 1;
+             while((y - i >= 0) && this.arrCells[x][y - i].value ===  cell.value){
+                 count++;
+                 i++;
+             }
+             this.endGame(count);
+              count = 1;
+              i = 1;
+             while((x + i < this.rows) &&this.arrCells[x + i][y].value ===  cell.value){
+                 count++;
+                 i++;
+             }
+              i = 1;
+             while((x - i >= 0) &&this.arrCells[x - i][y].value ===  cell.value){
+                 count++;
+                 i++;
+             }
+             this.endGame(count);
+              count = 1;
+             i = 1;
+             j = 1;
+             while((y + i < this.cols) && (x + i < this.rows) && this.arrCells[x + i][y + j].value ===  cell.value){
+                 count++;
+                 i++;
+                 j++;
+             }
+             i = 1;
+             j = 1;
+             while((x - i >= 0) && (y - j >= 0) && this.arrCells[x - i][y - j].value ===  cell.value){
+                 count++;
+                 i++;
+                 j++;
+             }
+             this.endGame(count);
+             count = 1;
+             i = 1;
+             j = 1;
+             while((y + j < this.cols) && (x - i >= 0) && this.arrCells[x - i][y + j].value ===  cell.value){
+                 count++;
+                 i++;
+                 j++;
+             }
+              i = 1;
+              j = 1;
+             while((y - j >= 0) && (x + i < this.rows) &&this.arrCells[x + i][y - j].value ===  cell.value){
+                 count++;
+                 i++;
+                 j++;
+             }
+             this.endGame(count);
+         }
+         endGame(count) {
+             if (count >= 5) {
+                 this.over = false;
+                 alert('You win')
+             }
+         }
+     }
+     function play(x,y) {
+         chessBoard.play(x,y)
+     }
+    function start() {
+        document.getElementById('gameCaro').innerHTML= '';
+        chessBoard = new Chessboard(10, 10, "gameCaro");
+        chessBoard.drawBoard();
+    }
+    start();
+</script>
+</body>
+</html>

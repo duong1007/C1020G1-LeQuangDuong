@@ -11,6 +11,7 @@
     <table>
         <thead>
         <tr>
+            <th>STT</th>
             <th width="100px">Tên</th>
             <th>Sửa</th>
             <th>Xóa</th>
@@ -25,7 +26,7 @@
     let b = document.getElementById('sun');
     let datalist = [];
     let reset = -1;
-    let i;
+    let i = 0;
     function add() {
         if (reset == -1) {
             datalist.push(a.value);
@@ -41,7 +42,7 @@
         b.innerHTML= '';
         for (i = 0; i < datalist.length; i++) {
             let name = datalist[i];
-            b.innerHTML += "<tr>" +
+            b.innerHTML += "<tr>" + "<td>" + (i*1 + 1) + "</td>" +
                 "<td>" + name + "</td>" +
                 "<td>" + "<input type='button' value='Edit' onclick='edit("+(i)+")'>" + "</td>" +
                 "<td>" + "<input type='button' value='Delete' onclick='deletea("+(i)+")'>" + "</td>" + "</tr>";
@@ -49,10 +50,11 @@
         }
     }
     function add2() {
-        b.innerHTML += "<tr>" +
+        b.innerHTML += "<tr>" + "<td>" + (i*1 + 1) + "</td>" +
             "<td>" + a.value + "</td>" +
             "<td>" + "<input type='button' value='Edit' onclick='edit("+(datalist.length - 1)+")'>" + "</td>" +
             "<td>" + "<input type='button' value='Delete' onclick='deletea("+(datalist.length - 1)+")'>" + "</td>" + "</tr>";
+        i++;
         a.value = '';
     }
     function edit(data) {

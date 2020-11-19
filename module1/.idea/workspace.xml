@@ -2,9 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c966e1d6-e262-4cdb-a3e0-caef1dd12eba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/tes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/adem_eva.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/co_caro.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/e01e378f00cce992b0dd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/pic_bulboff.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/pic_bulbon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/switchLight.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/xay_dung_hinh_chu_nhat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/xay_dung_lop_temperature.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/xay_dung_mobile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/xay_dung_mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/thực hành/Funny_circle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/thực hành/xay_dung_lop_date.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/thực hành/xay_dung_lop_hinh_tron.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/thực hành/xây dựng lớp mô phỏng sự hoạt động của đèn pin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hàm/bài tập/ham_xac_dinh_so_nguyen_to.html" beforeDir="false" afterPath="$PROJECT_DIR$/hàm/bài tập/ham_xac_dinh_so_nguyen_to.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hàm/bài tập/ung_dung_quan_ly.html" beforeDir="false" afterPath="$PROJECT_DIR$/hàm/bài tập/ung_dung_quan_ly.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +56,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/update bài tập/objects/script.js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -45,6 +66,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\C1020G1_LeQuangDuong\module1\Hướng đối tượng\bài tập" />
       <recent name="D:\C1020G1_LeQuangDuong\module1\hàm\thực hành" />
       <recent name="D:\C1020G1_LeQuangDuong\module1\Mảng\bài tập" />
     </key>
@@ -72,10 +94,23 @@
       <workItem from="1605407419545" duration="10157000" />
       <workItem from="1605440835126" duration="319000" />
       <workItem from="1605441271857" duration="1067000" />
+      <workItem from="1605491203454" duration="383000" />
+      <workItem from="1605494057477" duration="3179000" />
+      <workItem from="1605501560508" duration="2542000" />
+      <workItem from="1605582996184" duration="17757000" />
+      <workItem from="1605613325377" duration="2698000" />
+      <workItem from="1605662337566" duration="17237000" />
+      <workItem from="1605700378230" duration="12058000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1605682266254">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605682266254" />
   </component>
 </project>

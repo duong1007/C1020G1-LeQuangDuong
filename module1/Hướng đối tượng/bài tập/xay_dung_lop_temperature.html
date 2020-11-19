@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(c) {
+            this.c = c;
+        }
+        getC() {
+            return this.c;
+        }
+        chanceToF() {
+            let F = (this.getC()*1.8) + 32;
+            return F;
+        }
+        chanceToK() {
+            let K = this.getC() + 273.15;
+            return K;
+        }
+    }
+    let doC = new Temperature(25);
+    alert('độ F là ' + doC.chanceToF() + ' độ K là ' + doC.chanceToK())
+</script>
+</body>
+</html>
