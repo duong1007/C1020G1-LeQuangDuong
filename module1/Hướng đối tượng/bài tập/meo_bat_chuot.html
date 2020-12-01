@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<div id="game"></div>
+<body>
+<script>
+    class Animal {
+        constructor(name,weight,speed,talk) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.talk = talk
+        }
+    }
+    class Rat extends Animal{
+        constructor(name,weight,speed,talk,survival) {
+            super(name,weight,speed,talk);
+            this.survival = survival;
+            this.img = 'https://img.ntdvn.com/2020/01/black-and-white-mouse-51340-1.jpg';
+            this.left = Math.random() * window.innerWidth;
+            this.top = Math.random() * window.innerHeight;
+        }
+        getImg() {
+            return '<img width="' + 30 + '"' +
+                ' height="' + 30 + '"' +
+                ' src="' + this.img + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        }
+        moveLeft() {
+            this.left -= this.speed
+        }
+        moveRight(){
+            this.left += this.speed
+        }
+    }
+    class Cat extends Animal {
+        constructor(name,weight,speed,talk,status) {
+            super(name,weight,speed,talk);
+            this.status = status;
+            this.img = 'https://images.kienthuc.net.vn/zoomh/800/uploaded/hongngan/2017_01_11/B/kho-do-nhung-con-meo-cung-tuc-gian-voi-ca-the-gioi.jpg';
+            this.top = 300;
+            this.left = 200
+        }
+        setSpeed() {
+            this.speed = 40;
+        }
+        setStatus() {
+            this.status = 'fast'
+        }
+        getImg(){
+            return '<img width="'+ 60 + '"' +
+                ' height="'+ 60 + '"' +
+                ' src="' + this.img +'"' +
+                ' style="top: '+ this.top +'px; left:'+ this.left +'px;position:absolute;" onclick="fast()"/>';
+        }
+       searchRat(rat) {
+            if ( this.top != rat.top) {
+                if (this.top < rat.top) {
+                    this.top += this.speed;
+                    if ((rat.top - this.top) <= this.speed) {
+                        this.top += (rat.top - this.top);
+                    }
+                } else if (this.top > rat.top) {
+                    this.top -= this.speed;
+                    if ((this.top - rat.top) <= this.speed) {
+                        this.top -= (this.top - rat.top);
+                    }
+                }
+            }
+            else {
+                if (this.left < rat.left) {
+                    this.left += this.speed;
+                    if ((rat.left - this.left) <= this.speed) {
+                        this.top += (rat.left - this.left);
+                    }
+                } else if (this.left > rat.left) {
+                    this.left -= this.speed;
+                    if ((this.left - rat.left) <= this.speed) {
+                        this.left -= (this.left - rat.left);
+                    }
+                } else {
+                    return 1
+                }
+            }
+       }
+       eatRat(rat) {
+            rat.survival = 'die';
+           this.weight += rat.weight;
+           return 'chuột đã ' + rat.survival +',' + 'mèo tăng ' + this.weight + ' kg'
+       }
+    }
+    let cat = new Cat('Tom',30,20,'meo meo','normal');
+    let rat = new Rat('jerry',15,20,'chít chít','life');
+    let move = true;
+   function start(){
+       if (rat.left < window.innerWidth - 30 && move == true) {
+           rat.moveRight();
+       }
+       if (rat.left >= window.innerWidth -30) {
+           move =  false
+       }
+       if ( rat.left > 0 && move == false) {
+           rat.moveLeft();
+       }
+       if (rat.left <= 0) {
+           move = true;
+       }
+       document.getElementById('game').innerHTML =rat.getImg() + cat.getImg();
+       cat.searchRat(rat);
+       if (cat.searchRat(rat) == 1 && cat.speed > rat.speed) {
+           alert('đã bắt được chuột');
+           alert(cat.eatRat(rat))
+       } else {
+          setTimeout(start, 500)
+       }
+   }
+   function fast() {
+       cat.setSpeed();
+       cat.setStatus()
+   }
+   start();
+</script>
+</body>
+</html>

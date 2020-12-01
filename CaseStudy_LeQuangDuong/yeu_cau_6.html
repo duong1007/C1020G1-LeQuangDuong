@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table th {
+            width: 100px
+        }
+        .text {
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+        }
+
+    </style>
+</head>
+<body>
+<input type="button" onclick="CustomerData();" value="Customer">
+<input type="button" onclick="EmployeeData();" value="Employee">
+<div style="border:1px solid #ddd; padding: 5px; display: none" id="invisible">
+    <legen><b>YOUR BOOKING</b></legen>
+<form id="reset" >
+    <table>
+        <tr>
+            <th>Name: </th>
+            <td>
+                <input type="text" id="name" onfocusout="CheckName()">
+            </td>
+            <th>Số CMND: </th>
+            <td>
+                <input type="number" id="cmnd" onfocusout="CheckID()">
+            </td>
+        </tr>
+        <tr>
+            <th>Date of Birth:</th>
+            <td>
+                <input type="date" id="birth">
+            </td>
+            <th>Email:</th>
+            <td>
+                <input type="text" id="email" onfocusout="CheckEmail()">
+            </td>
+        </tr>
+        <tr>
+            <th>Address:</th>
+            <td>
+                <input type="text" id="add" onfocusout="CheckADD()">
+            </td>
+            <th>Customer Card:</th>
+            <td>
+                <select id="card">
+                    <option>Diamond</option>
+                    <option>Platinum</option>
+                    <option>Gold</option>
+                    <option>Silver</option>
+                    <option>Member</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Amount:</th>
+            <td>
+                <input type="number" id="people" onfocusout="CheckAmount()">
+            </td>
+            <th>RentDay:</th>
+            <td>
+                <input type="number" id="rent" onfocusout="CheckRent()">
+            </td>
+        </tr>
+        <tr>
+            <th>Room:</th>
+            <td>
+                <select id="room">
+                    <option>Villa</option>
+                    <option>House</option>
+                    <option>Room</option>
+                </select>
+            </td>
+            <th>Discount:</th>
+            <td>
+                <input type="number" id="discount" onfocusout="Discount()">
+            </td>
+        </tr>
+    </table>
+</form>
+    <input type="button" value ="Add" onclick="add()" id="duong">
+    <hr>
+<table class="text">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Tên</th>
+        <th>Số CMND</th>
+        <th>Email</th>
+        <th>Ngày Sinh</th>
+        <th>Địa chỉ</th>
+        <th>Card</th>
+        <th>Amount</th>
+        <th>RentDay</th>
+        <th>Room</th>
+        <th>Discount</th>
+        <th>Thanh Toán</th>
+        <td><b>Sửa</b></td>
+        <td><b>Xóa</b></td>
+    </tr>
+    </thead>
+    <tbody id="sun"></tbody>
+</table>
+</div>
+<div id="task2"></div>
+<script type="text/javascript" src="yeu_cau_6_task_1.js">
+</script>
+<script type="text/javascript" src="yeu_cau_6_task_2.js">
+</script>
+</body>
+</html>

@@ -5,9 +5,21 @@
     <title>Game puzzle</title>
 </head>
 <body>
+<img  name="image" src="example-slide-1.png" onclick="switch_Image()">
 <form>
     <script>
-
+        let current = 1;
+        let num_image = 4;
+        function switch_Image(){
+            current++;
+            if (current < num_image) {
+                document.images['image'].src ='example-slide-' + current + '.png';
+            }
+            if(current == num_image){
+                document.images['image'].src ='example-slide-' + current + '.png';
+                current = 0;
+            }
+        }
     </script>
 </form>
 </body>

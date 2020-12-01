@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dce2012-5830-4da2-a445-e4d26ab56406" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Yeu_cau_5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeu_cau_6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeu_cau_6_task_1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeu_cau_6_task_2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/Hướng đối tượng/bài tập/meo_bat_chuot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/cấu trúc điều kiện 1/bài tập/example-slide-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/cấu trúc điều kiện 1/bài tập/example-slide-12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/cấu trúc điều kiện 1/bài tập/example-slide-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/cấu trúc điều kiện 1/bài tập/example-slide-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/cấu trúc điều kiện 1/bài tập/example-slide-4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Yeu_cau_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Yeu_cau_1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Yeu_cau_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Yeu_cau_4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yeu_cau_3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Yeu_cau_3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../module1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module1/hàm/bài tập/ham_xac_dinh_so_nguyen_to.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/hàm/bài tập/ham_xac_dinh_so_nguyen_to.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module1/hàm/bài tập/ung_dung_quan_ly.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/hàm/bài tập/ung_dung_quan_ly.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module1/Biến, khai báo biến và kiểu dữ liệu/Bài tập/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module1/cấu trúc điều kiện 1/bài tập/game_puzzle.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/cấu trúc điều kiện 1/bài tập/game_puzzle.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -41,7 +47,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../module1/hàm/bài tập/ung_dung_quan_ly.html" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/egg_game/index.html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -71,6 +77,13 @@
       <workItem from="1605441159666" duration="4206000" />
       <workItem from="1605489579575" duration="1601000" />
       <workItem from="1605491589527" duration="13663000" />
+      <workItem from="1606094413691" duration="20022000" />
+      <workItem from="1606182814263" duration="11535000" />
+      <workItem from="1606198364170" duration="2205000" />
+      <workItem from="1606202209598" duration="274000" />
+      <workItem from="1606202887235" duration="1063000" />
+      <workItem from="1606275783461" duration="924000" />
+      <workItem from="1606361145460" duration="881000" />
     </task>
     <servers />
   </component>
@@ -78,9 +91,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1605490056839">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1606189253238">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605490056839" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606189253238" />
   </component>
 </project>

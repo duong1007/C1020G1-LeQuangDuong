@@ -1,7 +1,7 @@
 
 let i;
-function CheckName() {
-    let a = document.getElementById('name').value;
+function checkall(id) {
+    let a = document.getElementById(id).value;
     let b = a[0].toUpperCase();
     for (i = 1; i < a.length; i++) {
         if (a[i - 1] == ' ' && a[i] == ' ') {
@@ -11,21 +11,21 @@ function CheckName() {
         } else if (a[i - 1] != '' && a[i] != '') {
             b += a[i].toLowerCase();
         }
+    }
+    document.getElementById(id).value = b;
+}
+function checkall2(id) {
+    let  a = document.getElementById(id).value;
+    if (a < 0 || (Math.floor(a) - a ) != 0) {
+        alert('sai định dạng');
+        document.getElementById(id).value = '';
     }
 }
+function CheckName() {
+   checkall('name');
+}
 function CheckADD() {
-    let a = document.getElementById('add').value;
-    let b = a[0].toUpperCase();
-    for (i = 1; i < a.length; i++) {
-        if (a[i - 1] == ' ' && a[i] == ' ') {
-            continue;
-        } else if (a[i - 1] == ' ' && a[i] != ' ') {
-            b += a[i].toUpperCase();
-        } else if (a[i - 1] != '' && a[i] != '') {
-            b += a[i].toLowerCase();
-        }
-    }
-    document.getElementById('add').value = b;
+   checkall('add');
 }
 function CheckID() {
     let a = document.getElementById('cmnd').value;
@@ -37,18 +37,10 @@ function CheckID() {
     }
 }
 function CheckRent() {
-    let  a = document.getElementById('rent').value;
-    if (a < 0 || (Math.floor(a) - a ) != 0) {
-        alert('sai định dạng');
-        document.getElementById('rent').value = '';
-    }
+   checkall2('rent')
 }
 function CheckAmount() {
-    let  a = document.getElementById('people').value;
-    if (a < 0 || (Math.floor(a) - a ) != 0) {
-        alert('sai định dạng');
-        document.getElementById('people').value = '';
-    }
+    checkall2('people')
 }
 function CheckEmail() {
     let a = document.getElementById('email').value;

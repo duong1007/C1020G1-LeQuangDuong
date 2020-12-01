@@ -2,30 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c966e1d6-e262-4cdb-a3e0-caef1dd12eba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/tes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/adem_eva.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/co_caro.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/e01e378f00cce992b0dd.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/pic_bulboff.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/pic_bulbon.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/switchLight.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/xay_dung_hinh_chu_nhat.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/xay_dung_lop_temperature.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/xay_dung_mobile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/xay_dung_mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/thực hành/Funny_circle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/thực hành/xay_dung_lop_date.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/thực hành/xay_dung_lop_hinh_tron.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/thực hành/xây dựng lớp mô phỏng sự hoạt động của đèn pin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/yeu_cau_6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/yeu_cau_6_task_1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/yeu_cau_6_task_2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hướng đối tượng/bài tập/meo_bat_chuot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cấu trúc điều kiện 1/bài tập/example-slide-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cấu trúc điều kiện 1/bài tập/example-slide-12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cấu trúc điều kiện 1/bài tập/example-slide-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cấu trúc điều kiện 1/bài tập/example-slide-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cấu trúc điều kiện 1/bài tập/example-slide-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Introduction_to_Java/Bai_tap/chuyen_doi_tien_te.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Introduction_to_Java/Bai_tap/doc_so_thanh_chu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Introduction_to_Java/Bai_tap/hien_thi_loi_chao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Introduction_to_Java/Thuc_hanh/SystemTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Introduction_to_Java/Thuc_hanh/giai_phuong_trinh_bac_nhat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Introduction_to_Java/Thuc_hanh/khai_bao_va_su_dung_bien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Introduction_to_Java/Thuc_hanh/su_dung_toan_tu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Introduction_to_Java/Thuc_hanh/tinh_chi_so_can_nang_cua_con_nguoi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Introduction_to_Java/Thuc_hanh/tinh_nam_nhuan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Introduction_to_Java/Thuc_hanh/tinh_so_ngay_trong_thang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Loop/Bai_tap/so_nguyen_to_20.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Loop/Bai_tap/ve_hinh.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Loop/Thuc_hanh/kiem_tra_so_nguyen_to.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Loop/Thuc_hanh/thiet_ke_menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Loop/Thuc_hanh/tim_UCLN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_2/src/Loop/Thuc_hanh/tinh_tien_lai.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy_LeQuangDuong/Yeu_cau_3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hàm/bài tập/ham_xac_dinh_so_nguyen_to.html" beforeDir="false" afterPath="$PROJECT_DIR$/hàm/bài tập/ham_xac_dinh_so_nguyen_to.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hàm/bài tập/ung_dung_quan_ly.html" beforeDir="false" afterPath="$PROJECT_DIR$/hàm/bài tập/ung_dung_quan_ly.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Biến, khai báo biến và kiểu dữ liệu/Bài tập/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cấu trúc điều kiện 1/bài tập/game_puzzle.html" beforeDir="false" afterPath="$PROJECT_DIR$/cấu trúc điều kiện 1/bài tập/game_puzzle.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +108,23 @@
       <workItem from="1605613325377" duration="2698000" />
       <workItem from="1605662337566" duration="17237000" />
       <workItem from="1605700378230" duration="12058000" />
+      <workItem from="1605748712876" duration="19178000" />
+      <workItem from="1605836070001" duration="3810000" />
+      <workItem from="1605918944395" duration="2740000" />
+      <workItem from="1606093473219" duration="906000" />
+      <workItem from="1606104135720" duration="1513000" />
+      <workItem from="1606106010197" duration="1679000" />
+      <workItem from="1606123599189" duration="625000" />
+      <workItem from="1606202261798" duration="915000" />
+      <workItem from="1606203480201" duration="849000" />
+      <workItem from="1606204429029" duration="212000" />
+      <workItem from="1606204667516" duration="925000" />
+      <workItem from="1606211533885" duration="597000" />
+      <workItem from="1606268252211" duration="471000" />
+      <workItem from="1606274368421" duration="24000" />
+      <workItem from="1606360464298" duration="656000" />
+      <workItem from="1606466300070" duration="53000" />
+      <workItem from="1606653282231" duration="391000" />
     </task>
     <servers />
   </component>
@@ -108,9 +132,13 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1605682266254">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1606466346732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605682266254" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606466346732" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605770298334">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605770298334" />
   </component>
 </project>

@@ -1,0 +1,2 @@
+psvm + TAB t?o m?i main()
+sout + TAB t?o m?i systeam.out.print
