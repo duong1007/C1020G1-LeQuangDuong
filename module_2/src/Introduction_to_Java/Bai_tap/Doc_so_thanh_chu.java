@@ -156,7 +156,7 @@ public class Doc_so_thanh_chu {
         if (number >= 100){
             if (number % 100 == 0){
                 Result = Hundred + " Hundred";
-            } else if(unit == 0) {
+            } else if(unit == 0 || tens == 1) {
                 Result = Hundred + " Hundred" + " And " + Tens;
             } else {
                 Result = Hundred + " Hundred" + " And " + Tens + " " + Unit;
