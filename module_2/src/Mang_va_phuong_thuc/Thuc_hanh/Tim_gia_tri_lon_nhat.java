@@ -26,7 +26,7 @@ public class Tim_gia_tri_lon_nhat {
         }
         int max = array[0];
         int index = 0;
-        for (i = 0; i < array.length; i++){
+        for (i = 1; i < array.length; i++){
             if (max < array[i]){
                 max = array[i];
                 index = i;
