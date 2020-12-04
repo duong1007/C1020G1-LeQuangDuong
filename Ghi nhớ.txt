@@ -1,2 +1,20 @@
-psvm + TAB t?o m?i main()
-sout + TAB t?o m?i systeam.out.print
+
+Tính chat truu tuong (abstract)
+Tính chat dóng gói (encapsulation)
+Tính chat ke thua (inheritance)
+Tính chat da hình (polymorphism)
+
+// truu tuong
+implement: trien khai.
+interface: giao dien.
+anonymous: nac danh.
+conhesion: tinh gan ket.
+immutable: co dinh.
+mutable: thay doi dc.
+synchronized: thao tac lam viec dong bo.
+consistency: tinh thong nhat
+clarity: tinh ro rang.
+aggregation: tinh tap hop.
+Reference type: kieu doi tuong
+primitive type: kieu nguyen thuy 
+Nested class: lop long nhau
