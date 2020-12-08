@@ -18,3 +18,6 @@ aggregation: tinh tap hop.
 Reference type: kieu doi tuong
 primitive type: kieu nguyen thuy 
 Nested class: lop long nhau
+
+// arraylist
+capacity : suc chua
