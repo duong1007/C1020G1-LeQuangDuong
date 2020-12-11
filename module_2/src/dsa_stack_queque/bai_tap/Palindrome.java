@@ -1,4 +1,4 @@
-package dsa_stack_queque;
+package dsa_stack_queque.bai_tap;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
