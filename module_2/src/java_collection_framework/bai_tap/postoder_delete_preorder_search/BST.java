@@ -9,6 +9,33 @@ public class BST<E extends Comparable<E>>{
     public BST() {
     }
 
+    public boolean insert(E e) {
+        if (root == null) {
+            root = new TreeNode<>(e);
+
+        } else {
+            TreeNode<E> parent = null;
+            TreeNode<E> cur = root;
+            while (cur != null) {
+                if (e.compareTo(cur.element) < 0) {
+                    parent = cur;
+                    cur = cur.left;
+                } else if (e.compareTo(cur.element) > 0) {
+                    parent = cur;
+                    cur = cur.right;
+                } else {
+                    return false;
+                }
+            }
+            if (e.compareTo(parent.element) < 0) {
+                parent.left = new TreeNode<>(e);
+            } else {
+                parent.right = new TreeNode<>(e);
+            }
+        }
+        size++;
+        return true;
+    }
 
     public void postOrder() {
         postOrder(root);
@@ -32,7 +59,7 @@ public class BST<E extends Comparable<E>>{
         preOrder(root.right);
     }
 
-    public TreeNode<E> search(TreeNode<E> root, E key) {
+    public TreeNode<E> search(E key) {
         TreeNode<E> curr = root;
 
         while (curr != null && curr.element != key) {
@@ -46,41 +73,7 @@ public class BST<E extends Comparable<E>>{
         return curr;
     }
 
-//    public TreeNode<E> minimumKey(TreeNode<E> curr) {
-//        while (curr.left != null) {
-//            curr = curr.left;
-//        }
-//        return curr;
-//    }
-//
-//    public TreeNode<E> deleteNode(TreeNode<E> root, E key) {
-//        TreeNode<E> curr = search(root, key)
-//
-//        if (curr == null) {
-//            return root;
-//        }
-//
-//        if (curr.left == null && curr.right == null) {
-//            curr = null;
-//        }
-//
-//        else if (curr.left != null && curr.right != null) {
-//            TreeNode<E> successor  = minimumKey(curr.right);
-//
-//            E val = successor.element;
-//
-//            deleteNode(root, successor.element);
-//
-//            curr.element = val;
-//
-//        } else {
-//            TreeNode<E> child = (curr.left != null)? curr.left: curr.right;
-//            curr = child;
-//        }
-//        return root;
-//    }
-
-    public TreeNode<E> maximumKey(TreeNode<E> root){
+    private TreeNode<E> maximumKey(TreeNode<E> root){
         while (root.right != null) {
             root = root.right;
         }
