@@ -15,7 +15,7 @@ public class BinarySearch {
             else
                 low = mid + 1;
         }
-        return -1; /* Now high < low, key not found */
+        return -1;
     }
 
     public static void main(String[] args) {
