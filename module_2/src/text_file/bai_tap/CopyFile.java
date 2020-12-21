@@ -10,8 +10,9 @@ public class CopyFile {
         try {
             FileReader fileReader = new FileReader(reader);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
-
-            if (!copy.exists()) {
+            if (!reader.exists()){
+                throw new FileNotFoundException();
+            } else if (!copy.exists()) {
                 FileWriter fileWriter = new FileWriter(copy);
                 BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
                 String line;

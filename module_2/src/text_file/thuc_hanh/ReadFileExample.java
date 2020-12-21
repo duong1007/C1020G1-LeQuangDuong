@@ -27,10 +27,8 @@ public class ReadFileExample {
             }
             br.close();
 
-            // Hiển thị ra màn hình tổng các số nguyên trong file
             System.out.println("Tổng = " + sum);
         } catch (Exception e) {
-            // TH file không tồn tại hoặc nội dung file có lỗi thì sẽ hiển thị thông báo lỗi.
             System.err.println("Fie không tồn tại or nội dung có lỗi!");
         }
     }
