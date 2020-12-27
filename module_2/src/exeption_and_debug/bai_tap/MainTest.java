@@ -19,5 +19,11 @@ public class MainTest {
             } catch (IllegalTriangleException e) {
                 e.printStackTrace();
             }
+            try {
+                System.out.println(new Triangle(a,b,4));
+            } catch (IllegalTriangleException e) {
+                e.printStackTrace();
+            }
+
         }
 }
