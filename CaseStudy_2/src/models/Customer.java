@@ -27,6 +27,7 @@ public class Customer implements BuyTicket {
     private static final String EMAIL_REGEX ="^[A-Za-z0-9]{3,}[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$";
     private static final String ID_REGEX ="^\\d{3}\\s\\d{3}\\s\\d{3}$";
     private static final String GENDER_REGEX ="^(Unknown)|(Male)|(Female)$";
+    private static final String TYPE_REGEX ="^(Diamond)|(Platinum)|(Gold)|(Silver)|(Member).$";
     static Scanner scanner = new Scanner(System.in);
 
     public Customer() {
@@ -113,7 +114,10 @@ public class Customer implements BuyTicket {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(String type) throws TypeException {
+        if(regex(type,TYPE_REGEX)) {
+            throw new TypeException();
+        }
         this.type = type;
     }
 
@@ -144,6 +148,7 @@ public class Customer implements BuyTicket {
             }
         }  while (name == null);
 
+
         do {
             System.out.println("Enter Date of Birth: ");
             try {
@@ -155,6 +160,7 @@ public class Customer implements BuyTicket {
             }
         } while (birth == null);
 
+
         do {
             System.out.println("Enter Email: ");
             try {
@@ -163,6 +169,7 @@ public class Customer implements BuyTicket {
                 System.err.println("Email must be format abc@abc.abc");
             }
         } while (email == null);
+
 
         do {
             System.out.println("Enter ID: ");
@@ -175,8 +182,10 @@ public class Customer implements BuyTicket {
             }
         } while (id == null);
 
+
         System.out.println("Enter Phone Number: ");
         this.phoneNumber = scanner.nextLine();
+
 
         do {
             System.out.println("Enter Gender: ");
@@ -187,8 +196,16 @@ public class Customer implements BuyTicket {
             }
         } while (gender == null);
 
-        System.out.println("Enter Type: ");
-        this.type = scanner.next();
+
+        do {
+            System.out.println("Enter Type: ");
+            try {
+                setType(scanner.next());
+            } catch (TypeException e) {
+                System.err.println("Type must be one of Diamond, Platinum, Gold, Silver, Member" );
+            }
+        } while (type == null);
+
 
         System.out.println("Enter Address: ");
         this.address = scanner.next();

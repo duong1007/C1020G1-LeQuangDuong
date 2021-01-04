@@ -19,10 +19,25 @@ public class FileData {
     static final String CUSTOMER = "src/Data/Customer.csv";
     static final String BOOKING = "src/Data/Booking.csv";
     static final String EMPLOYEE = "src/data/Employee.csv";
+    static final String REGEX = ",";
 
     public static void saveData(String fileName,Object data) {
         File file = new File(fileName);
         try (FileWriter fileWriter = new FileWriter(file,true);
+             BufferedWriter writer = new BufferedWriter(fileWriter);
+             PrintWriter print = new PrintWriter(writer)) {
+
+            print.println(data);
+            print.flush();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+// updateData sai
+    public static void updateData(String fileName,Object data) {
+        File file = new File(fileName);
+        try (FileWriter fileWriter = new FileWriter(file);
              BufferedWriter writer = new BufferedWriter(fileWriter);
              PrintWriter print = new PrintWriter(writer)) {
 
@@ -40,7 +55,7 @@ public class FileData {
              BufferedWriter writer = new BufferedWriter(fileWriter);
              PrintWriter print = new PrintWriter(writer)) {
 
-            print.println(id + ", " + idServices);
+            print.println(id + REGEX + idServices);
             print.flush();
 
         } catch (IOException e) {
@@ -60,8 +75,6 @@ public class FileData {
                 dataList.add(data);
             }
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -71,7 +84,7 @@ public class FileData {
     public static List<Villa> readFileVilla() {
         List<Villa> listVilla = new ArrayList<>();
         for (String string : openFile(VILLA)) {
-            String[] str = string.split(",");
+            String[] str = string.split(REGEX);
             double str2 = Double.parseDouble(str[2]);
             double str3 = Double.parseDouble(str[3]);
             int str4 = Integer.parseInt(str[4]);
@@ -86,7 +99,7 @@ public class FileData {
     public static List<House> readFileHouse() {
         List<House> listHouse = new ArrayList<>();
         for (String string : openFile(HOUSE)) {
-            String[] str = string.split(",");
+            String[] str = string.split(REGEX);
             double str2 = Double.parseDouble(str[2]);
             double str3 = Double.parseDouble(str[3]);
             int str4 = Integer.parseInt(str[4]);
@@ -100,7 +113,7 @@ public class FileData {
     public static List<Room> readFileRoom() {
         List<Room> listRoom = new ArrayList<>();
         for (String string : openFile(ROOM)) {
-            String[] str = string.split(",");
+            String[] str = string.split(REGEX);
             double str2 = Double.parseDouble(str[2]);
             double str3 = Double.parseDouble(str[3]);
             int str4 = Integer.parseInt(str[4]);
@@ -114,7 +127,7 @@ public class FileData {
         DateFormat dateFormat = new SimpleDateFormat("dd/mm/yyyy");
         List<Customer> customerList = new ArrayList<>();
         for (String string : openFile(CUSTOMER)) {
-            String[] str = string.split(",");
+            String[] str = string.split(REGEX);
             Customer customer = null;
 
             try {
@@ -130,16 +143,23 @@ public class FileData {
     public static Map<String,Employee> readFileEmployeeMap() {
         Map<String,Employee> employeeMap = new LinkedHashMap<>();
         List<String> string = openFile(EMPLOYEE);
-        for (int index = 0; index < string.size(); index++) {
-            String[] str = string.get(index).split(",");
-            int str1 = Integer.parseInt(str[1]);
-            Employee employee = new Employee(str[0],str1,str[2]);
-            if ((index + 1) < 10) {
-                employeeMap.put("00" + (index + 1), employee);
-            } else {
-                employeeMap.put("0" + (index + 1), employee);
-            }
+        for (String s : string) {
+            String[] str = s.split(REGEX);
+            int str2 = Integer.parseInt(str[2]);
+            Employee employee = new Employee(str[1], str2, str[3]);
+            employeeMap.put(str[0], employee);
         }
         return employeeMap;
+    }
+
+    public static List<Employee> readFileEmployee() {
+        List<Employee> employeeList = new ArrayList<>();
+        for (String s : openFile(EMPLOYEE)) {
+            String[] str = s.split(REGEX);
+            int str2 = Integer.parseInt(str[2]);
+            Employee employee = new Employee(str[1], str2, str[3]);
+            employeeList.add(employee);
+        }
+        return employeeList;
     }
 }

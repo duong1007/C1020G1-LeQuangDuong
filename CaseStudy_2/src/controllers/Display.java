@@ -8,7 +8,11 @@ public class Display {
                 "4.\tShow Information of Customer\n" +
                 "5.\tAdd New Booking\n" +
                 "6.\tShow Information of Employee\n" +
-                "7.\tExit\n" +
+                "7.\tSearch Employee\n" +
+                "8.\tAdd Cinema Customer\n" +
+                "9.\tShow Cinema Customer\n" +
+                "10.\tDelete\n" +
+                "11.\tExit\n" +
                 "\tYour Choice:" );
     }
 
@@ -37,6 +41,23 @@ public class Display {
         System.out.println("1.\tBooking Villa\n" +
                 "2.\tBooking House\n" +
                 "3.\tBooking Room\n" +
+                "\tYour Choice:");
+    }
+
+    public static void displayDelete() {
+        System.out.println("1.\tDelete Service\n" +
+                "2.\tDelete Customer\n" +
+                "3.\tDelete Employee\n" +
+                "4.\tDelete Booking\n" +
+                "5.\tExit\n" +
+                "\tYour Choice:");
+    }
+
+    public static void displayDeleteService() {
+        System.out.println("1.\tDelete Villa\n" +
+                "2.\tDelete House\n" +
+                "3.\tDelete Room\n" +
+                "4.\tExit\n" +
                 "\tYour Choice:");
     }
 }

@@ -9,11 +9,6 @@ import java.util.*;
 
 public class Show {
 
-    static final String VILLA = "src/Data/Villa.csv";
-    static final String HOUSE = "src/Data/House.csv";
-    static final String ROOM = "src/Data/Room.csv";
-    static final String CUSTOMER = "src/Data/Customer.csv";
-
     static Scanner scanner = new Scanner(System.in);
 
     private static void nameVillaNotDuplicate() {
