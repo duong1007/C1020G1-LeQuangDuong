@@ -1,7 +1,7 @@
 package controllers;
 
 import data.FileData;
-import libs.FilingCabinets;
+import models.FilingCabinets;
 import models.*;
 import commons.regex.compare.CompareName;
 

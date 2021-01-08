@@ -12,12 +12,8 @@ public class Gop_mang {
     }
     public static String concat(int arrA[], int arrB[]) {
         int arrPlus[] = new int[arrA.length + arrB.length];
-        for (int i = 0; i < arrA.length; i++) {
-            arrPlus[i] = arrA[i];
-        }
-        for (int i = 0; i < arrB.length ; i++) {
-            arrPlus[arrA.length + i]=arrB[i];
-        }
+        System.arraycopy(arrA, 0, arrPlus, 0, arrA.length);
+        System.arraycopy(arrB, 0, arrPlus, arrA.length + 0, arrB.length);
         return Arrays.toString(arrPlus);
     }
 }

@@ -3,7 +3,6 @@ package models;
 import commons.regex.exceptions.*;
 import commons.regex.Regex;
 import data.FileData;
-import libs.BuyTicket;
 
 import java.text.DateFormat;
 import java.text.ParseException;

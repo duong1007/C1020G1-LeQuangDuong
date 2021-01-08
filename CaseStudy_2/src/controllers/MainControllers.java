@@ -1,11 +1,9 @@
 package controllers;
-import libs.Cinema4D;
-import libs.FilingCabinets;
+import models.Cinema4D;
 
 import java.util.*;
 
 public class MainControllers {
-
     public static void option() {
         Scanner scanner = new Scanner(System.in);
         int choice = 0;

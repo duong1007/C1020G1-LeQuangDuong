@@ -1,4 +1,4 @@
-package libs;
+package models;
 
 import data.FileData;
 import models.Customer;

@@ -1,6 +1,7 @@
-package libs;
+package controllers;
 
 import models.Employee;
+import models.FilingCabinets;
 
 import java.util.Scanner;
 
