@@ -21,7 +21,7 @@ Ten_Bo_Phan varchar(45) not null
 
 create table Nhan_Vien (
 ID_Nhan_Vien int primary key,
-Ho_Ten int not null,
+Ho_Ten varchar(50) not null,
 ID_Vi_Tri int not null,
 ID_Trinh_Do int not null,
 ID_Bo_Phan int not null,

@@ -5,10 +5,6 @@ select khach_hang.Ho_Ten
 from khach_hang
 group by khach_hang.Ho_Ten;
 
-select khach_hang.Ho_Ten, count(khach_hang.Ho_Ten)
-from khach_hang
-group by khach_hang.Ho_Ten;
-
 select khach_hang.Ho_Ten
 from khach_hang
 union 

@@ -75,11 +75,12 @@ values
 
 insert into khach_hang 
 values 
-(1,5,"Luyen","1998-07-10",563563654,031955881,"maybiluyena@gmail.com","da nang"),
-(2,4,"Minh","1998-01-29",356756565,4553434,"maybiluyena@gmail.com","da nang"),
-(3,3,"Hoang","1998-03-10",674567467,33453454,"maybiluyena@gmail.com","da nang"),
-(4,2,"Ha","1998-09-02",989897878,5654645634,"maybiluyena@gmail.com","da nang"),
-(5,1,"Hai","1998-12-05",5634565664,5467456546,"maybiluyena@gmail.com","da nang");
+(6,5,"Phuong","1963-07-10",563563654,031955881,"maybiluyena@gmail.com","da nang"),
+(7,4,"Hong","1972-01-29",356756565,4553434,"maybiluyena@gmail.com","da nang"),
+(8,3,"Thao","1954-03-10",674567467,33453454,"maybiluyena@gmail.com","da nang"),
+(9,2,"Huong","1984-09-02",989897878,5654645634,"maybiluyena@gmail.com","da nang"),
+(10,1,"Hung","2008-12-05",5634565664,5467456546,"maybiluyena@gmail.com","da nang");
+
 
 insert into hop_dong
 values 
@@ -94,3 +95,29 @@ values
 (2,2,1,2),
 (3,3,2,1),
 (4,4,3,1);
+
+insert into khach_hang 
+values 
+(11,5,"Phuong","1963-07-10",563455665,031955881,"maybiluyena@gmail.com","da nang"),
+(12,4,"Hong","1972-01-29",5463456,4575675674,"maybiluyena@gmail.com","da nang"),
+(13,3,"Thao","1954-03-10",5645667675,3347667,"maybiluyena@gmail.com","da nang"),
+(14,2,"Huong","1984-09-02",123444355,65464645634,"maybiluyena@gmail.com","da nang"),
+(15,1,"Hung","2008-12-05",09989789,5467566546,"maybiluyena@gmail.com","da nang");
+
+insert into hop_dong
+values 
+(9,1,9,4,"2018-12-10","2021-10-10",34234,23423423),
+(10,1,10,6,"2018-03-10","2020-12-10",675464,45745665),
+(11,1,9,3,"2019-06-20","2020-12-13",4564,3987665),
+(12,1,8,1,"2019-06-10","2021-10-15",5664,4567656);
+
+insert into hop_dong_chi_tiet
+values 
+(13,5,1,4),
+(14,6,2,2),
+(15,7,2,1),
+(16,5,3,1),
+(17,4,1,4),
+(18,1,4,2),
+(19,1,4,1),
+(20,3,5,1);
