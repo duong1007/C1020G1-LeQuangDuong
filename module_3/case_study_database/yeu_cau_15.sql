@@ -7,4 +7,4 @@ left join trinh_do on nhan_vien.ID_Trinh_Do = trinh_do.ID_Trinh_Do
 left join bo_phan on nhan_vien.ID_Bo_Phan = bo_phan.ID_Bo_Phan
 where hop_dong.Ngay_Lam_Dich_Vu between "2018-01-01" and "2019-12-31"
 group by nhan_vien.ID_Nhan_Vien) a
-where count < 3 or count = 3;
+having count < 4;

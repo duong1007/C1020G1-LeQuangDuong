@@ -20,7 +20,7 @@ Ten_Bo_Phan varchar(45) not null
 );
 
 create table Nhan_Vien (
-ID_Nhan_Vien int primary key,
+ID_Nhan_Vien int primary key auto_increment,
 Ho_Ten varchar(50) not null,
 ID_Vi_Tri int not null,
 ID_Trinh_Do int not null,
@@ -43,7 +43,7 @@ Ten_Loai_Khach varchar(45)
 );
 
 create table Khach_Hang (
-ID_Khach_Hang int primary key,
+ID_Khach_Hang int primary key auto_increment,
 ID_Loai_Khach int,
 Ho_Ten varchar(45) not null,
 Ngay_Sinh date not null,
@@ -93,7 +93,7 @@ Trang_Thai_Kha_Dung varchar(45) not null
 
 
 create table Hop_Dong (
-ID_Hop_Dong int primary key,
+ID_Hop_Dong int primary key auto_increment,
 ID_Nhan_Vien int,
 ID_Khach_Hang int,
 ID_Dich_Vu int,

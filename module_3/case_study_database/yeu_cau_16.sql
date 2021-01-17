@@ -1,4 +1,4 @@
-delete from nhan_vien e
+delete from nhan_vien 
 where ID_Nhan_Vien not in (
 						  select hop_dong.ID_Nhan_Vien 
 						  from hop_dong
