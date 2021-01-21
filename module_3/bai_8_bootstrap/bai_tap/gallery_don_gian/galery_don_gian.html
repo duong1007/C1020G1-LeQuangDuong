@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .hand-border {
+            border: 1px solid #ccc;
+        }
+
+        .hand-border:hover {
+            border: 1px solid #777;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .clearfix {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+</head>
+<body>
+
+<h2>Responsive Image Gallery</h2>
+<h4>Resize the browser window to see the effect.</h4>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 col-sm-6 col-12">
+            <div class="hand-border">
+                <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg">
+                    <img src="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg" alt="Trolltunga Norway">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-12">
+            <div class="hand-border">
+                <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_forest.jpg">
+                    <img src="https://demo.codegym.vn/web/15/gallery/img_forest.jpg" alt="Forest">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-12">
+            <div class="hand-border">
+                <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_lights.jpg">
+                    <img src="https://demo.codegym.vn/web/15/gallery/img_lights.jpg" alt="Northern Lights">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-12">
+            <div class="hand-border">
+                <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_mountains.jpg">
+                    <img src="https://demo.codegym.vn/web/15/gallery/img_mountains.jpg" alt="Mountains">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<div style="padding:6px;">
+    <p>This example use media queries to re-arrange the images on different screen sizes:
+        for screens larger than 700px wide, it will show four images side by side,
+        for screens smaller than 700px, it will show two images side by side.
+        For screens smaller than 500px, the images will stack vertically (100%).</p>
+</div>
+
+</body>
+</html>

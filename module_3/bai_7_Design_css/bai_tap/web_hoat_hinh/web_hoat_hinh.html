@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        [class*="col-"] {
+            float: left;
+            padding: 10px;
+        }
+        @media only screen and (max-width: 768px) {
+            [class*="col-"] {
+                width: 100%;
+            }}
+        .header{
+            background-color: gray;
+            padding: 10px;
+        }
+        .middle{
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(149,144,143,1) ;
+            margin-top: 5px;
+        }
+        .read{
+            padding-left: 80px;
+            padding-bottom: 30px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="row">
+    <div class="header">
+        <p><b>PHIM</b> <b style="background-color: rgba(245,42,53,1); padding: 5px">HOẠT HÌNH</b></p>
+    </div>
+</div>
+<div class="row">
+    <div class="middle">
+        <span>Phim Hoạt Hình</span>
+        <span>|</span>
+        <span>Phim Hoạt Hình Yêu Thích</span>
+        <span>|</span>
+        <span>Nhân Vật Hoạt Hình</span>
+        <span>|</span>
+        <span>Góp Ý</span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <img src="https://img4.thuthuatphanmem.vn/uploads/2019/11/18/anh-hoat-hinh-buon-mot-minh_033142454.jpg" alt="Đọc Ngay"  width="250"  height="300">
+        <p class="read">Đọc Ngay</p>
+        <img src="https://img.thuthuatphanmem.vn/uploads/2018/10/10/anh-hoat-hinh-girl-dep_052251675.jpg" alt="#"  width="250" height="300">
+        <p class="read">Đọc Ngay</p>
+        <img src="https://img.thuthuatphanmem.vn/uploads/2018/10/10/anh-dep-hoat-hinh-anime-girl_052251347.jpg" alt="#" width="250" height="300">
+        <p class="read">Đọc Ngay</p>
+    </div>
+</div>
+<div class="col-8">
+    <img src="https://vehoathinhcartoon.com/wp-content/uploads/2018/09/15-h%C3%ACnh-n%E1%BB%81n-Conan-%C4%91%E1%BA%B9p-lung-linh-kh%C3%B4ng-th%E1%BB%83-b%E1%BB%8F-qua-vehoathinhcartoon-com-749x499.png" alt="">
+    <h2>Thám Tử Lừng Danh Conna</h2>
+    <p>Thám tử lừng danh Conan (名探偵コナン (Danh thám trinh Conan) Meitantei Konan?, tựa tiếng Anh: "Detective Conan",
+        tại Mỹ có tên là "Case Closed") là một bộ manga Nhật Bản dành cho lứa tuổi thiếu niên thuộc thể loại trinh
+        thám được vẽ và minh họa bởi Aoyama Gosho. Bộ truyện này ban đầu là những chương truyện nhỏ được đăng trên
+        tuần báo Shōnen Sunday của Shogakukan từ ngày 19 tháng 1 năm 1994 sau đó được đóng thành các tập tankōbon</p>
+</div>
+<div class="row">
+    <div class="col-12">
+        <p style="text-align: center ; background-color:rgba(149,144,143,0.69) ">Foot Text</p>
+    </div>
+</div>
+</body>
+</html>
