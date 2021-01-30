@@ -2,20 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dce2012-5830-4da2-a445-e4d26ab56406" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/yeu_cau_6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeu_cau_6_task_1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeu_cau_6_task_2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module1/Hướng đối tượng/bài tập/meo_bat_chuot.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module1/cấu trúc điều kiện 1/bài tập/example-slide-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module1/cấu trúc điều kiện 1/bài tập/example-slide-12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module1/cấu trúc điều kiện 1/bài tập/example-slide-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module1/cấu trúc điều kiện 1/bài tập/example-slide-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module1/cấu trúc điều kiện 1/bài tập/example-slide-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/GreetingWeb/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/GreetingWeb/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/GreetingWeb/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/GreetingWeb/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/GreetingWeb/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/create_gradle/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/create_gradle/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/create_gradle/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/create_gradle/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/create_gradle/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/create_gradle/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/create_gradle/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/create_gradle/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/create_gradle/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/create_gradle/src/main/java/Greeter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/create_gradle/src/main/java/HelloWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_14/thuc_hanh/create_gradle/src/main/java/HelloWorldTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/bai_1_co_so_du_lieu_quan_he/thuc_hanh/.idea/thuc_hanh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/C1020G1_LeQuangDuong.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/C1020G1_LeQuangDuong.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CaseStudy_LeQuangDuong.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CaseStudy_1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Yeu_cau_3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Yeu_cau_3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module1/Biến, khai báo biến và kiểu dữ liệu/Bài tập/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module1/cấu trúc điều kiện 1/bài tập/game_puzzle.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/cấu trúc điều kiện 1/bài tập/game_puzzle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_3/bai_12_jdbc/thuc_hanh/demo.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../module_3/bai_12_jdbc/thuc_hanh/demo.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_3/bai_8_bootstrap/bai_tap/gallery_don_gian/galery_don_gian.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_3/bai_8_bootstrap/bai_tap/gallery_don_gian/galery_don_gian.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +59,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/egg_game/index.html" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -84,6 +97,7 @@
       <workItem from="1606202887235" duration="1063000" />
       <workItem from="1606275783461" duration="924000" />
       <workItem from="1606361145460" duration="881000" />
+      <workItem from="1611905341234" duration="198000" />
     </task>
     <servers />
   </component>
@@ -91,9 +105,13 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1606189253238">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1611905491246">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606189253238" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1611905491246" />
+    <state x="65" y="0" key="new project wizard" timestamp="1611905538124">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1611905538124" />
   </component>
 </project>
