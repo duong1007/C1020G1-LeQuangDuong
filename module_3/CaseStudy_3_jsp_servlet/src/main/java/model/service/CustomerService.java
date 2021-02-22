@@ -1,14 +1,14 @@
 package model.service;
 
 import model.bean.Customer;
-import model.repository.CustomerRepository;
-import model.repository.CustomerRepositoryImp;
+import model.repository.Repository;
+import model.repository.customer.CustomerRepositoryImp;
 
 import java.util.List;
 
-public class CustomerService implements CustomerRepository{
+public class CustomerService implements Repository<Customer>{
 
-    CustomerRepository customerRepositoryImp = new CustomerRepositoryImp();
+    Repository<Customer> customerRepositoryImp = new CustomerRepositoryImp();
 
 
     @Override
@@ -35,5 +35,10 @@ public class CustomerService implements CustomerRepository{
     @Override
     public Customer findById(int id) {
         return customerRepositoryImp.findById(id);
+    }
+
+    @Override
+    public List<Customer> findByName(String name) {
+        return customerRepositoryImp.findByName(name);
     }
 }

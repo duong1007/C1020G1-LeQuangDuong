@@ -9,12 +9,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@javax.servlet.annotation.WebServlet(name = "CustomerServlet", urlPatterns = {"","/customers"})
+@javax.servlet.annotation.WebServlet(name = "CustomerServlet", urlPatterns = "/customers")
 public class CustomerServlet extends javax.servlet.http.HttpServlet {
 
     private CustomerService customerService = new CustomerService();
 
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
+
         String action = request.getParameter("action");
 
         if (action == null) {
@@ -25,19 +30,23 @@ public class CustomerServlet extends javax.servlet.http.HttpServlet {
             case "create":
                 create(request,response);
                 break;
-            case "read":
-                break;
             case "update":
                 updateCustomer(request,response);
                 break;
             default:
                 showCustomer(request,response);
                 break;
+
         }
+
     }
 
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
+
         String action = request.getParameter("action");
 
         if (action == null) {
@@ -48,19 +57,36 @@ public class CustomerServlet extends javax.servlet.http.HttpServlet {
             case "create":
                 showCreate(request,response);
                 break;
-            case "read":
-                break;
             case "update":
                 showUpdate(request,response);
                 break;
             case "delete":
+                deleteCustomer(request,response);
                 break;
-            case "find":
+            case "Search":
+                findByName(request,response);
                 break;
             default:
                 showCustomer(request,response);
                 break;
         }
+
+    }
+
+    private void findByName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name = request.getParameter("name");
+        List<Customer> customers = customerService.findByName(name);
+
+        request.setAttribute("customers",customers);
+        request.setAttribute("search","customers");
+        request.getRequestDispatcher("customer/display.jsp").forward(request,response);
+    }
+
+    private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        customerService.delete(id);
+
+        showCustomer(request,response);
 
     }
 
@@ -77,7 +103,7 @@ public class CustomerServlet extends javax.servlet.http.HttpServlet {
         Customer customer = new Customer(type,name,date,gender,card,phone,email,address);
         customerService.create(customer);
 
-        request.getRequestDispatcher("customer/display.jsp").forward(request,response);
+        showCustomer(request,response);
 
     }
 
@@ -85,6 +111,7 @@ public class CustomerServlet extends javax.servlet.http.HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Customer customer = customerService.findById(id);
 
+        request.setAttribute("search","customers");
         request.setAttribute("customer",customer);
         request.getRequestDispatcher("customer/update.jsp").forward(request,response);
     }
@@ -108,11 +135,14 @@ public class CustomerServlet extends javax.servlet.http.HttpServlet {
 
     private void showCustomer(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Customer> customers = customerService.readAll();
+
         request.setAttribute("customers",customers);
+        request.setAttribute("search","customers");
         request.getRequestDispatcher("customer/display.jsp").forward(request,response);
     }
 
     private void showCreate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("search","customers");
         request.getRequestDispatcher("customer/create.jsp").forward(request,response);
     }
 }
