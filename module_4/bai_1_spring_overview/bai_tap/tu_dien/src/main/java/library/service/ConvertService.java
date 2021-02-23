@@ -7,22 +7,22 @@ public class ConvertService {
     private  String[] english = Data.english;
 
     public String chance(String word){
-        String result = "không tìm thấy kết quả";
+        String result;
         int i;
         for (i = 0; i < vietNam.length ; i++) {
             String answer = vietNam[i];
             if (word.equals(answer)) {
-                result = english[i];
+              return result = english[i];
             }
         }
         
         for (i = 0; i < english.length ; i++) {
             String answer = vietNam[i];
             if (word.equals(answer)) {
-                result = vietNam[i];
+              return result = vietNam[i];
             }
         }
 
-        return result;
+        return result = "không có kết quả";
     }
 }
