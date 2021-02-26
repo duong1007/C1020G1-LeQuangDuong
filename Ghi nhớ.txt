@@ -38,3 +38,4 @@ compile group: 'org.springframework', name: 'spring-web', version: '4.3.17.RELEA
 compile group: 'org.springframework', name: 'spring-webmvc', version: '4.3.17.RELEASE'
 compile group: 'org.thymeleaf', name: 'thymeleaf-spring4', version: '3.0.9.RELEASE'
 compile group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '1.2'
+compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.3.Final'
