@@ -52,4 +52,6 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
         return viewResolver;
     }
 
+
+
 }

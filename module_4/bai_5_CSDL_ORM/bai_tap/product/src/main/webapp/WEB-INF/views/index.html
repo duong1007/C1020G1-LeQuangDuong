@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Title</title>
+</head>
+<div th:if="${success}">
+    <span th:text="${success}"></span>
+</div>
+<body>
+    <a th:href="@{/create}">Add new Product</a>
+    <fieldset>
+        <legend> Product List </legend>
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Manufacture</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="p : ${products}">
+                <td><a th:href="@{/{id}/view(id=${p.id})}" th:text="${p.name}"></a></td>
+                <td th:text="${p.price}"></td>
+                <td th:text="${p.manufacture}"></td>
+                <td><a th:href="@{/{id}/edit(id=${p.getId()})}">Edit</a></td>
+                <td><a th:href="@{/{id}/delete(id=${p.getId()})}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </fieldset>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
