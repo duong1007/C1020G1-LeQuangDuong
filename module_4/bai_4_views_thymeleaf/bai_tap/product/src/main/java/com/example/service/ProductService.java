@@ -1,39 +1,19 @@
 package com.example.service;
 
 import com.example.model.Product;
-import com.example.repository.ProductRepository;
-import com.example.repository.ProductRepositoryImp;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class ProductService implements ProductRepository {
 
-    ProductRepository productRepository = new ProductRepositoryImp();
+public interface ProductService {
 
-    @Override
-    public List<Product> findAll() {
-        return productRepository.findAll();
-    }
+    List<Product> findAll();
 
-    @Override
-    public void save(Product product) {
-        productRepository.save(product);
-    }
+    void save(Product product);
 
-    @Override
-    public Product findById(int id) {
-        return productRepository.findById(id);
-    }
+    Product findById(int id);
 
-    @Override
-    public void update(int id, Product product) {
-        productRepository.update(id,product);
-    }
+    void update(int id, Product product);
 
-    @Override
-    public void remove(int id) {
-        productRepository.remove(id);
-    }
+    void remove(int id);
 }

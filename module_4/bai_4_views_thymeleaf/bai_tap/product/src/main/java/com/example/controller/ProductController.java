@@ -3,6 +3,7 @@ package com.example.controller;
 
 import com.example.model.Product;
 import com.example.service.ProductService;
+import com.example.service.ProductServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +18,7 @@ import java.util.List;
 public class ProductController {
 
     @Autowired
-    ProductService productService;
+    ProductServiceImp productService;
 
     @GetMapping("/")
     public String index(Model model) {

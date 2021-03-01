@@ -3,13 +3,13 @@ package product_manager.service.iml;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import product_manager.model.Product;
-import product_manager.repository.ProductRepository;
 import product_manager.repository.iml.ProductRepositoryIml;
+import product_manager.service.ProductService;
 
 import java.util.List;
 
 @Service
-public class ProductServiceIml implements ProductRepository {
+public class ProductServiceIml implements ProductService {
 
     @Autowired
     ProductRepositoryIml productRepositoryIml;
