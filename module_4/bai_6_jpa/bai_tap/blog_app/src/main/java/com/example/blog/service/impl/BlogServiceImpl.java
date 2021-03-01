@@ -26,7 +26,17 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    public void create(Blog blog) {
+        blogRepository.save(blog);
+    }
+
+    @Override
     public void update(Integer id, Blog blog) {
+       Blog oldBlog = blogRepository.findById(id).get();
+       oldBlog.setName(blog.getName());
+       oldBlog.setContent(blog.getContent());
+       oldBlog.setType(blog.getType());
+       blogRepository.save(oldBlog);
     }
 
     @Override

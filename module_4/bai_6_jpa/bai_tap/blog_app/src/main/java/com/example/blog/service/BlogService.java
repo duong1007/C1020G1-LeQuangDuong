@@ -10,6 +10,8 @@ public interface BlogService {
 
     Blog findById(Integer id);
 
+    void create(Blog blog);
+
     void update(Integer id,Blog blog);
 
     void delete(Integer id);
