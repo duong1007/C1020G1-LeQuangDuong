@@ -33,7 +33,7 @@ public class BlogController {
 
     @PostMapping("/create")
     public String create(Blog blog) {
-        blogService.create(blog);
+        blogService.save(blog);
         return "redirect:/";
     }
 
@@ -46,7 +46,7 @@ public class BlogController {
 
     @PostMapping("/edit")
     public String update(Blog blog,RedirectAttributes redirectAttributes) {
-        blogService.update(blog.getId(),blog);
+        blogService.save(blog);
         redirectAttributes.addFlashAttribute("success","edit success");
         return "redirect:/";
     }

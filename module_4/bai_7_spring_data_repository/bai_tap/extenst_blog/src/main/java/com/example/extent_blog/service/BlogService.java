@@ -1,6 +1,8 @@
-package com.example.blog.service;
+package com.example.extent_blog.service;
 
-import com.example.blog.model.Blog;
+
+import com.example.extent_blog.model.Blog;
+import com.example.extent_blog.model.BlogCategory;
 
 import java.util.List;
 
@@ -13,5 +15,6 @@ public interface BlogService {
     void save(Blog blog);
 
     void delete(Integer id);
+
 
 }

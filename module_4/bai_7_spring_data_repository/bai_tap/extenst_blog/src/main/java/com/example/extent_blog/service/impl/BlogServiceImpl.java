@@ -1,8 +1,9 @@
-package com.example.blog.service.impl;
+package com.example.extent_blog.service.impl;
 
-import com.example.blog.model.Blog;
-import com.example.blog.repository.BlogRepository;
-import com.example.blog.service.BlogService;
+
+import com.example.extent_blog.model.Blog;
+import com.example.extent_blog.repository.BlogRepository;
+import com.example.extent_blog.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,6 @@ public class BlogServiceImpl implements BlogService {
     BlogRepository blogRepository;
 
 
-    @Override
     public List<Blog> findAll() {
         return blogRepository.findAll();
     }
