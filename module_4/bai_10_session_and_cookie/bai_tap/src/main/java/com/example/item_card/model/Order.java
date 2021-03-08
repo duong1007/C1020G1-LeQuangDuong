@@ -16,6 +16,7 @@ public class Order {
         this.amount = amount;
     }
 
+
     public Product getProduct() {
         return product;
     }

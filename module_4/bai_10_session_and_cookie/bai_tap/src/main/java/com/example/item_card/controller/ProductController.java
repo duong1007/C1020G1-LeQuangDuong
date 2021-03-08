@@ -51,7 +51,7 @@ public class ProductController {
         return "/view";
     }
 
-    @PostMapping("/{id}/cart")
+    @GetMapping("/{id}/cart")
     public String addToCart(@ModelAttribute("cart") List<Order> cart,
                             @PathVariable int id,
                             @RequestParam int amount,
@@ -61,5 +61,23 @@ public class ProductController {
         return "redirect:/";
     }
 
+    @GetMapping("/show-cart")
+    public String showCart(){
+        return "/cart";
+    }
 
+    @GetMapping("/{id}/delete-by-id")
+    public String updateCart(@ModelAttribute("cart") List<Order> cart,
+                             @PathVariable int id){
+        cart.remove(id);
+        return "/cart";
+    }
+
+    @GetMapping("/delete-all")
+    public String updateCart(@ModelAttribute("cart") List<Order> cart){
+        for (Order oder: cart) {
+            cart.remove(oder);
+        }
+        return "redirect:/cart";
+    }
 }

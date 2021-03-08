@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<span></span>
+<th:block th:if="${mess}">
+    <p th:text="${mess}"></p>
+</th:block>
+<section class="shopping-cart spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form th:action="@{/update-cart}">
+                    <div class="cart-table">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th class="p-name">Product Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th><a th:href="@{/delete-all}">X</a></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="order,orderStart : ${cart}">
+                                <td class="cart-pic first-row"><img th:src="@{/img/products/{image}.jpg(image=${order.product.img})}" alt="" src="#"></td>
+                                <td class="cart-title first-row">
+                                    <h5 th:text="${order.product.name}"></h5>
+                                </td>
+                                <td class="p-price first-row" th:text="'$'+${order.product.price}+'.00'"></td>
+                                <td class="qua-col first-row">
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" name="amount" value="1">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="total-price first-row" th:text="'$'+${order.product.price}+'.00'"></td>
+                                <td class="close-td first-row">
+                                    <a th:href="@{/{id}/delete-by-id(id=${orderStart.index})}">X</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="cart-buttons">
+                                <a href="#" class="primary-btn continue-shop">Continue shopping</a>
+                                <button type="submit" class="primary-btn up-cart">Update cart</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 offset-lg-4">
+                            <div class="proceed-checkout">
+                                <ul>
+                                    <li class="subtotal">Subtotal <span>$240.00</span></li>
+                                    <li class="cart-total">Total <span>$240.00</span></li>
+                                </ul>
+                                <a href="#" class="proceed-btn">PROCEED TO CHECK OUT</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
