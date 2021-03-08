@@ -2,7 +2,7 @@ package com.example.libary_management.controller;
 
 
 import com.example.libary_management.model.Book;
-import com.example.libary_management.model.BorrowBooks;
+import com.example.libary_management.model.BorrowBook;
 import com.example.libary_management.service.Imp.BookServiceImp;
 import com.example.libary_management.service.Imp.BorrowBookServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
@@ -41,21 +42,21 @@ public class LibraryManagementController {
     }
 
     @PostMapping("/create")
-    public String create(Book book,Model model){
+    public String createBook(Book book,Model model){
         bookServiceImp.save(book);
         model.addAttribute("mess","thêm sách thành công");
         return "/book/create";
     }
 
     @GetMapping("/{id}/borrow")
-    public String borrow(@PathVariable Integer id, RedirectAttributes redirectAttributes){
-        BorrowBooks borrowBook = new BorrowBooks();
+    public String borrowBook(@PathVariable Integer id, RedirectAttributes redirectAttributes){
+        BorrowBook borrowBook = new BorrowBook();
         Book book = bookServiceImp.findById(id);
 
         borrowBook.setBook(book);
 
 
-        long code = (long) ((Math.random()*99999) + 10000);
+        int code = (int) ((Math.random()*99999) + 10000);
         borrowBook.setBookCode(code);
 
 
@@ -66,5 +67,29 @@ public class LibraryManagementController {
 
         redirectAttributes.addFlashAttribute("code",code);
         return "redirect:/";
+    }
+
+    @GetMapping("/pay")
+    public String pay(){
+        return "/book/pay";
+    }
+
+    @PostMapping("/pay")
+    public  String payBook(@RequestParam int borrowCode, RedirectAttributes redirectAttributes){
+        BorrowBook borrowBook = borrowBookServiceImp.findByBookCode(borrowCode);
+        if(borrowBook != null) {
+            borrowBookServiceImp.delete(borrowBook);
+
+
+            Book book = bookServiceImp.findById(borrowBook.getBook().getId());
+            book.setAmount(book.getAmount()+1);
+            bookServiceImp.save(book);
+
+
+            redirectAttributes.addFlashAttribute("mesPay","Pay Success");
+            return "redirect:/";
+        } else {
+            return "/book/error";
+        }
     }
 }

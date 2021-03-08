@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<span></span>
+<h1>Product List</h1>
+<th:block th:if="${mess}">
+    <p th:text="${mess}"></p>
+</th:block>
+<h4><a th:href="@{/show-cart}">Shopping Cart</a></h4>
+<div class="product-list">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 order-1 order-lg-2">
+                <div class="col-lg-4 col-sm-6" th:each="product : ${products}">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img th:src="@{/img/products/{image}.jpg(image=${product.img})}" alt="">
+                            <div class="icon">
+                                <i class="icon_heart_alt"></i>
+                            </div>
+                            <ul>
+                                <li class="quick-view"><a th:href="@{/{id}/view(id=${product.id})}">+ Quick View</a></li>
+                            </ul>
+                        </div>
+                        <div class="pi-text">
+                            <div class="catagory-name">Towel</div>
+                            <a href="#">
+                                <h5 th:text="${product.name}"></h5>
+                            </a>
+                            <div class="product-price">
+                                $1.00
+                                <span th:text="'$'+${product.price}+'.00'"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

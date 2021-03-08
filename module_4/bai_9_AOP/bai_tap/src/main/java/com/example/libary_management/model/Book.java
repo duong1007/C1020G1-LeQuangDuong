@@ -16,7 +16,7 @@ public class Book {
 
     @OneToMany
     @JoinColumn(name = "borrow_book_id",referencedColumnName = "id")
-    private Set<BorrowBooks> borrowBooks;
+    private Set<BorrowBook> borrowBooks;
 
     public String getContent() {
         return content;
@@ -26,11 +26,11 @@ public class Book {
         this.content = content;
     }
 
-    public Set<BorrowBooks> getBorrowBooks() {
+    public Set<BorrowBook> getBorrowBooks() {
         return borrowBooks;
     }
 
-    public void setBorrowBooks(Set<BorrowBooks> borrowBooks) {
+    public void setBorrowBooks(Set<BorrowBook> borrowBooks) {
         this.borrowBooks = borrowBooks;
     }
 

@@ -1,7 +1,6 @@
 package com.example.libary_management.service.Imp;
 
-import com.example.libary_management.model.Book;
-import com.example.libary_management.model.BorrowBooks;
+import com.example.libary_management.model.BorrowBook;
 import com.example.libary_management.repository.BorrowBookRepository;
 import com.example.libary_management.service.BorrowBookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,22 +15,28 @@ public class BorrowBookServiceImp implements BorrowBookService {
     BorrowBookRepository borrowBookRepository;
 
     @Override
-    public List<BorrowBooks> findAll() {
+    public List<BorrowBook> findAll() {
         return borrowBookRepository.findAll();
     }
 
     @Override
-    public void save(BorrowBooks borrowBook) {
+    public void save(BorrowBook borrowBook) {
         borrowBookRepository.save(borrowBook);
     }
 
     @Override
-    public BorrowBooks findById(Integer id) {
+    public BorrowBook findById(Integer id) {
         return borrowBookRepository.findById(id).orElse(null);
     }
 
     @Override
-    public void delete(Integer id) {
-        borrowBookRepository.deleteById(id);
+    public void delete(BorrowBook borrowBook) {
+        borrowBookRepository.delete(borrowBook);
     }
+
+    @Override
+    public BorrowBook findByBookCode(int bookCode) {
+        return borrowBookRepository.findByBookCode(bookCode);
+    }
+
 }

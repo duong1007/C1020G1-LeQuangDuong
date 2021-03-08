@@ -6,11 +6,6 @@
 </head>
 <body>
 <h1 th:text="${mess}"></h1>
-<h1>
-    <th:block th:if="${code}">
-
-    </th:block>
-</h1>
 <form action="#" th:action="@{/create}" method="post" th:object="${book}" >
     <div>
         <label>
@@ -40,8 +35,11 @@
         </label>
     </div>
     <div>
-        <button type="submit">Add</button>
+        <button type="submit" >Add</button>
     </div>
 </form>
+<h2>
+    <a th:href="@{/}">Back to home</a>
+</h2>
 </body>
 </html>

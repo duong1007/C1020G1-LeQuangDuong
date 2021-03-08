@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Book's Name</th>
+        <th>Borrow Code</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="borrow,borrowStart : ${borrows}">
+        <td th:text="${borrowStart.count}"></td>
+        <td th:text="${borrow.book.name}"></td>
+        <td th:text="${borrow.bookCode}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

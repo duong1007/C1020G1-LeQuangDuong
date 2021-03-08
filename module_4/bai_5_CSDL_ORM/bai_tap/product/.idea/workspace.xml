@@ -2,59 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b99be0d9-7bd0-4c86-8bff-f1937d025852" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/product_manager/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/bai_tap/blog_app/src/main/java/com/example/blog/model/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/bai_tap/blog_app/src/main/java/com/example/blog/repository/BlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/bai_tap/blog_app/src/main/java/com/example/blog/service/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/bai_tap/blog_app/src/main/java/com/example/blog/service/impl/BlogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/.gradle/5.2.1/fileContent/fileContent.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/build/classes/java/main/com/example/ApplicationConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/build/classes/java/main/com/example/ApplicationInitializer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/build/classes/java/main/com/example/controller/CustomerController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/build/classes/java/main/com/example/model/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/build/classes/java/main/com/example/repository/CustomerRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/build/classes/java/main/com/example/repository/Repository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/build/classes/java/main/com/example/repository/impl/CustomerRepositoryImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/build/classes/java/main/com/example/service/CustomerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/build/classes/java/main/com/example/service/impl/CustomerServiecImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/src/main/java/com/example/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/src/main/java/com/example/ApplicationInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/src/main/java/com/example/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/src/main/java/com/example/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/src/main/java/com/example/repository/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/src/main/java/com/example/repository/Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/src/main/java/com/example/repository/impl/CustomerRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/src/main/java/com/example/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/src/main/java/com/example/service/impl/CustomerServiecImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../bai_6_jpa/thuc_hanh/customer/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_10_session_and_cookie/thuc_hanh/count_view/src/main/java/com/example/count_view/controller/CounterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_10_session_and_cookie/thuc_hanh/count_view/src/main/java/com/example/count_view/model/MyCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_10_session_and_cookie/thuc_hanh/count_view/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/aspect/BooksAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/config/AOPConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/controller/BorrowBookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/resources/templates/book/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/resources/templates/book/pay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/resources/templates/borrow/code.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/product_manager/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/product_manager/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/product_manager/AppInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/product_manager/AppInit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/product-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/product-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/product_manager/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/product_manager/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/product_manager/AppInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/product_manager/AppInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/product_manager/service/iml/ProductServiceIml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/product_manager/service/iml/ProductServiceIml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/controller/LibraryManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/controller/LibraryManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/model/BorrowBooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/model/BorrowBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/repository/BorrowBookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/repository/BorrowBookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/service/BorrowBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/service/BorrowBookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/service/Imp/BorrowBookServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/java/com/example/libary_management/service/Imp/BorrowBookServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/resources/templates/book/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/resources/templates/book/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/resources/templates/book/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/resources/templates/book/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/resources/templates/book/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_9_AOP/bai_tap/src/main/resources/templates/book/view.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +68,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../bai_4_views_thymeleaf/bai_tap/product" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -226,6 +193,7 @@
       <workItem from="1614527072833" duration="424000" />
       <workItem from="1614558967132" duration="7005000" />
       <workItem from="1614608746320" duration="211000" />
+      <workItem from="1615097171377" duration="348000" />
     </task>
     <servers />
   </component>

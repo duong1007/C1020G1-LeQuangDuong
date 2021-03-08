@@ -3,18 +3,18 @@ package com.example.libary_management.model;
 import javax.persistence.*;
 
 @Entity
-public class BorrowBooks {
+public class BorrowBook {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private long bookCode;
+    private int bookCode;
 
     @ManyToOne
     @JoinColumn(name = "book_id",referencedColumnName = "id")
     private Book book;
 
-    public BorrowBooks() {
+    public BorrowBook() {
     }
 
 
@@ -30,7 +30,7 @@ public class BorrowBooks {
         return bookCode;
     }
 
-    public void setBookCode(long bookCode) {
+    public void setBookCode(int bookCode) {
         this.bookCode = bookCode;
     }
 

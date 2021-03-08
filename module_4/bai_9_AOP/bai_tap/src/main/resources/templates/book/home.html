@@ -6,8 +6,15 @@
 </head>
 <body>
 <h1>Book Library</h1>
-<h3><a href="#">Pay Book</a></h3>
+<h3><a th:href="@{/pay}">Pay Book</a></h3>
+<th:block th:if="${mesPay}">
+    <h1 th:text="${mesPay}"></h1>
+</th:block>
+
 <h2><a th:href="@{/create}">Add new Book</a></h2>
+<th:block th:if="${code}"> Borrow Code
+    <h1 th:text="${code}"></h1>
+</th:block>
 <table>
     <caption>Book List</caption>
     <thead>

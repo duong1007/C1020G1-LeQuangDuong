@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/create" method="post" th:object="${product}">
+    <div>
+        <label> Name
+            <input type="text" th:field="*{name}">
+        </label>
+    </div>
+    <br>
+    <div>
+        <label> Price
+            <input type="number" th:field="*{price}">
+        </label>
+    </div>
+    <br>
+    <div>
+        <label> Manufacture
+            <input type="text" th:field="*{manufacture}">
+        </label>
+    </div>
+    \<br>
+    <div>
+        <label> Description
+            <input type="text" th:field="*{description}">
+        </label>
+    </div>
+    <br>
+    <div>
+        <label> Image
+            <input type="text" th:field="*{img}">
+        </label>
+    </div>
+    <br>
+    <div>
+        <input type="submit" value="Create">
+    </div>
+</form>
+<th:block th:if="${mess}">
+    <p th:text="${mess}"></p>
+</th:block>
+<a href="/">Bach to home</a>
+</body>
+</html>

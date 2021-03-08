@@ -1,16 +1,18 @@
 package com.example.libary_management.service;
 
 
-import com.example.libary_management.model.BorrowBooks;
+import com.example.libary_management.model.BorrowBook;
 
 import java.util.List;
 
 public interface BorrowBookService {
-    List<BorrowBooks> findAll();
+    List<BorrowBook> findAll();
 
-    void save(BorrowBooks borrowBook);
+    void save(BorrowBook borrowBook);
 
-    BorrowBooks findById(Integer id);
+    BorrowBook findById(Integer id);
 
-    void delete(Integer id);
+    void delete(BorrowBook borrowBook);
+
+    BorrowBook findByBookCode(int bookCode);
 }
