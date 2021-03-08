@@ -75,9 +75,9 @@ public class ProductController {
 
     @GetMapping("/delete-all")
     public String updateCart(@ModelAttribute("cart") List<Order> cart){
-        for (Order oder: cart) {
-            cart.remove(oder);
+        while (!cart.isEmpty()){
+            cart.remove(0);
         }
-        return "redirect:/cart";
+        return "/cart";
     }
 }
