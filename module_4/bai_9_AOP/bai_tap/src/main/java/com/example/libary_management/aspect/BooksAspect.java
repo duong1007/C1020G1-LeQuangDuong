@@ -4,15 +4,24 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.slf4j.LoggerFactory;
 
 @Aspect
 public class BooksAspect {
 
     private static int amountPeople = 0;
 
-    @After("execution(* com.example.libary_management.controller.LibraryManagementController.*Book(..))")
-    public void AfterChangeBookStatus(JoinPoint joinPoint){
-        System.out.println("sách đã thay đổi trạng thái" + joinPoint.getSignature().getName());
+    private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(BookController.class);
+    public static String bookName;
+
+    @After("execution(* com.example.libary_management.controller.BookController.borrowBook(*,*))")
+    public void afterBorrowing(){
+        LOGGER.info("Book: " + bookName + " had been borrowed !");
+    }
+
+    @After("execution(* com.app.controller.BookController.returnBook(*,*))")
+    public void afterReturning(){
+        LOGGER.info("Book: " + bookName + " had been return !");
     }
 
     @Before("execution(* com.example.libary_management.controller.LibraryManagementController.*showList(..))")
