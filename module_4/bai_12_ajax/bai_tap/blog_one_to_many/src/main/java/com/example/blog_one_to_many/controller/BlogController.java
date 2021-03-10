@@ -8,6 +8,7 @@ import com.example.blog_one_to_many.service.impl.CategoryServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
@@ -46,6 +47,7 @@ public class BlogController {
         model.addAttribute("blogs", blogs);
         return "blog/home";
     }
+
 
     @GetMapping("/create")
     public String create(Model model){
@@ -100,5 +102,16 @@ public class BlogController {
         return "/blog/home";
     }
 
-
+    @GetMapping(value = "/search")
+    public String searchPage(@RequestParam(value = "search", required = false) String search, Model model,
+                             @PageableDefault(size = 5, sort = "localDate") Pageable pageable) {
+        Page<Blog> blogs;
+        if (search != null && !search.equals("")) {
+            blogs = blogService.findAllByNameContaining(search, pageable);
+        }else {
+            blogs = blogService.findAll(pageable);
+        }
+        model.addAttribute("blogs", blogs);
+        return "blog/home";
+    }
 }

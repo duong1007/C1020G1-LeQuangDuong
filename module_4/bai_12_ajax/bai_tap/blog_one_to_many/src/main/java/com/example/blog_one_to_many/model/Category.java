@@ -1,5 +1,7 @@
 package com.example.blog_one_to_many.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -11,6 +13,7 @@ public class Category {
     private Integer id;
     private String name;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "category",targetEntity = Blog.class)
     private List<Blog> blog;
 

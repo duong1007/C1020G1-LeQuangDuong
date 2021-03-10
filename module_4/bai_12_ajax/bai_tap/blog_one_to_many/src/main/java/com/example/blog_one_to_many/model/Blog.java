@@ -1,6 +1,9 @@
 package com.example.blog_one_to_many.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 
 @Entity
@@ -16,6 +19,7 @@ public class Blog {
     @Column(columnDefinition = "datetime")
     private String localDate;
 
+    @JsonManagedReference
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "category_id")
     private Category category;
