@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!--    Cách 1-->
+<!--    <script>-->
+<!--        $(document).ready(function(){-->
+<!--            $("#myInput").on("keyup", function() {-->
+<!--                let value = $(this).val().toLowerCase();-->
+<!--                $("#myTable tr").filter(function() {-->
+<!--                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)-->
+<!--                });-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
+
+
+<!--    cách 2-->
+    <script>
+        $(document).ready(function(){
+            $('#myInput').on("keyup",function(){
+                let search = document.getElementById("myInput").value;
+                $.ajax({
+                    type : 'GET',
+                    url : 'http://localhost:8080/test/search?search=' + search,
+                    data_type : 'HTML',
+                    success: function(blogs){
+                        let result = "";
+                        for (let i = 0; i < blogs.content.length; i++) {
+                            result += "<tr>";
+                            result += "<th>" + (i + 1) + "</th>";
+                            result += "<td>" + blogs.content[i].name + "</td>";
+                            result += "<td>" + blogs.content[i].type + "</td>";
+                            result += "<td>" + blogs.content[i].localDate + "</td>";
+                            result += "<td></td>";
+                            result += "<td></td>";
+                            result += "</tr>";
+                        }
+                        $("#myTable").html(result);
+                    }
+                })
+            })
+        })
+    </script>
+<!--    load-->
+    <script>
+        let result = "";
+        let page=0;
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: 'GET',
+            url: 'http://localhost:8080/test/',
+            data_type: 'json',
+            success: function (blogs) {
+                console.log(blogs);
+                for (let i = 0; i < blogs.content.length; i++) {
+                    result += "<tr>";
+                    result += "<th>" + (i + 1) + "</th>";
+                    result += "<td>" + blogs.content[i].name + "</td>";
+                    result += "<td>" + blogs.content[i].category.name + "</td>";
+                    result += "<td>" + blogs.content[i].localDate + "</td>";
+                    result += "<td></td>";
+                    result += "<td></td>";
+                    result += "</tr>";
+                }
+                $("#myTable").html(result);
+            }
+        });
+
+        $(document).ready(function(){
+            $("#btnLoad").click(function(){
+                $.ajax({
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                        "Access-Control-Allow-Origin": "*",
+                        "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
+                    },
+                    type: 'GET',
+                    url: 'http://localhost:8080/test/?page=' + (++page),
+                    data_type: 'json',
+                    success: function (blogs) {
+                        for (let i = 0; i < blogs.content.length; i++) {
+                            result += "<tr>";
+                            result += "<th>" + (i + 6) + "</th>";
+                            result += "<td>" + blogs.content[i].name + "</td>";
+                            result += "<td>" + blogs.content[i].category.name + "</td>";
+                            result += "<td>" + blogs.content[i].localDate + "</td>";
+                            result += "<td></td>";
+                            result += "<td></td>";
+                            result += "</tr>";
+                        }
+                        $("#myTable").html(result);
+                    }
+                })
+            })
+        })
+
+    </script>
+</head>
+<body>
+<h2><a href="/create">Add new Blog security</a></h2>
+<span>
+<h2><a href="/register">Register</a></h2>
+<a th:if="${#request.userPrincipal != null}" th:href="@{/logout}">Logout</a>
+</span>
+<h2><a href="ajax/create.html">Add new Blog Ajax</a></h2>
+
+<h2 th:text="${success}"></h2>
+    Search by name:
+    <input id="myInput" name="s" type="text" placeholder="Search.."/>
+<br/>
+<table border="1" style="border-collapse: collapse">
+    <caption>Blog Table</caption>
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Local Date</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody id="myTable">
+    </tbody>
+</table>
+<br>
+<button id="btnLoad">Load</button>
+</body>
+</html>

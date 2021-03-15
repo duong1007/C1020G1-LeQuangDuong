@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Blog</title>
+</head>
+<body>
+<div id="divCreate"></div>
+<div>
+    <label for="nameBlog">Name Blog</label>
+    <input type="text" id="nameBlog">
+</div>
+<br>
+<div>
+    <label for="contentBlog">Content</label>
+    <input type="text" id="contentBlog">
+</div>
+<br>
+<div id="category"></div>
+<br>
+<br>
+<button id="btnCreate">Create</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $.ajax({
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
+        },
+        type: 'GET',
+        url: 'http://localhost:8080/test/category',
+        data_type: 'json',
+        success: function(categories){
+            let result = "<label for='categoryBlog'>Category </label>";
+            result += "<select id='categoryBlog'>"
+            for (let i = 0; i < categories.length;i++) {
+                result += "<option value="+(i+1)+">" + categories[i].name + "</option>"
+            }
+            result += "</select>"
+
+            $("#category").html(result);
+        }
+    })
+
+    $(document).ready(function(){
+        $("#btnCreate").click(function(){
+            let name = $("#nameBlog").val();
+            let content = $("#contentBlog").val();
+            let categoryId = $("#categoryBlog").val();
+            let blog = {
+                "name" : name,
+                "content" : content,
+                "category" : {
+                    "id" : categoryId
+                }
+            };
+
+            $.ajax({
+                headers: {
+                    'Accept': 'application/json',
+                },
+                type: "POST",
+                url: "http://localhost:8080/test/createBlog",
+                data: JSON.stringify(blog),
+                contentType: "application/json;charset=UTF-8",
+                success: function(result){
+                    console.log(result)
+                    $("#divCreate").html("Đã tạo mới blog" + name )
+                },
+            })
+        })
+
+    })
+
+</script>
+
+</html>
