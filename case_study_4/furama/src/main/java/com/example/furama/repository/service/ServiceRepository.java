@@ -1,4 +1,4 @@
-package com.example.furama.repository.Service;
+package com.example.furama.repository.service;
 
 import com.example.furama.model.Service;
 import org.springframework.data.jpa.repository.JpaRepository;

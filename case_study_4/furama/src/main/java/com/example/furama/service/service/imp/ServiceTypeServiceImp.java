@@ -1,9 +1,7 @@
 package com.example.furama.service.service.imp;
 
-import com.example.furama.model.RentType;
 import com.example.furama.model.ServiceType;
-import com.example.furama.repository.Service.ServiceTypeRepository;
-import com.example.furama.service.service.RentTypeService;
+import com.example.furama.repository.service.ServiceTypeRepository;
 import com.example.furama.service.service.ServiceTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

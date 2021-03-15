@@ -45,7 +45,7 @@ public class Service {
     @JoinColumn(name = "service_type_id",referencedColumnName = "service_type_id")
     private ServiceType serviceType;
 
-    @OneToMany(mappedBy = "serviceContract")
+    @OneToMany(mappedBy = "serviceContract",cascade = CascadeType.ALL)
     private Set<Contract> contractServices;
 
     public String getServiceCode() {

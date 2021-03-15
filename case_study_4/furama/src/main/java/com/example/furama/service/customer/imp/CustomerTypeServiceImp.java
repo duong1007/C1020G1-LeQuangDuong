@@ -1,7 +1,7 @@
 package com.example.furama.service.customer.imp;
 
 import com.example.furama.model.CustomerType;
-import com.example.furama.repository.Customer.CustomerTypeRepository;
+import com.example.furama.repository.customer.CustomerTypeRepository;
 import com.example.furama.service.customer.CustomerTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

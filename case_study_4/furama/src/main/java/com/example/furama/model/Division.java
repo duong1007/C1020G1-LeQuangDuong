@@ -9,10 +9,10 @@ public class Division {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "division_id")
-    private Long division_id;
+    private Long divisionId;
 
     @Column(name = "division_name",length = 45)
-    private String division_name;
+    private String divisionName;
 
     @OneToMany(mappedBy = "employeeDivision")
     private Set<Employee> employeeDivisions;
@@ -20,20 +20,20 @@ public class Division {
     public Division() {
     }
 
-    public Long getDivision_id() {
-        return division_id;
+    public Long getDivisionId() {
+        return divisionId;
     }
 
-    public void setDivision_id(Long division_id) {
-        this.division_id = division_id;
+    public void setDivisionId(Long divisionId) {
+        this.divisionId = divisionId;
     }
 
-    public String getDivision_name() {
-        return division_name;
+    public String getDivisionName() {
+        return divisionName;
     }
 
-    public void setDivision_name(String division_name) {
-        this.division_name = division_name;
+    public void setDivisionName(String divisionName) {
+        this.divisionName = divisionName;
     }
 
     public Set<Employee> getEmployeeDivisions() {

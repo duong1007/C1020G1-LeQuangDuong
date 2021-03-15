@@ -17,7 +17,7 @@
             <div class="col-lg-12">
                 <div class="breadcrumb-text">
                     <a href="/"><i class="fa fa-home"></i> Home</a>
-                    <span>Service</span>
+                    <span>Employee</span>
                 </div>
             </div>
         </div>
@@ -74,31 +74,37 @@
                 <div class="table-wrapper">
                     <div class="table-title">
                         <div class="row">
-                            <div class="col-sm-8"><h2>Service <b>Details</b></h2></div>
+                            <div class="col-sm-8"><h2>Employee <b>Details</b></h2></div>
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>
+                                    <a th:href="@{/employee/create}" class="text-white">Add New</a></button>
+                            </div>
                         </div>
                     </div>
                     <table class="table table-bordered">
                         <thead>
                         <tr>
-                            <th>Code</th>
                             <th>Name</th>
-                            <th>Type</th>
-                            <th>Rent Type</th>
-                            <th>Cost</th>
+                            <th>Birth Day</th>
+                            <th>Position</th>
+                            <th>Division</th>
+                            <th>Salary</th>
+                            <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr th:each="service, serviceStart : ${services}">
-                            <td th:text="${service.serviceCode}"></td>
-                            <td th:text="${service.serviceName}"></td>
-                            <td th:text="${service.serviceType.serviceTypeName}"></td>
-                            <td th:text="${service.serviceCost}"></td>
+                        <tr th:each="employee, employeeStart : ${employees}">
+                            <td th:text="${employee.employeeName}"></td>
+                            <td th:text="${employee.employeeBirthday}"></td>
+                            <td th:text="${employee.employeePosition.positionName}"></td>
+                            <td th:text="${employee.employeeDivision.divisionName}"></td>
+                            <td th:text="${employee.employeeSalary}"></td>
                             <td>
                                 <a class="edit" title="Edit" data-toggle="tooltip"
-                                   th:href="@{service/{id}/edit(id=${service.serviceId})}">
+                                   th:href="@{employee/{id}/edit(id=${employee.employeeId})}">
                                     <i class="material-icons">&#xE254;</i></a>
                                 <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"
-                                   th:onclick="|setIdToForm('${service.serviceId}')|">
+                                   th:onclick="|setIdToForm('${employee.employeeId}')|">
                                     <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                             </td>
                         </tr>
@@ -106,9 +112,9 @@
                         <div id="deleteEmployeeModal" class="modal fade">
                             <div class="modal-dialog">
                                 <div class="modal-content">
-                                    <form method="get" th:action="@{/service/delete}">
+                                    <form method="get" th:action="@{/employee/delete}">
                                         <div class="modal-header">
-                                            <h4 class="modal-title">Delete Service</h4>
+                                            <h4 class="modal-title">Delete Customer</h4>
                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                         </div>
                                         <div class="modal-body">
@@ -117,7 +123,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                                            <input type="hidden" id="setServiceId" name="id">
+                                            <input type="hidden" id="setEmployeeId" name="id">
                                             <input type="submit" class="btn btn-danger" value="Delete">
                                         </div>
                                     </form>
@@ -130,19 +136,19 @@
                         <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
                         <ul class="pagination">
                             <li class="page-item">
-                                <a th:href="@{'/service'(page=${services.number - 1})}" th:if="${services.hasPrevious()}">
+                                <a th:href="@{'/customer'(page=${employees.number - 1})}" th:if="${employees.hasPrevious()}">
                                     <i class="fa fa-angle-double-left"></i>
                                 </a>
                             </li>
 
                             <li class="page-item active"
-                                th:each="numberPage : ${services.totalPages}">
-                                <a class="page-link" th:href="@{'/'(page=${services.number})}"
-                                   th:text="${services.number + 1}"></a>
+                                th:each="numberPage : ${employees.totalPages}">
+                                <a class="page-link" th:href="@{'/'(page=${employees.number})}"
+                                   th:text="${employees.number + 1}"></a>
 
                             </li>
                             <li class="page-item">
-                                <a th:href="@{'/service'(page=${services.number + 1})}" th:if="${services.hasNext()}" class="page-link">
+                                <a th:href="@{'/customer'(page=${employees.number + 1})}" th:if="${employees.hasNext()}" class="page-link">
                                     <i class="fa fa-angle-double-right"></i>
                                 </a>
                             </li>
@@ -154,10 +160,41 @@
     </div>
 </section>
 <!-- Product Shop Section End -->
+<!-- Banner Section Begin -->
+<div class="banner-section spad">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="single-banner">
+                    <img th:src="@{img/banner-1.jpg}" alt="">
+                    <div class="inner-text">
+                        <h4>Men’s</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="single-banner">
+                    <img th:src="@{img/banner-2.jpg}" alt="">
+                    <div class="inner-text">
+                        <h4>Women’s</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="single-banner">
+                    <img th:src="@{img/banner-3.jpg}" alt="">
+                    <div class="inner-text">
+                        <h4>Kid’s</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
     function setIdToForm(id) {
-        document.getElementById("setServiceId").value = id;
+        document.getElementById("setEmployeeId").value = id;
     }
 </script>
 

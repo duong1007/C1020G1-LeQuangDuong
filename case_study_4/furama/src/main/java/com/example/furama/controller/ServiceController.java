@@ -52,7 +52,7 @@ public class ServiceController {
     public String createService(Service service, @RequestParam Long idServiceType){
         service.setServiceType(serviceTypeService.findById(idServiceType));
         serviceService.save(service);
-        return "/service/list";
+        return "redirect:/service/list";
     }
 
     @GetMapping("/house")
@@ -66,4 +66,17 @@ public class ServiceController {
         model.addAttribute("service", new Service());
         return "/service/room";
     }
+
+    @GetMapping("/delete")
+    public String deleteService(@RequestParam("id") Long id){
+        serviceService.delete(id);
+        return "redirect:/service/list";
+    }
+
+    @GetMapping("/{id}/edit")
+    public String deleteService(@PathVariable Long id,Model model){
+        model.addAttribute("service",serviceService.findById(id));
+        return "service/edit";
+    }
+
 }

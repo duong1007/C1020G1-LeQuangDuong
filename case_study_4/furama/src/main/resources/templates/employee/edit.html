@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+<!-- Header Section Begin -->
+<header th:replace="layout/layout :: header"></header>
+<div class="breacrumb-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-text product-more">
+                    <a href="/"><i class="fa fa-home"></i> Home</a>
+                    <a th:href="@{/employee}">Employee</a>
+                    <span>Edit Employee</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb Section Begin -->
+<!-- Shopping Cart Section Begin -->
+<section class="checkout-section spad">
+    <div class="container">
+        <form method="post" class="checkout-form" th:action="@{/employee/edit}" th:object="${employee}">
+            <input type="hidden" th:field="*{employeeId}">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4>Information</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="fir">Full Name<span>*</span></label>
+                            <input type="text" id="fir" th:field="*{employeeName}">
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="last">ID Card<span>*</span></label>
+                            <input type="text" id="last" th:field="*{employeeCard}">
+                        </div>
+                        <div class="col-lg-12">
+                            <label for="cun-name">Date Of Birth</label>
+                            <input type="date" id="cun-name" th:field="*{employeeBirthday}">
+                        </div>
+                        <div class="col-lg-12">
+                            <label for="cun">Salary<span>*</span></label>
+                            <input type="number" id="cun" th:field="*{employeeSalary}">
+                        </div>
+                        <div class="col-lg-12">
+                            <label for="street">Street Address<span>*</span></label>
+                            <input type="text" id="street" class="street-first" th:field="*{employeeAddress}">
+                            <input type="text">
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="email">Email Address<span>*</span></label>
+                            <input type="text" id="email" th:field="*{employeeEmail}">
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="phone">Phone<span>*</span></label>
+                            <input type="text" id="phone" th:field="*{employeePhone}">
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="create-item">
+                                <label for="acc-create">
+                                    Create an account?
+                                    <input type="checkbox" id="acc-create">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="place-order">
+                        <h4>Degree</h4>
+                        <div class="order-total">
+                            <h5><b>Division</b></h5>
+                            <br>
+                            <div class="payment-check">
+                                <div class="form-check" th:each="division : ${divisions}">
+                                    <label>
+                                        <input class="form-check-input" type="radio" th:field="*{employeeDivision}"
+                                               th:text="${division.divisionName}" th:value="${division.divisionId}">
+                                    </label>
+                                </div>
+                            </div>
+                            <h5><b>Education</b></h5>
+                            <br>
+                            <div class="payment-check">
+                                <div class="form-check" th:each="education : ${educationDegrees} " >
+                                    <label>
+                                        <input class="form-check-input" type="radio" th:field="*{employeeEducation}"
+                                               th:text="${education.educationDegreeName}"
+                                               th:value="${education.educationDegreeId}">
+                                    </label>
+                                </div>
+                            </div>
+                            <h5><b>Position</b></h5>
+                            <br>
+                            <div class="input-group mb-3">
+                                    <select class="custom-select" th:field="*{employeePosition}" >
+                                        <option th:each="position : ${positions}" th:text="${position.positionName}"
+                                                th:value="${position.positionId}"></option>
+                                    </select>
+                            </div>
+                            <div class="order-btn">
+                                <button class="site-btn place-btn">Edit Employee</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- Shopping Cart Section End -->
+
+
+<!-- Footer Section Begin -->
+<footer th:replace="layout/layout :: footer"></footer>
+<!-- Footer Section End -->
+
+</body>
+</html>
