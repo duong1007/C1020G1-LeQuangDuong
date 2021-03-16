@@ -72,13 +72,15 @@
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-7">
-                    <div class="advanced-search">
-                        <button type="button" class="category-btn">All Categories</button>
-                        <div class="input-group">
-                            <input type="text" placeholder="What do you need?">
-                            <button type="button"><i class="ti-search"></i></button>
+                    <form th:action="@{/customer/search/customer}" method="get">
+                        <div class="advanced-search">
+                            <button type="button" class="category-btn">All Categories</button>
+                            <div class="input-group">
+                                <input type="text" placeholder="What do you need?" name="s">
+                                <button type="submit"><i class="ti-search"></i></button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <div class="col-lg-3 text-right col-md-3">
                     <ul class="nav-right">
@@ -154,16 +156,16 @@
                         </ul>
                     </li>
                     <li><a th:href="@{/employee}">Employee</a></li>
-                    <li><a href="./contact.html">Contract</a></li>
-                    <li><a href="./contact.html">About US</a></li>
+                    <li><a th:href="@{/contract/create/contract}">Contract</a></li>
+                    <li><a href="/">About US</a></li>
                     <li><a href="#">Pages</a>
                         <ul class="dropdown">
-                            <li><a href="./blog-details.html">Contract Details</a></li>
-                            <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                            <li><a href="./check-out.html">Checkout</a></li>
-                            <li><a href="./faq.html">Faq</a></li>
-                            <li><a href="./register.html">Register</a></li>
-                            <li><a href="./login.html">Login</a></li>
+                            <li><a th:href="@{/contract/create/detail}">Contract Details</a></li>
+                            <li><a th:href="@{/contract/search/active}">Customer Active</a></li>
+                            <li><a href="/">Checkout</a></li>
+                            <li><a href="/">Faq</a></li>
+                            <li><a href="/">Register</a></li>
+                            <li><a href="/">Login</a></li>
                         </ul>
                     </li>
                 </ul>

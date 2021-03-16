@@ -35,20 +35,24 @@
                         <div class="col-lg-6">
                             <label for="fir">Full Name<span>*</span></label>
                             <input type="text" id="fir" th:field="*{customerName}">
+                            <p class="errors" th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}"></p>
                         </div>
                         <div class="col-lg-6">
                             <label for="last">ID Card<span>*</span></label>
                             <input type="text" id="last" th:field="*{customerIdCard}">
+                            <p class="errors" th:if="${#fields.hasErrors('customerIdCard')}" th:errors="*{customerIdCard}"></p>
                         </div>
                         <div class="col-lg-12">
                             <label for="cun-name">Date Of Birth</label>
                             <input type="date" id="cun-name" th:field="*{customerBirthday}">
+                            <p class="errors" th:if="${#fields.hasErrors('customerBirthday')}" th:errors="*{customerBirthday}"></p>
                         </div>
                         <div class="col-lg-12">
                             <label >Gender<span>*</span></label>
                             <input type="radio"  th:field="*{customerGender}" value="Male"> Male
                             <input type="radio"  th:field="*{customerGender}"  value="Female"> Female
                             <input type="radio"  th:field="*{customerGender}"  value="Other"> Other
+                            <p class="errors" th:if="${#fields.hasErrors('customerGender')}" th:errors="*{customerGender}"></p>
                         </div>
                         <div class="col-lg-12">
                             <br>
@@ -64,7 +68,9 @@
                                     th:text="${customerType.customerTypeName}"></option>
                                 </select>
                             </div>
+                            <p class="errors" th:if="${#fields.hasErrors('customerType')}" th:errors="*{customerType}"></p>
                         </div>
+
                         <div class="col-lg-12">
                             <label for="street">Street Address<span>*</span></label>
                             <input type="text" id="street" class="street-first" th:field="*{customerAddress}" >
@@ -72,14 +78,18 @@
                         <div class="col-lg-12">
                             <label for="code">Customer Code<span>*</span></label>
                             <input type="text" id="code" class="street-first" th:field="*{customerCode}" >
+                            <p class="errors" th:if="${#fields.hasErrors('customerCode')}" th:errors="*{customerCode}"></p>
                         </div>
+
                         <div class="col-lg-6">
                             <label for="email">Email Address<span>*</span></label>
                             <input type="email" id="email" th:field="*{customerEmail}" >
+                            <p class="errors" th:if="${#fields.hasErrors('customerEmail')}" th:errors="*{customerEmail}"></p>
                         </div>
                         <div class="col-lg-6">
                             <label for="phone">Phone<span>*</span></label>
                             <input type="tel" id="phone" th:field="*{customerPhone}">
+                            <p class="errors" th:if="${#fields.hasErrors('customerPhone')}" th:errors="*{customerPhone}"></p>
                         </div>
                         <div class="col-lg-4 offset-lg-4">
                             <button type="submit" class="site-btn login-btn">Create Customer</button>

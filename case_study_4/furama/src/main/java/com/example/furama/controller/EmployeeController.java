@@ -1,10 +1,10 @@
 package com.example.furama.controller;
 
 
-import com.example.furama.model.Division;
-import com.example.furama.model.EducationDegree;
-import com.example.furama.model.Employee;
-import com.example.furama.model.Position;
+import com.example.furama.model.employee.Division;
+import com.example.furama.model.employee.EducationDegree;
+import com.example.furama.model.employee.Employee;
+import com.example.furama.model.employee.Position;
 import com.example.furama.service.employee.DivisionService;
 import com.example.furama.service.employee.EducationDegreeService;
 import com.example.furama.service.employee.EmployeeService;

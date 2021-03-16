@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/layout :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<!-- Header Section Begin -->
+<header th:replace="layout/layout :: header"></header>
+<!-- Header End -->
+
+<div class="breacrumb-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-text">
+                    <a href="/"><i class="fa fa-home"></i> Home</a>
+                    <a th:href="@{/contract/create/contract}">Contract</a>
+                    <span>Create Contract</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="checkout-section spad">
+    <div class="container">
+        <form method="post" class="checkout-form" th:object="${contract}">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <h4>Information</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="fir">Start Date<span>*</span></label>
+                            <input type="date" id="fir" th:field="*{contractStartDate}">
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="last">End Date<span>*</span></label>
+                            <input type="date" id="last" th:field="*{contractEndDate}">
+                        </div>
+                        <div class="col-lg-12">
+                            <label for="cun-name">Deposit</label>
+                            <input type="number" id="cun-name" th:field="*{contractDeposit}">
+                        </div>
+                        <div class="col-lg-12">
+                            <label for="street">Total<span>*</span></label>
+                            <input type="text" id="street" class="street-first" th:field="*{contractTotalMoney}">
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="email">Employee ID<span>*</span></label>
+                            <input type="text" id="email" th:field="*{employeeContract.employeeId}">
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="phone">Customer ID<span>*</span></label>
+                            <input type="text" id="phone" th:field="*{customerContract.customerId}">
+                        </div>
+                        <div class="col-lg-12">
+                            <label for="cun-service">Service ID</label>
+                            <input type="text" id="cun-service" th:field="*{serviceContract.serviceId}">
+                        </div>
+                        <div class="col-lg-4 offset-lg-4">
+                            <button type="submit" class="site-btn login-btn">Create Contract</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- Register Form Section End -->
+<footer th:replace="layout/layout :: footer"></footer>
+</body>
+</html>

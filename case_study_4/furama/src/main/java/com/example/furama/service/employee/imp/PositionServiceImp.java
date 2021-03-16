@@ -1,8 +1,7 @@
 package com.example.furama.service.employee.imp;
 
-import com.example.furama.model.Position;
+import com.example.furama.model.employee.Position;
 import com.example.furama.repository.employee.PositionRepository;
-import com.example.furama.service.MainService;
 import com.example.furama.service.employee.PositionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

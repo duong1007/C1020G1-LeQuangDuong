@@ -1,8 +1,8 @@
 package com.example.furama.controller;
 
-import com.example.furama.model.RentType;
-import com.example.furama.model.Service;
-import com.example.furama.model.ServiceType;
+import com.example.furama.model.service.RentType;
+import com.example.furama.model.service.Service;
+import com.example.furama.model.service.ServiceType;
 import com.example.furama.service.service.RentTypeService;
 import com.example.furama.service.service.ServiceService;
 import com.example.furama.service.service.ServiceTypeService;
@@ -45,7 +45,7 @@ public class ServiceController {
     @GetMapping("/villa")
     public String createVilla(Model model){
         model.addAttribute("service", new Service());
-        return "/service/villa";
+        return "/service/villa/create";
     }
 
     @PostMapping("/service")
@@ -58,13 +58,13 @@ public class ServiceController {
     @GetMapping("/house")
     public String createHouse(Model model){
         model.addAttribute("service", new Service());
-        return "/service/house";
+        return "/service/house/create";
     }
 
     @GetMapping("/room")
     public String createRoom(Model model){
         model.addAttribute("service", new Service());
-        return "/service/room";
+        return "/service/room/create";
     }
 
     @GetMapping("/delete")
@@ -74,9 +74,17 @@ public class ServiceController {
     }
 
     @GetMapping("/{id}/edit")
-    public String deleteService(@PathVariable Long id,Model model){
-        model.addAttribute("service",serviceService.findById(id));
-        return "service/edit";
+    public String deleteService(@PathVariable Long id, Model model){
+        Service service = serviceService.findById(id);
+        model.addAttribute("service",service);
+        Long serviceTypeId = service.getServiceType().getServiceTypeId();
+        if (serviceTypeId == 1L) {
+            return "service/villa/edit";
+        } else if (serviceTypeId == 2L) {
+            return "service/house/edit";
+        } else {
+            return "service/room/edit";
+        }
     }
 
 }

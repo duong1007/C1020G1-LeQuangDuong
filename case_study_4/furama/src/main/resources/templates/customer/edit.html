@@ -25,7 +25,7 @@
 
 <section class="checkout-section spad">
     <div class="container">
-        <form method="post" class="checkout-form" th:object="${customer}">
+        <form method="post" class="checkout-form" th:object="${customer}" th:action="@{customer/edit}">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <h4>Information</h4>

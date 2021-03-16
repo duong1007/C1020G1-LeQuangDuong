@@ -1,6 +1,6 @@
 package com.example.furama.service.employee.imp;
 
-import com.example.furama.model.EducationDegree;
+import com.example.furama.model.employee.EducationDegree;
 import com.example.furama.repository.employee.EducationDegreeRepository;
 import com.example.furama.service.employee.EducationDegreeService;
 import org.springframework.beans.factory.annotation.Autowired;

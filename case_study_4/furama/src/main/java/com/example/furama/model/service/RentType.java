@@ -1,4 +1,4 @@
-package com.example.furama.model;
+package com.example.furama.model.service;
 
 import javax.persistence.*;
 import java.util.Set;

@@ -1,6 +1,6 @@
 package com.example.furama.service.employee.imp;
 
-import com.example.furama.model.Division;
+import com.example.furama.model.employee.Division;
 import com.example.furama.repository.employee.DivisionRepository;
 import com.example.furama.service.employee.DivisionService;
 import org.springframework.beans.factory.annotation.Autowired;

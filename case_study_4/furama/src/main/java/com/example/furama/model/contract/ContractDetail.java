@@ -1,4 +1,5 @@
-package com.example.furama.model;
+package com.example.furama.model.contract;
+
 
 import javax.persistence.*;
 

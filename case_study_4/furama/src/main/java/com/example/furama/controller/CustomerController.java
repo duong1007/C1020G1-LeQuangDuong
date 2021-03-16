@@ -1,13 +1,15 @@
 package com.example.furama.controller;
 
-import com.example.furama.model.Customer;
-import com.example.furama.model.CustomerType;
+import com.example.furama.model.customer.Customer;
+import com.example.furama.model.customer.CustomerType;
 import com.example.furama.service.customer.CustomerService;
 import com.example.furama.service.customer.CustomerTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -41,10 +43,15 @@ public class CustomerController {
     }
 
     @PostMapping("/create")
-    public String createCustomer(Model model,Customer customer){
-        customerService.save(customer);
-        model.addAttribute("success","Create success!!!!");
-        return "/customer/create";
+    public String createCustomer(@Validated @ModelAttribute("customer") Customer customer, BindingResult bindingResult,
+                                 RedirectAttributes redirectAttributes){
+        if (bindingResult.hasFieldErrors()){
+            return "/customer/create";
+        } else {
+            customerService.save(customer);
+            redirectAttributes.addAttribute("success","Create success!!!!");
+            return "redirect:/customer";
+        }
     }
 
     @GetMapping("{id}/edit")
@@ -64,5 +71,12 @@ public class CustomerController {
         customerService.delete(id);
         redirectAttributes.addFlashAttribute("success","delete success");
         return "redirect:/";
+    }
+
+    @GetMapping("/search/customer")
+    public String searchCustomer(@RequestParam("s") String s,Model model,Pageable pageable){
+        model.addAttribute("customers",customerService.searchCustomer(s,pageable));
+        return "/customer/show";
+
     }
 }

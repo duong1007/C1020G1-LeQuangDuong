@@ -1,6 +1,6 @@
 package com.example.furama.service.customer.imp;
 
-import com.example.furama.model.Customer;
+import com.example.furama.model.customer.Customer;
 import com.example.furama.repository.customer.CustomerRepository;
 import com.example.furama.service.customer.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,4 +41,8 @@ public class CustomerServiceImp implements CustomerService {
         return null;
     }
 
+    @Override
+    public Page<Customer> searchCustomer(String s, Pageable pageable) {
+        return customerRepository.findAllByCustomerNameContainingOrCustomerCodeContaining(s,s,pageable);
+    }
 }

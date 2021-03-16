@@ -1,4 +1,8 @@
-package com.example.furama.model;
+package com.example.furama.model.contract;
+
+import com.example.furama.model.customer.Customer;
+import com.example.furama.model.employee.Employee;
+import com.example.furama.model.service.Service;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -10,10 +14,10 @@ public class Contract {
     @Column(name = "contract_id")
     private Long contractId;
 
-    @Column(name = "contract_start_date",columnDefinition = "datetime",nullable = false)
+    @Column(name = "contract_start_date",columnDefinition = "date",nullable = false)
     private String contractStartDate;
 
-    @Column(name = "contract_end_date",columnDefinition = "datetime",nullable = false)
+    @Column(name = "contract_end_date",columnDefinition = "date",nullable = false)
     private String contractEndDate;
 
     @Column(name = "contract_deposit",nullable = false)
@@ -34,7 +38,7 @@ public class Contract {
     @JoinColumn(name = "service_id",referencedColumnName = "service_id")
     private Service serviceContract;
 
-    @OneToMany(mappedBy = "contract")
+    @OneToMany(mappedBy = "contract",cascade = CascadeType.ALL)
     private Set<ContractDetail> contractDetail;
 
     public Contract() {
