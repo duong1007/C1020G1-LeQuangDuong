@@ -35,6 +35,7 @@ public class Customer {
     private String customerGender;
 
     @NotNull(message = "Not Null")
+    @Pattern(regexp = "^(\\d{9})|(\\d{12})$",message = "id card must be 9 number or 12 number")
     @Column(name = "customer_id_card",length = 45, nullable = false)
     private String customerIdCard;
 

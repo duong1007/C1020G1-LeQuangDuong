@@ -3,8 +3,10 @@ package com.example.furama.model.contract;
 import com.example.furama.model.customer.Customer;
 import com.example.furama.model.employee.Employee;
 import com.example.furama.model.service.Service;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import java.util.Set;
 
 @Entity
@@ -14,12 +16,15 @@ public class Contract {
     @Column(name = "contract_id")
     private Long contractId;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "contract_start_date",columnDefinition = "date",nullable = false)
     private String contractStartDate;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "contract_end_date",columnDefinition = "date",nullable = false)
     private String contractEndDate;
 
+    @Min(value = 0,message = "must be > 0")
     @Column(name = "contract_deposit",nullable = false)
     private double contractDeposit;
 

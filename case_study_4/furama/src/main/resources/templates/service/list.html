@@ -95,7 +95,7 @@
                             <td th:text="${service.serviceCost}"></td>
                             <td>
                                 <a class="edit" title="Edit" data-toggle="tooltip"
-                                   th:href="@{service/{id}/edit(id=${service.serviceId})}">
+                                   th:href="@{/service/{id}/edit(id=${service.serviceId})}">
                                     <i class="material-icons">&#xE254;</i></a>
                                 <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"
                                    th:onclick="|setIdToForm('${service.serviceId}')|">

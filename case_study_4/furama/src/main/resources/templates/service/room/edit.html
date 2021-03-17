@@ -25,7 +25,9 @@
 
 <section class="checkout-section spad">
     <div class="container">
-        <form method="post" class="checkout-form" th:object="${service}" th:action="@{/service/service}">
+        <form method="post" class="checkout-form" th:object="${service}" th:action="@{/service/edit}">
+            <input type="hidden" th:field="*{serviceId}">
+            <input type="hidden" th:field="*{serviceType.serviceTypeId}">
             <div class="row">
                 <div class="col-lg-12">
                     <h4>Information</h4>
@@ -39,6 +41,7 @@
                         <div class="col-lg-6">
                             <label for="code">Service Code<span>*</span></label>
                             <input type="number" id="code" th:field="*{serviceCode}">
+                            <p class="errors" th:if="${#fields.hasErrors('serviceCode')}" th:errors="*{serviceCode}"></p>
                         </div>
 
                         <div class="col-lg-12">
@@ -58,6 +61,7 @@
                         <div class="col-lg-12">
                             <label for="cun-name">Cost</label>
                             <input type="number" id="cun-name" th:field="*{serviceCost}">
+                            <p class="errors" th:if="${#fields.hasErrors('serviceCost')}" th:errors="*{serviceCost}"></p>
                         </div>
                         <div class="col-lg-12">
                             <label for="street">Description<span>*</span></label>
@@ -67,10 +71,12 @@
                         <div class="col-lg-6">
                             <label for="last">Area Villa<span>*</span></label>
                             <input type="number" id="last" th:field="*{serviceArea}">
+                            <p class="errors" th:if="${#fields.hasErrors('serviceArea')}" th:errors="*{serviceArea}"></p>
                         </div>
                         <div class="col-lg-6">
                             <label for="cun">Max People<span>*</span></label>
                             <input type="number" id="cun" th:field="*{serviceMaxPeople}">
+                            <p class="errors" th:if="${#fields.hasErrors('serviceMaxPeople')}" th:errors="*{serviceMaxPeople}"></p>
                         </div>
                     </div>
                 </div>

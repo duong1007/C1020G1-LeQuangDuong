@@ -1,4 +1,4 @@
-package com.example.furama.model.employee;
+package com.example.furama.model.account;
 
 import javax.persistence.*;
 

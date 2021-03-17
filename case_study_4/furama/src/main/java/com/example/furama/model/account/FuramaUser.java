@@ -1,4 +1,6 @@
-package com.example.furama.model.employee;
+package com.example.furama.model.account;
+
+import com.example.furama.model.employee.Employee;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -51,4 +53,5 @@ public class FuramaUser {
     public void setEmployee(Employee employee) {
         this.employee = employee;
     }
+
 }

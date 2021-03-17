@@ -50,17 +50,41 @@
                             <label for="street">Total<span>*</span></label>
                             <input type="text" id="street" class="street-first" th:field="*{contractTotalMoney}">
                         </div>
-                        <div class="col-lg-6">
-                            <label for="email">Employee ID<span>*</span></label>
-                            <input type="text" id="email" th:field="*{employeeContract.employeeId}">
-                        </div>
-                        <div class="col-lg-6">
-                            <label for="phone">Customer ID<span>*</span></label>
-                            <input type="text" id="phone" th:field="*{customerContract.customerId}">
+                        <div class="col-lg-12">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="employee">Employee<span>*</span></label>
+                                </div>
+                                <select class="custom-select" id="employee" th:field="*{employeeContract}" >
+                                    <option th:each="employee : ${employees}"
+                                            th:value="${employee.employeeId}"
+                                            th:text="${employee.employeeId} + '/' +${employee.employeeName}"></option>
+                                </select>
+                            </div>
                         </div>
                         <div class="col-lg-12">
-                            <label for="cun-service">Service ID</label>
-                            <input type="text" id="cun-service" th:field="*{serviceContract.serviceId}">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="customer">Customer<span>*</span></label>
+                                </div>
+                                <select class="custom-select" id="customer" th:field="*{customerContract}" >
+                                    <option th:each="customer : ${customers}"
+                                            th:value="${customer.customerId}"
+                                            th:text="${customer.customerId} + '/' + ${customer.customerName}"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="service">Service<span>*</span></label>
+                                </div>
+                                <select type="text" class="custom-select" id="service" th:field="*{serviceContract}">
+                                    <option th:each="service : ${services}"
+                                            th:value="${service.serviceId}"
+                                            th:text="${service.serviceId}+'/'+${service.serviceName}"></option>
+                                </select>
+                            </div>
                         </div>
                         <div class="col-lg-4 offset-lg-4">
                             <button type="submit" class="site-btn login-btn">Create Contract</button>

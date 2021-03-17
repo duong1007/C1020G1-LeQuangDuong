@@ -17,7 +17,11 @@ public class ContractServiceImp implements ContractService {
 
     @Override
     public Page<Contract> findAll(Pageable pageable) {
-        return contractRepository.findAll(pageable);
+        Page<Contract> contracts = contractRepository.findAll(pageable);
+        for (Contract contract : contracts) {
+            contract.setContractTotalMoney(100000000);
+        }
+        return contracts ;
     }
 
     @Override
@@ -41,7 +45,12 @@ public class ContractServiceImp implements ContractService {
     }
 
     @Override
-    public Page<Contract> findAllByContractEndDateAfter(String s, Pageable pageable) {
+    public Page<Contract> findAllCustomerActive(String s, Pageable pageable) {
         return contractRepository.findAllByContractStartDateBeforeAndContractEndDateAfter(s,s,pageable);
+    }
+
+    @Override
+    public Page<Contract> searchCustomerActive(String s, String name, Pageable pageable) {
+        return contractRepository.findAllByContractStartDateBeforeAndContractEndDateAfterAndCustomerContract_CustomerNameContaining(s,s,name,pageable);
     }
 }

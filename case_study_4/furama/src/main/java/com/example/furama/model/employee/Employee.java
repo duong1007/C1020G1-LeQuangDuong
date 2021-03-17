@@ -1,8 +1,13 @@
 package com.example.furama.model.employee;
 
+import com.example.furama.model.account.FuramaUser;
 import com.example.furama.model.contract.Contract;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
 import java.util.Set;
 
 @Entity
@@ -15,19 +20,23 @@ public class Employee {
     @Column(name = "employee_name",length = 45,nullable = false)
     private String employeeName;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "employee_birthday",columnDefinition = "date",nullable = false)
     private String employeeBirthday;
 
+    @Pattern(regexp = "^(\\d{9})|(\\d{12})$",message = "id card must be 9 number or 12 number")
     @Column(name = "employee_id_card",length = 45,nullable = false)
     private String employeeCard;
 
+    @Min(value = 0,message = "must be > 0")
     @Column(name = "employee_salary",length = 45,nullable = false)
     private double employeeSalary;
 
+    @Pattern(regexp = "^(090|091|[(]84[+][)]90|[(]84+[)]91)\\d{7}$",message = "must be 090xx|091xx|(+84)xx")
     @Column(name = "employee_phone",length = 45,nullable = false)
     private double employeePhone;
 
-
+    @Email(message = "Email must be abc@abc.abc")
     @Column(name = "employee_email",length = 45)
     private String employeeEmail;
 

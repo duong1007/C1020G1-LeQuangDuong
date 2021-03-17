@@ -7,5 +7,6 @@ import org.springframework.data.domain.Pageable;
 
 public interface ContractService extends MainService<Contract> {
 
-    Page<Contract> findAllByContractEndDateAfter(String s, Pageable pageable);
+    Page<Contract> findAllCustomerActive(String s, Pageable pageable);
+    Page<Contract> searchCustomerActive(String s,String name, Pageable pageable);
 }

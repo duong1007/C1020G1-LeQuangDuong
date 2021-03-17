@@ -84,10 +84,6 @@ p {
 	margin: 0 0 15px 0;
 }
 
-.errors p {
-	color: #c14949; !important;
-}
-
 img {
 	max-width: 100%;
 }
@@ -4314,3 +4310,4 @@ ol {
 		padding-right: 15px;
 	}
 }
+

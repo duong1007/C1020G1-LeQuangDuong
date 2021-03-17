@@ -38,7 +38,7 @@ public class CustomerServiceImp implements CustomerService {
 
     @Override
     public List<Customer> findAll() {
-        return null;
+        return customerRepository.findAll();
     }
 
     @Override

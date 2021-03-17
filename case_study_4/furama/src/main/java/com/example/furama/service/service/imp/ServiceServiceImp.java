@@ -21,7 +21,7 @@ public class ServiceServiceImp implements ServiceService {
 
     @Override
     public Service findById(Long id) {
-        return null;
+        return serviceRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -36,6 +36,6 @@ public class ServiceServiceImp implements ServiceService {
 
     @Override
     public List<Service> findAll() {
-        return null;
+        return serviceRepository.findAll();
     }
 }

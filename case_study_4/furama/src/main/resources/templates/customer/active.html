@@ -76,8 +76,14 @@
                         <div class="row">
                             <div class="col-sm-8"><h2>Customer <b>Active</b></h2></div>
                             <div class="col-sm-4">
-                                <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>
-                                    <a th:href="@{/customer/create}" class="text-white">Add New</a></button>
+                                <form th:action="@{/contract/search/active}" method="post">
+                                    <div class="search-box">
+                                        <label>
+                                            <i class="material-icons">&#xE8B6;</i>
+                                            <input type="text" class="form-control" name="name" placeholder="Search&hellip;">
+                                        </label>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -90,6 +96,7 @@
                             <th>Start Date</th>
                             <th>End Date</th>
                             <th>Service</th>
+                            <th>Total Money</th>
                             <th>Attack Service</th>
                             <th>Service Actions</th>
                         </tr>
@@ -102,13 +109,14 @@
                             <td th:text="${contract.contractStartDate}"></td>
                             <td th:text="${contract.contractEndDate}"></td>
                             <td th:text="${contract.serviceContract.serviceName}"></td>
+                            <td th:text="${contract.contractTotalMoney}"></td>
                             <td>
                                 <p th:each="contractDetail : ${contract.contractDetail}"
                                    th:text="${contractDetail.attackService.attackServiceName}"></p>
                             </td>
                             <td>
                                 <a class="edit" title="Edit" data-toggle="tooltip"
-                                   th:href="@{service/{id}/edit(id=${contract.serviceContract.serviceId})}">
+                                   th:href="@{/service/{id}/edit(id=${contract.serviceContract.serviceId})}">
                                     <i class="material-icons">&#xE254;</i></a>
                                 <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"
                                    th:onclick="|setIdToForm('${contract.serviceContract.serviceId}')|">
@@ -172,6 +180,7 @@
         document.getElementById("setCustomerId").value = id;
     }
 </script>
+
 
 <!-- Footer Section Begin -->
 <footer th:replace="layout/layout :: footer"></footer>

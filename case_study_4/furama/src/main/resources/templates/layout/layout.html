@@ -46,9 +46,9 @@
                 <a href="#" class="login-panel"><i class="fa fa-user"></i>Login</a>
                 <div class="lan-selector">
                     <select class="language_drop" name="countries" id="countries" style="width:300px;">
-                        <option value='yt' data-image="img/flag-1.jpg" data-imagecss="flag yt"
+                        <option value='yt' data-image="/img/flag-1.jpg" data-imagecss="flag yt"
                                 data-title="English">English</option>
-                        <option value='yu' data-image="img/flag-2.jpg" data-imagecss="flag yu"
+                        <option value='yu' data-image="/img/flag-2.jpg" data-imagecss="flag yu"
                                 data-title="Bangladesh">German </option>
                     </select>
                 </div>
@@ -67,7 +67,7 @@
                 <div class="col-lg-2 col-md-2">
                     <div class="logo">
                         <a href="./index.html">
-                            <img src="img/logo.png" alt="">
+                            <img th:src="@{/img/logo.png}" alt="">
                         </a>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                                     <table>
                                         <tbody>
                                         <tr>
-                                            <td class="si-pic"><img th:src="@{img/select-product-1.jpg}" alt=""></td>
+                                            <td class="si-pic"><img th:src="@{/img/select-product-1.jpg}" alt=""></td>
                                             <td class="si-text">
                                                 <div class="product-selected">
                                                     <p>$60.00 x 1</p>
@@ -112,7 +112,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="si-pic"><img th:src="@{img/select-product-2.jpg}" alt=""></td>
+                                            <td class="si-pic"><img th:src="@{/img/select-product-2.jpg}" alt=""></td>
                                             <td class="si-text">
                                                 <div class="product-selected">
                                                     <p>$60.00 x 1</p>
@@ -164,7 +164,7 @@
                             <li><a th:href="@{/contract/search/active}">Customer Active</a></li>
                             <li><a href="/">Checkout</a></li>
                             <li><a href="/">Faq</a></li>
-                            <li><a href="/">Register</a></li>
+                            <li><a th:href="@{/register}">Register</a></li>
                             <li><a href="/">Login</a></li>
                         </ul>
                     </li>
@@ -181,7 +181,7 @@
             <div class="col-lg-3">
                 <div class="footer-left">
                     <div class="footer-logo">
-                        <a href="#"><img th:src="@{img/footer-logo.png}" alt=""></a>
+                        <a href="#"><img th:src="@{/img/footer-logo.png}" alt=""></a>
                     </div>
                     <ul>
                         <li>Address: 60-49 Road 11378 New York</li>
@@ -240,7 +240,7 @@
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </div>
                     <div class="payment-pic">
-                        <img th:src="@{img/payment-method.png}" alt="">
+                        <img th:src="@{/img/payment-method.png}" alt="">
                     </div>
                 </div>
             </div>

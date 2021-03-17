@@ -1,8 +1,11 @@
 package com.example.furama.model.service;
 
 import com.example.furama.model.contract.Contract;
+import org.springframework.format.annotation.NumberFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
 import java.util.Set;
 
 @Entity
@@ -12,18 +15,22 @@ public class Service {
     @Column(name = "service_id")
     private Long serviceId;
 
+    @Pattern(regexp = "^(DV-)\\d{4}$",message = "CustomerCode Must be (KH-XXXX) with X in [0,9]")
     @Column(name = "service_code",length = 20,unique = true)
     private String ServiceCode;
 
     @Column(name = "service_name",length = 45, nullable = false)
     private String serviceName;
 
+    @Min(value = 0,message = "must be > 0")
     @Column(name = "service_area")
     private int serviceArea;
 
+    @Min(value = 0,message = "must be > 0")
     @Column(name = "service_cost")
     private double serviceCost;
 
+    @Min(value = 0,message = "must be > 0")
     @Column(name = "service_max_people")
     private int serviceMaxPeople;
 
@@ -36,6 +43,7 @@ public class Service {
     @Column(name = "pool_area")
     private double poolArea;
 
+    @Min(value = 0,message = "must be > 0")
     @Column(name = "number_of_floors")
     private int numberOfFloors;
 

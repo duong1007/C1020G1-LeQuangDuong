@@ -13,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -62,7 +64,10 @@ public class EmployeeController {
     }
 
     @PostMapping("/create")
-    public String createEmployee(Employee employee){
+    public String createEmployee(@Validated @ModelAttribute("employee") Employee employee, BindingResult bindingResult){
+        if(bindingResult.hasFieldErrors()){
+            return "/employee/create";
+        }
         employeeService.save(employee);
         return "employee/create";
     }
@@ -74,7 +79,11 @@ public class EmployeeController {
     }
 
     @PostMapping("/edit")
-    public String editEmployee(Employee employee){
+    public String editEmployee(@Validated @ModelAttribute("employee") Employee employee, BindingResult bindingResult){
+        if(bindingResult.hasFieldErrors()){
+            return "/employee/edit";
+        }
+
         employeeService.save(employee);
         return "redirect:/employee";
     }

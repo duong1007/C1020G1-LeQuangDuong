@@ -61,8 +61,11 @@ public class CustomerController {
     }
 
     @PostMapping("/edit")
-    public String editCustomer(Customer customer){
+    public String editCustomer(@Validated @ModelAttribute("customer") Customer customer, BindingResult bindingResult){
         customerService.save(customer);
+        if (bindingResult.hasFieldErrors()){
+            return "/customer/edit";
+        }
         return "redirect:/customer/show";
     }
 

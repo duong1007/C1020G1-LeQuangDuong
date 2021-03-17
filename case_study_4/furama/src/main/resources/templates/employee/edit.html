@@ -36,18 +36,22 @@
                         <div class="col-lg-6">
                             <label for="fir">Full Name<span>*</span></label>
                             <input type="text" id="fir" th:field="*{employeeName}">
+                            <p class="errors" th:if="${#fields.hasErrors('employeeName')}" th:errors="*{employeeName}"></p>
                         </div>
                         <div class="col-lg-6">
                             <label for="last">ID Card<span>*</span></label>
                             <input type="text" id="last" th:field="*{employeeCard}">
+                            <p class="errors" th:if="${#fields.hasErrors('employeeCard')}" th:errors="*{employeeCard}"></p>
                         </div>
                         <div class="col-lg-12">
                             <label for="cun-name">Date Of Birth</label>
                             <input type="date" id="cun-name" th:field="*{employeeBirthday}">
+                            <p class="errors" th:if="${#fields.hasErrors('employeeBirthday')}" th:errors="*{employeeBirthday}"></p>
                         </div>
                         <div class="col-lg-12">
                             <label for="cun">Salary<span>*</span></label>
                             <input type="number" id="cun" th:field="*{employeeSalary}">
+                            <p class="errors" th:if="${#fields.hasErrors('employeeSalary')}" th:errors="*{employeeSalary}"></p>
                         </div>
                         <div class="col-lg-12">
                             <label for="street">Street Address<span>*</span></label>
@@ -57,10 +61,12 @@
                         <div class="col-lg-6">
                             <label for="email">Email Address<span>*</span></label>
                             <input type="text" id="email" th:field="*{employeeEmail}">
+                            <p class="errors" th:if="${#fields.hasErrors('employeeEmail')}" th:errors="*{employeeEmail}"></p>
                         </div>
                         <div class="col-lg-6">
                             <label for="phone">Phone<span>*</span></label>
                             <input type="text" id="phone" th:field="*{employeePhone}">
+                            <p class="errors" th:if="${#fields.hasErrors('employeePhone')}" th:errors="*{employeePhone}"></p>
                         </div>
                         <div class="col-lg-12">
                             <div class="create-item">
