@@ -6,6 +6,7 @@ import com.example.furama.service.customer.CustomerService;
 import com.example.furama.service.customer.CustomerTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -31,7 +32,7 @@ public class CustomerController {
     }
 
     @GetMapping
-    public String showCustomer(Model model, Pageable pageable){
+    public String showCustomer(Model model,@PageableDefault(size = 5) Pageable pageable){
         model.addAttribute("customers",customerService.findAll(pageable));
         return "/customer/show";
     }
@@ -44,12 +45,13 @@ public class CustomerController {
 
     @PostMapping("/create")
     public String createCustomer(@Validated @ModelAttribute("customer") Customer customer, BindingResult bindingResult,
-                                 RedirectAttributes redirectAttributes){
+                                 RedirectAttributes redirectAttributes,Model model){
         if (bindingResult.hasFieldErrors()){
+            model.addAttribute("warning","Validation Success");
             return "/customer/create";
         } else {
             customerService.save(customer);
-            redirectAttributes.addAttribute("success","Create success!!!!");
+            redirectAttributes.addFlashAttribute("messenger","Create Success!");
             return "redirect:/customer";
         }
     }
@@ -61,18 +63,23 @@ public class CustomerController {
     }
 
     @PostMapping("/edit")
-    public String editCustomer(@Validated @ModelAttribute("customer") Customer customer, BindingResult bindingResult){
-        customerService.save(customer);
+    public String editCustomer(@Validated @ModelAttribute("customer") Customer customer, BindingResult bindingResult,
+                               Model model,
+                               RedirectAttributes redirectAttributes){
+
         if (bindingResult.hasFieldErrors()){
+            model.addAttribute("warning","Validation Success");
             return "/customer/edit";
         }
+        customerService.save(customer);
+        redirectAttributes.addFlashAttribute("messenger","Create Success!");
         return "redirect:/customer/show";
     }
 
     @GetMapping("/delete")
     public String deleteCustomer(@RequestParam("id") Long id, RedirectAttributes redirectAttributes){
         customerService.delete(id);
-        redirectAttributes.addFlashAttribute("success","delete success");
+        redirectAttributes.addFlashAttribute("messenger","delete success");
         return "redirect:/";
     }
 

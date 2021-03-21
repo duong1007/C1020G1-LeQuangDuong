@@ -13,10 +13,10 @@ public class FuramaUser {
 
     private String password;
 
-    @OneToOne(mappedBy = "furamaUser")
+    @OneToOne(mappedBy = "furamaUser",cascade = CascadeType.ALL)
     private Employee employee;
 
-    @OneToMany(mappedBy = "furamaUser")
+    @OneToMany(mappedBy = "furamaUser",cascade = CascadeType.ALL)
     private Set<FuramaUserRole> furamaUserRole;
 
     public FuramaUser() {

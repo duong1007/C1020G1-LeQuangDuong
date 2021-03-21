@@ -11,26 +11,27 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class FuramaServiceImp implements FuramaUserService {
+public class FuramaUserServiceImp implements FuramaUserService {
     @Autowired
     FuramaUserRepository furamaUserRepository;
+
     @Override
     public Page<FuramaUser> findAll(Pageable pageable) {
         return null;
     }
 
     @Override
-    public FuramaUser findById(Long id) {
-        return null;
+    public FuramaUser findById(String id) {
+        return furamaUserRepository.findById(id).orElse(null);
     }
 
     @Override
-    public void save(FuramaUser furamaUser) {
-        furamaUserRepository.save(furamaUser);
+    public void save(FuramaUser t) {
+        furamaUserRepository.save(t);
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(String id) {
 
     }
 

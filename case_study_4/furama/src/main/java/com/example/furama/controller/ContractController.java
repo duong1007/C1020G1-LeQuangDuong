@@ -19,6 +19,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -74,12 +75,15 @@ public class ContractController {
     }
 
     @PostMapping("/create/contract")
-    public String createContract(@Validated @ModelAttribute("contract") Contract contract, BindingResult bindingResult){
+    public String createContract(@Validated @ModelAttribute("contract") Contract contract, BindingResult bindingResult,
+                                 Model model, RedirectAttributes redirectAttributes){
         if (bindingResult.hasFieldErrors()){
+            model.addAttribute("warning","Validation Success");
             return "/contract/create-contract";
         }
         contractService.save(contract);
-        return "redirect:/";
+        redirectAttributes.addFlashAttribute("messenger","Create Success!");
+        return "/contract/create-contract";
     }
 
     @GetMapping("/create/detail")
@@ -89,14 +93,14 @@ public class ContractController {
     }
 
     @PostMapping("/create/detail")
-    public String createContractDetail(ContractDetail contractDetail) {
+    public String createContractDetail(ContractDetail contractDetail,Model model) {
+        model.addAttribute("messenger","Create Success!");
         contractDetailService.save(contractDetail);
-        return "redirect:/";
+        return "/contract/create-detail";
     }
 
     @GetMapping("/search/active")
     public String searchDate(Model model,Pageable pageable){
-
         model.addAttribute("contracts",contractService.findAllCustomerActive(LocalDate.now().toString(),pageable));
         return "/customer/active";
 

@@ -39,4 +39,9 @@ public class EmployeeServiceImp implements EmployeeService {
     public List<Employee> findAll() {
         return employeeRepository.findAll();
     }
+
+    @Override
+    public Employee findDuplicate(String duplicate) {
+        return employeeRepository.findByEmployeeEmail(duplicate);
+    }
 }

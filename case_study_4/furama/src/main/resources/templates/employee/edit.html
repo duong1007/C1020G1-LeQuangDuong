@@ -30,6 +30,9 @@
         <form method="post" class="checkout-form" th:action="@{/employee/edit}" th:object="${employee}">
             <input type="hidden" th:field="*{employeeId}">
             <div class="row">
+                <div class="col-lg-12">
+                    <div th:replace="layout/layout :: alert"></div>
+                </div>
                 <div class="col-lg-6">
                     <h4>Information</h4>
                     <div class="row">

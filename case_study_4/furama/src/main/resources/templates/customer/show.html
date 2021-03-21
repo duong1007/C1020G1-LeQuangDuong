@@ -27,6 +27,9 @@
 <section class="product-shop spad">
     <div class="container">
         <div class="row">
+            <div class="col-lg-12">
+                <div th:replace="layout/layout :: alert"></div>
+            </div>
             <div class="col-lg-3 col-md-6 col-sm-8 order-2 order-lg-1 produts-sidebar-filter">
                 <div class="filter-widget">
                     <h4 class="fw-title">Categories</h4>
@@ -134,15 +137,27 @@
                         <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
                         <ul class="pagination">
                             <li class="page-item">
-                                <a th:href="@{'/customer'(page=${customers.number - 1})}" th:if="${customers.hasPrevious()}">
+                                <a th:href="@{'/customer'(page=${customers.number - 1})}"
+                                   th:if="${customers.hasPrevious()}">
                                 <i class="fa fa-angle-double-left"></i>
                                 </a>
                             </li>
+                            <li class="page-item">
+                                <a class="page-link" th:href="@{'/customer'(page=${customers.number})}"
+                                   th:if="${customers.hasPrevious()}"
+                                   th:text="${customers.number}"></a>
 
-                            <li class="page-item active"
-                                th:each="numberPage : ${customers.totalPages}">
-                                <a class="page-link" th:href="@{'/'(page=${customers.number})}"
+                            </li>
+
+                            <li class="page-item active">
+                                <a class="page-link" th:href="@{'/customer'(page=${customers.number})}"
                                    th:text="${customers.number + 1}"></a>
+
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" th:href="@{'/customer'(page=${customers.number})}"
+                                   th:if="${customers.hasNext()}"
+                                   th:text="${customers.number + 2}"></a>
 
                             </li>
                             <li class="page-item">
@@ -158,6 +173,36 @@
     </div>
 </section>
 <!-- Product Shop Section End -->
+<div class="banner-section spad">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="single-banner">
+                    <img th:src="@{img/banner-1.jpg}" alt="">
+                    <div class="inner-text">
+                        <h4>Men’s</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="single-banner">
+                    <img th:src="@{img/banner-2.jpg}" alt="">
+                    <div class="inner-text">
+                        <h4>Women’s</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="single-banner">
+                    <img th:src="@{img/banner-3.jpg}" alt="">
+                    <div class="inner-text">
+                        <h4>Kid’s</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
     function setIdToForm(id) {
         document.getElementById("setCustomerId").value = id;

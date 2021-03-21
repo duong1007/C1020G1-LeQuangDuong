@@ -1,10 +1,11 @@
 package com.example.furama.model.service;
 
+
 import com.example.furama.model.contract.Contract;
-import org.springframework.format.annotation.NumberFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import java.util.Set;
 
@@ -15,10 +16,12 @@ public class Service {
     @Column(name = "service_id")
     private Long serviceId;
 
+    @NotEmpty(message = "Not Empty")
     @Pattern(regexp = "^(DV-)\\d{4}$",message = "CustomerCode Must be (KH-XXXX) with X in [0,9]")
     @Column(name = "service_code",length = 20,unique = true)
-    private String ServiceCode;
+    private String serviceCode;
 
+    @NotEmpty(message = "Not Empty")
     @Column(name = "service_name",length = 45, nullable = false)
     private String serviceName;
 
@@ -34,9 +37,11 @@ public class Service {
     @Column(name = "service_max_people")
     private int serviceMaxPeople;
 
+    @NotEmpty(message = "Not Empty")
     @Column(name = "standar_room",length = 45, nullable = false)
     private String standardRoom;
 
+    @NotEmpty(message = "Not Empty")
     @Column(name = "description_other_convenience",length = 45, nullable = false)
     private String descriptionOtherConvenience;
 
@@ -59,11 +64,11 @@ public class Service {
     private Set<Contract> contractServices;
 
     public String getServiceCode() {
-        return ServiceCode;
+        return serviceCode;
     }
 
     public void setServiceCode(String serviceCode) {
-        ServiceCode = serviceCode;
+        this.serviceCode = serviceCode;
     }
 
     public Set<Contract> getContractServices() {

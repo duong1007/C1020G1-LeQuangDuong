@@ -26,8 +26,11 @@
 <section class="checkout-section spad">
     <div class="container">
         <form method="post" class="checkout-form" th:object="${service}" th:action="@{/service/service}">
-            <input type="hidden" th:field="*{serviceType.serviceTypeId}" value="2">
+            <input type="hidden" name="serviceTypeId" value="2">
             <div class="row">
+                <div class="col-lg-12">
+                    <div th:replace="layout/layout :: alert"></div>
+                </div>
                 <div class="col-lg-12">
                     <h4>Information</h4>
                 </div>

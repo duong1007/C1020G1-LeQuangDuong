@@ -4,4 +4,6 @@ import com.example.furama.model.service.Service;
 import com.example.furama.service.MainService;
 
 public interface ServiceService extends MainService<Service> {
+
+    Service findDuplicate(String duplicate);
 }

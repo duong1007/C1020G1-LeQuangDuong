@@ -1,6 +1,7 @@
 package com.example.furama.controller;
 
 import com.example.furama.model.account.FuramaUser;
+import com.example.furama.model.employee.Employee;
 import com.example.furama.service.account.FuramaUserService;
 import com.example.furama.service.employee.EmployeeService;
 import com.example.furama.util.WebUtils;
@@ -23,6 +24,7 @@ public class MainController {
     @Autowired
     EmployeeService employeeService;
 
+
     @GetMapping("/")
     public String home(){
         return "/home";
@@ -39,7 +41,10 @@ public class MainController {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         furamaUser.setPassword(encoder.encode(furamaUser.getPassword()));
         furamaUserService.save(furamaUser);
-        employeeService.findById(id).setFuramaUser(furamaUser);
+
+        Employee employee = employeeService.findById(id);
+        employee.setFuramaUser(furamaUser);
+        employeeService.save(employee);
         return "redirect:/";
     }
 
@@ -69,11 +74,11 @@ public class MainController {
 
     @GetMapping(value = "/logoutSuccessful")
     public String logoutSuccessfulPage() {
-        return "redirect:/";
+        return "redirect:/login";
     }
 
     @GetMapping("/userAccountInfo")
     public String login(){
-        return "/";
+        return "/home";
     }
 }

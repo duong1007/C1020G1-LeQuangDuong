@@ -1,6 +1,6 @@
 package com.example.furama.controller;
 
-import com.example.furama.model.employee.Employee;
+import com.example.furama.annotation.service.ServiceCustomValid;
 import com.example.furama.model.service.RentType;
 import com.example.furama.model.service.Service;
 import com.example.furama.model.service.ServiceType;
@@ -9,12 +9,15 @@ import com.example.furama.service.service.ServiceService;
 import com.example.furama.service.service.ServiceTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -29,6 +32,11 @@ public class ServiceController {
     @Autowired
     ServiceTypeService serviceTypeService;
 
+    @Autowired
+    ServiceCustomValid serviceCustomValid;
+
+
+
     @ModelAttribute("rentTypes")
     public List<RentType> showRentType(){
         return rentTypeService.findAll();
@@ -40,7 +48,7 @@ public class ServiceController {
     }
 
     @GetMapping("/list")
-    public String showList(Model model, Pageable pageable){
+    public String showList(Model model,@PageableDefault(size = 5) Pageable pageable){
         model.addAttribute("services",serviceService.findAll(pageable));
         return "/service/list";
     }
@@ -52,21 +60,6 @@ public class ServiceController {
         return "/service/villa/create";
     }
 
-    @PostMapping("/service")
-    public String createService(@Validated @ModelAttribute("service") Service service, BindingResult bindingResult){
-        if (bindingResult.hasFieldErrors()){
-            Long serviceTypeId = service.getServiceType().getServiceTypeId();
-            if (serviceTypeId == 1L) {
-                return "service/villa/create";
-            } else if (serviceTypeId == 2L) {
-                return "service/house/create";
-            } else {
-                return "service/room/create";
-            }
-        }
-        serviceService.save(service);
-        return "redirect:/service/list";
-    }
 
     @GetMapping("/house")
     public String createHouse(Model model){
@@ -81,8 +74,9 @@ public class ServiceController {
     }
 
     @GetMapping("/delete")
-    public String deleteService(@RequestParam("id") Long id){
+    public String deleteService(@RequestParam("id") Long id, RedirectAttributes redirectAttributes){
         serviceService.delete(id);
+        redirectAttributes.addFlashAttribute("messenger","Delete Success!");
         return "redirect:/service/list";
     }
 
@@ -100,19 +94,49 @@ public class ServiceController {
         }
     }
 
+    @InitBinder
+    private void bindValidator(WebDataBinder webDataBinder) {
+        webDataBinder.addValidators(serviceCustomValid);
+    }
+
+    @PostMapping("/service")
+    public String createService(@Valid @ModelAttribute("service") Service service, BindingResult bindingResult,
+                                @RequestParam("serviceTypeId") Long serviceTypeId, Model model, RedirectAttributes redirectAttributes){
+        if (bindingResult.hasFieldErrors()){
+            if (serviceTypeId == 1L) {
+                model.addAttribute("warning","Validation Data!");
+                return "service/villa/create";
+            } else if (serviceTypeId == 2L) {
+                model.addAttribute("warning","Validation Data!");
+                return "service/house/create";
+            } else {
+                model.addAttribute("warning","Validation Data!");
+                return "service/room/create";
+            }
+        }
+        service.setServiceType(serviceTypeService.findById(serviceTypeId));
+        serviceService.save(service);
+        redirectAttributes.addFlashAttribute("messenger","Create Success!");
+        return "redirect:/service/list";
+    }
+
     @PostMapping("/edit")
-    public String editService(@Validated @ModelAttribute("service") Service service, BindingResult bindingResult){
+    public String editService(@Valid @ModelAttribute("service") Service service, BindingResult bindingResult,Model model,RedirectAttributes redirectAttributes){
         if (bindingResult.hasFieldErrors()){
             Long serviceTypeId = service.getServiceType().getServiceTypeId();
             if (serviceTypeId == 1L) {
+                model.addAttribute("warning","Validation Data!");
                 return "service/villa/edit";
             } else if (serviceTypeId == 2L) {
+                model.addAttribute("warning","Validation Data!");
                 return "service/house/edit";
             } else {
+                model.addAttribute("warning","Validation Data!");
                 return "service/room/edit";
             }
         }
         serviceService.save(service);
+        redirectAttributes.addFlashAttribute("messenger","Edit Success!");
         return "redirect:/service/list";
 
     }

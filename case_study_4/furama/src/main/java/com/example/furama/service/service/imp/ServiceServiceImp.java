@@ -31,11 +31,16 @@ public class ServiceServiceImp implements ServiceService {
 
     @Override
     public void delete(Long id) {
-
+        serviceRepository.deleteById(id);
     }
 
     @Override
     public List<Service> findAll() {
         return serviceRepository.findAll();
+    }
+
+    @Override
+    public Service findDuplicate(String duplicate) {
+        return serviceRepository.findByServiceCode(duplicate);
     }
 }

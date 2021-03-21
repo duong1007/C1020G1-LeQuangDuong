@@ -1,12 +1,12 @@
 package com.example.furama.model.customer;
 
+import com.example.furama.annotation.customer.UniqueCustomer;
 import com.example.furama.model.contract.Contract;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
+import javax.validation.constraints.*;
+import java.util.Date;
 import java.util.Set;
 
 @Entity
@@ -16,34 +16,37 @@ public class Customer {
     @Column(name = "customer_id")
     private Long customerId;
 
-    @NotNull(message = "Not Null")
+    @UniqueCustomer(message = "Customer with this code is already exists.")
+    @NotEmpty(message = "Not Empty")
     @Pattern(regexp = "^(KH-)\\d{4}$",message = "CustomerCode Must be (KH-XXXX) with X in [0,9]")
     @Column(name = "customer_code",length = 20,unique = true)
     private String customerCode;
 
-    @NotNull(message = "Not Null")
+    @NotEmpty(message = "Not Empty")
     @Column(name = "customer_name",length = 45, nullable = false)
     private String customerName;
 
     @NotNull(message = "Not Null")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @Column(name = "customer_birthday",length = 45,columnDefinition = "date", nullable = false)
-    private String customerBirthday;
+    @Past(message = "Date input is invalid for a birth date.")
+    @Column(name = "customer_birthday",length = 45, nullable = false)
+    private Date customerBirthday;
 
-    @NotNull(message = "Not Null")
+    @NotEmpty(message = "Not Empty")
     @Column(name = "customer_gender",length = 15, nullable = false)
     private String customerGender;
 
-    @NotNull(message = "Not Null")
-    @Pattern(regexp = "^(\\d{9})|(\\d{12})$",message = "id card must be 9 number or 12 number")
+    @NotEmpty(message = "Not Empty")
+    @Pattern(regexp = "^(\\d{9})|(\\d{12})$",message = "Id card must be 9 number or 12 number")
     @Column(name = "customer_id_card",length = 45, nullable = false)
     private String customerIdCard;
 
-    @NotNull(message = "Not Null")
-    @Pattern(regexp = "^(090|091|[(]84[+][)]90|[(]84+[)]91)\\d{7}$",message = "must be 090xx|091xx|(+84)xx")
+    @NotEmpty(message = "Not Empty")
+    @Pattern(regexp = "^(090|091|[(]84[+][)]90|[(]84+[)]91)\\d{7}$",message = "Phone Must be 090xx|091xx|(+84)xx")
     @Column(name = "customer_phone",length = 45, nullable = false)
     private String customerPhone;
 
+    @UniqueCustomer(message = "Customer with this email is already exists.")
     @Email(message = "Email must be abc@abc.abc")
     @Column(name = "customer_email",length = 45)
     private String customerEmail;
@@ -55,7 +58,7 @@ public class Customer {
     @JoinColumn(name = "customer_type_id",referencedColumnName = "customer_type_id")
     private CustomerType customerType;
 
-    @OneToMany(mappedBy = "customerContract")
+    @OneToMany(mappedBy = "customerContract",cascade = CascadeType.ALL)
     private Set<Contract> contractCustomers;
 
     public Customer() {
@@ -101,11 +104,11 @@ public class Customer {
         this.customerName = customerName;
     }
 
-    public String getCustomerBirthday() {
+    public Date getCustomerBirthday() {
         return customerBirthday;
     }
 
-    public void setCustomerBirthday(String customerBirthday) {
+    public void setCustomerBirthday(Date customerBirthday) {
         this.customerBirthday = customerBirthday;
     }
 

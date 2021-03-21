@@ -1,13 +1,12 @@
 package com.example.furama.model.employee;
 
+import com.example.furama.annotation.employee.UniqueEmployee;
 import com.example.furama.model.account.FuramaUser;
 import com.example.furama.model.contract.Contract;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Pattern;
+import javax.validation.constraints.*;
 import java.util.Set;
 
 @Entity
@@ -17,25 +16,33 @@ public class Employee {
     @Column(name = "employee_id")
     private Long employeeId;
 
+
+    @NotEmpty(message = "Not Empty")
     @Column(name = "employee_name",length = 45,nullable = false)
     private String employeeName;
 
+    @NotNull(message = "Not Null")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Past(message = "Date input is invalid for a birth date.")
     @Column(name = "employee_birthday",columnDefinition = "date",nullable = false)
     private String employeeBirthday;
 
-    @Pattern(regexp = "^(\\d{9})|(\\d{12})$",message = "id card must be 9 number or 12 number")
+    @NotEmpty(message = "Not Empty")
+    @Pattern(regexp = "^(\\d{9})|(\\d{12})$",message = "Td card must be 9 number or 12 number")
     @Column(name = "employee_id_card",length = 45,nullable = false)
     private String employeeCard;
 
+    @NotNull(message = "Not Null")
     @Min(value = 0,message = "must be > 0")
     @Column(name = "employee_salary",length = 45,nullable = false)
     private double employeeSalary;
 
-    @Pattern(regexp = "^(090|091|[(]84[+][)]90|[(]84+[)]91)\\d{7}$",message = "must be 090xx|091xx|(+84)xx")
+    @NotEmpty(message = "Not Empty")
+    @Pattern(regexp = "^(090|091|[(]84[+][)]90|[(]84+[)]91)\\d{7}$",message = "Phone must be 090xx|091xx|(+84)xx")
     @Column(name = "employee_phone",length = 45,nullable = false)
-    private double employeePhone;
+    private String employeePhone;
 
+    @UniqueEmployee(message = "Employee with this email is already exists.")
     @Email(message = "Email must be abc@abc.abc")
     @Column(name = "employee_email",length = 45)
     private String employeeEmail;
@@ -55,11 +62,11 @@ public class Employee {
     @JoinColumn(name = "position_id",referencedColumnName = "position_id")
     private Position employeePosition;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "username",referencedColumnName = "username")
     private FuramaUser furamaUser;
 
-    @OneToMany(mappedBy = "employeeContract")
+    @OneToMany(mappedBy = "employeeContract",cascade = CascadeType.ALL)
     private Set<Contract> contractEmployees;
 
 
@@ -122,11 +129,11 @@ public class Employee {
         this.employeeSalary = employeeSalary;
     }
 
-    public double getEmployeePhone() {
+    public String getEmployeePhone() {
         return employeePhone;
     }
 
-    public void setEmployeePhone(double employeePhone) {
+    public void setEmployeePhone(String employeePhone) {
         this.employeePhone = employeePhone;
     }
 

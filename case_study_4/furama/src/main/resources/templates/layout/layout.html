@@ -25,6 +25,7 @@
     <link rel="stylesheet" th:href="@{/css/table.css}" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -43,7 +44,8 @@
                 </div>
             </div>
             <div class="ht-right">
-                <a href="#" class="login-panel"><i class="fa fa-user"></i>Login</a>
+                <a th:if="${#request.userPrincipal == null}" th:href="@{/login}" class="login-panel"><i class="fa fa-user"></i>Login</a>
+                <a th:if="${#request.userPrincipal != null}" th:href="@{/}" th:utext="${#request.userPrincipal.name}" class="login-panel"></a>
                 <div class="lan-selector">
                     <select class="language_drop" name="countries" id="countries" style="width:300px;">
                         <option value='yt' data-image="/img/flag-1.jpg" data-imagecss="flag yt"
@@ -66,7 +68,7 @@
             <div class="row">
                 <div class="col-lg-2 col-md-2">
                     <div class="logo">
-                        <a href="./index.html">
+                        <a href="/">
                             <img th:src="@{/img/logo.png}" alt="">
                         </a>
                     </div>
@@ -162,10 +164,10 @@
                         <ul class="dropdown">
                             <li><a th:href="@{/contract/create/detail}">Contract Details</a></li>
                             <li><a th:href="@{/contract/search/active}">Customer Active</a></li>
-                            <li><a href="/">Checkout</a></li>
                             <li><a href="/">Faq</a></li>
-                            <li><a th:href="@{/register}">Register</a></li>
-                            <li><a href="/">Login</a></li>
+                            <li th:if="${#request.userPrincipal == null}"><a th:href="@{/register}">Register</a></li>
+                            <li th:if="${#request.userPrincipal == null}"><a th:href="@{/login}">Login</a></li>
+                            <li th:if="${#request.userPrincipal != null}"><a th:href="@{/logout}">Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -175,6 +177,23 @@
     </div>
 </header>
 <!-- Header End -->
+<!-- Alert Begin -->
+<div th:fragment="alert">
+    <div class="alert alert-success alert-dismissible fade show" role="alert" th:if="${messenger}" >
+        <strong th:text="${messenger}"></strong> You have added a new employee successfully.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" th:if="${warning}" >
+        <strong th:text="${warning}"></strong> You should check in on some of those fields below.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+<!-- Alert end -->
+
 <footer class="footer-section" th:fragment="footer">
     <div class="container">
         <div class="row">
@@ -246,7 +265,6 @@
             </div>
         </div>
     </div>
-
     <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
     <script th:src="@{/js/bootstrap.min.js}"></script>
     <script th:src="@{/js/jquery-ui.min.js}"></script>
@@ -257,6 +275,15 @@
     <script th:src="@{/js/jquery.slicknav.js}"></script>
     <script th:src="@{/js/owl.carousel.min.js}"></script>
     <script th:src="@{/js/main.js}"></script>
+    <script>
+            $('.alert').alert()
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.js-example-basic-single').select2();
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </footer>
 </body>
 

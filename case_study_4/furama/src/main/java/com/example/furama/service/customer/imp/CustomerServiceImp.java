@@ -42,6 +42,11 @@ public class CustomerServiceImp implements CustomerService {
     }
 
     @Override
+    public Customer findDuplicate(String duplicate) {
+        return customerRepository.findByCustomerCodeOrCustomerEmail(duplicate,duplicate);
+    }
+
+    @Override
     public Page<Customer> searchCustomer(String s, Pageable pageable) {
         return customerRepository.findAllByCustomerNameContainingOrCustomerCodeContaining(s,s,pageable);
     }
