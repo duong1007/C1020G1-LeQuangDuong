@@ -1,0 +1,20 @@
+<h1>{{student.name}}</h1>
+<img [src]="student.avatarImg" alt="Ảnh Hot Girl" [style.width.px]="student.sizeAvatar">
+<br>
+<h3>Tuổi: {{student.age}}</h3>
+<h3>Chiều cao: {{student.height}}</h3>
+
+<hr>
+
+<h3>Thay đổi chiều cao:</h3>
+<label>
+  <input type="number" (change)="onchange($event)">
+</label>
+<br>
+
+<hr>
+
+<h3>Thay đổi size ảnh 2 chiều</h3>
+<label>
+  <input type="number" [(ngModel)]="student.sizeAvatar">
+</label>

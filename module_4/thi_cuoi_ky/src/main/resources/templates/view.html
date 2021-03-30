@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/layout :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+<!-- Header Section Begin -->
+<header th:replace="layout/layout :: header"></header>
+<!-- Header End -->
+
+<div class="breacrumb-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-text">
+                    <a href="/"><i class="fa fa-home"></i>Home</a>
+                    <a th:href="@{/show}">Transaction</a>
+                    <span>Add New</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="checkout-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                    <div th:replace="layout/layout :: alert"></div>
+                </div>
+            <div class="col-lg-6 offset-lg-3">
+                <h4>Information</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label>Transaction Code<span>*</span></label>
+                            <p th:text="${transaction.transactionCode}" ></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Area<span>*</span></label>
+                            <p th:text="${transaction.transactionArea}"></p>
+                        </div>
+                        <div class="col-lg-12">
+                            <label>Transaction Day</label>
+                            <p th:text="${transaction.transactionDate}"></p>
+                        </div>
+                        <div class="col-lg-12">
+                            <label >Type<span>*</span></label>
+                            <p th:text="${transaction.transactionType}"></p>
+                        </div>
+                        <div class="col-lg-12">
+                            <br>
+                        </div>
+                        <div class="col-lg-12">
+                            <label>Customer Name<span>*</span></label>
+                            <p th:text="${transaction.customer.customerName}" > </p>
+                        </div>
+                        <div class="col-lg-12">
+                            <label >Customer Phone<span>*</span></label>
+                            <p th:text="${transaction.customer.customerPhone}" ></p>
+                        </div>
+                        <div class="col-lg-12">
+                            <label >Customer Email<span>*</span></label>
+                            <p  th:text="${transaction.customer.customerEmail}" ></p>
+                        </div>
+                        <div class="col-lg-12">
+                            <label>Total</label>
+                            <p th:text="${transaction.transactionTotal}"><p>
+                        </div>
+                        <div class="col-lg-4 offset-lg-4">
+                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"
+                               th:data-thing="${transaction.transactionCode}"
+                               onclick="setIdToForm(this.getAttribute('data-thing'))">
+                                <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+<!-- Delete Modal HTML -->
+<div id="deleteEmployeeModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="get" th:action="@{/delete}">
+                <div class="modal-header">
+                    <h4 class="modal-title">Delete Customer</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete these Records?</p>
+                    <p class="text-warning"><small>This action cannot be undone.</small></p>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="hidden" id="setTransactionCode" name="id">
+                    <input type="submit" class="btn btn-danger" value="Delete">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Register Form Section End -->
+<script>
+    function setIdToForm(id) {
+        document.getElementById("setTransactionCode").value = id;
+    }
+</script>
+<footer th:replace="layout/layout :: footer"></footer>
+
+</body>
+</html>

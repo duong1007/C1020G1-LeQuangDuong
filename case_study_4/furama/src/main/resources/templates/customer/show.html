@@ -105,7 +105,8 @@
                                        th:href="@{customer/{id}/edit(id=${customer.customerId})}">
                                         <i class="material-icons">&#xE254;</i></a>
                                     <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"
-                                       th:onclick="|setIdToForm('${customer.customerId}')|">
+                                       th:data-thing="${customer.customerName}" th:data-id="${customer.customerId}"
+                                       onclick="setIdToForm(this.getAttribute('data-thing'),this.getAttribute('data-id'))">
                                         <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
@@ -119,7 +120,7 @@
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                             </div>
                                             <div class="modal-body">
-                                                <p>Are you sure you want to delete these Records?</p>
+                                                <p>Are you sure you want to delete <span id="setName"></span> Records?</p>
                                                 <p class="text-warning"><small>This action cannot be undone.</small></p>
                                             </div>
                                             <div class="modal-footer">
@@ -204,8 +205,10 @@
     </div>
 </div>
 <script>
-    function setIdToForm(id) {
+    function setIdToForm(name,id) {
         document.getElementById("setCustomerId").value = id;
+        document.getElementById("setName").textContent = name;
+
     }
 </script>
 

@@ -1,6 +1,5 @@
 package com.example.furama.controller;
 
-import com.example.furama.annotation.service.ServiceCustomValid;
 import com.example.furama.model.service.RentType;
 import com.example.furama.model.service.Service;
 import com.example.furama.model.service.ServiceType;
@@ -31,11 +30,6 @@ public class ServiceController {
 
     @Autowired
     ServiceTypeService serviceTypeService;
-
-    @Autowired
-    ServiceCustomValid serviceCustomValid;
-
-
 
     @ModelAttribute("rentTypes")
     public List<RentType> showRentType(){
@@ -94,26 +88,33 @@ public class ServiceController {
         }
     }
 
-    @InitBinder
-    private void bindValidator(WebDataBinder webDataBinder) {
-        webDataBinder.addValidators(serviceCustomValid);
-    }
 
     @PostMapping("/service")
     public String createService(@Valid @ModelAttribute("service") Service service, BindingResult bindingResult,
                                 @RequestParam("serviceTypeId") Long serviceTypeId, Model model, RedirectAttributes redirectAttributes){
+
         if (bindingResult.hasFieldErrors()){
             if (serviceTypeId == 1L) {
+                if (serviceService.findDuplicate(service.getServiceCode()) != null){
+                    bindingResult.rejectValue("serviceCode",null,"Service with code is existed");
+                }
                 model.addAttribute("warning","Validation Data!");
                 return "service/villa/create";
             } else if (serviceTypeId == 2L) {
+                if (serviceService.findDuplicate(service.getServiceCode()) != null){
+                    bindingResult.rejectValue("serviceCode",null,"Service with code is existed");
+                }
                 model.addAttribute("warning","Validation Data!");
                 return "service/house/create";
             } else {
+                if (serviceService.findDuplicate(service.getServiceCode()) != null){
+                    bindingResult.rejectValue("serviceCode",null,"Service with code is existed");
+                }
                 model.addAttribute("warning","Validation Data!");
                 return "service/room/create";
             }
         }
+
         service.setServiceType(serviceTypeService.findById(serviceTypeId));
         serviceService.save(service);
         redirectAttributes.addFlashAttribute("messenger","Create Success!");
