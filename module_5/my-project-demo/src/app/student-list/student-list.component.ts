@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {students} from '../model/StudentRepository';
 import {IStudent} from '../model/Student';
 
@@ -10,17 +10,16 @@ import {IStudent} from '../model/Student';
 export class StudentListComponent implements OnInit {
 
   studentList = students;
-  selectStudent: IStudent;
+  iStudent: IStudent;
   @Output() searchStudent = new EventEmitter<IStudent>();
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
   display(student: IStudent) {
-    this.selectStudent = student;
-    this.searchStudent.emit(this.selectStudent);
+    this.iStudent = student;
+    this.searchStudent.emit(this.iStudent);
   }
 
 }

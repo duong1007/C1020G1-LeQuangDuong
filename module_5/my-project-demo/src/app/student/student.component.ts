@@ -8,8 +8,7 @@ import {IStudent} from '../model/Student';
 })
 export class StudentComponent implements OnInit {
 
-  @Input()
-  student: IStudent;
+  @Input() student: IStudent;
 
   constructor() { }
 

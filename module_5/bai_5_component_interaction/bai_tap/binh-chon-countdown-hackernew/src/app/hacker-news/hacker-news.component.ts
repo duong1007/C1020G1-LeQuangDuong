@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Article} from '../model/Article';
 
 @Component({
   selector: 'app-hacker-news',
   templateUrl: './hacker-news.component.html',
   styleUrls: ['./hacker-news.component.scss']
 })
-export class HackerNewsComponent implements OnInit {
+export class HackerNewsComponent implements OnInit, OnChanges {
   articles = [
     {
       title: 'The Evolution of Async JavaScript: From Callbacks, to Promises, to Async/Await',
@@ -28,9 +29,28 @@ export class HackerNewsComponent implements OnInit {
       url: 'https://ruslanspivak.com/lsbaws-part1/'
     }
   ];
+  @Input() article: Article;
   constructor() { }
 
+  ngOnChanges(changes: SimpleChanges) {
+    for (const property in changes) {
+      if (property === 'article') {
+        this.addNewArticle(this.article);
+      }
+    }
+  }
+
   ngOnInit(): void {
+  }
+
+  addNewArticle(art) {
+    if (art !== undefined) {
+      this.articles.push({
+        title: art.title,
+        url: art.url
+      });
+    }
+    console.log(art);
   }
 
 }

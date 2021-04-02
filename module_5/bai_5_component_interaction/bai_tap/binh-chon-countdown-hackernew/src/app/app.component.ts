@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Article} from './model/Article';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ export class AppComponent {
   title = 'binh-chon-countdown-hackernew';
   countdownMsg = '';
   countdownAliasMsg = '';
+  article: Article;
   finishCountdown() {
     this.countdownMsg = 'Finished!';
   }
@@ -19,5 +21,9 @@ export class AppComponent {
 
   onRateChange(value) {
     console.log(value);
+  }
+
+  addArticle($event: Article) {
+    this.article = $event;
   }
 }

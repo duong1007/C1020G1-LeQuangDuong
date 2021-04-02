@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {IStudent} from './model/Student';
+import {students} from './model/StudentRepository';
 
 @Component({
   selector: 'app-root',
@@ -9,16 +10,31 @@ import {IStudent} from './model/Student';
 export class AppComponent {
   title = 'my-project-demo';
 
+  studentList =  students;
+
   student: IStudent;
 
-  hiddenStudent = false;
+  display(student: IStudent) {
+    this.student = student;
+  }
 
-  searchInStudent(searchStudent: IStudent) {
-    this.student = searchStudent;
-    this.hiddenStudent = true;
+  createStudent($event: IStudent) {
+    students.push({
+      id: $event.id,
+      name: $event.name,
+      age: $event.age,
+      avatarImg: $event.avatarImg,
+      height: $event.height,
+      sizeAvatar: $event.sizeAvatar,
+    });
+  }
+
+  delete(id: number) {
+    const index = students.findIndex(student => student.id === id);
+    students.splice(index, 1);
   }
 
   hiddenS() {
-    this.hiddenStudent = false;
+    this.student = null;
   }
 }

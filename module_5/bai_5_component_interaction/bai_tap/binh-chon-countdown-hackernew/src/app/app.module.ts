@@ -13,6 +13,7 @@ import { CountdownTimerAliasComponent } from './countdown-timer-alias/countdown-
 import { LikesComponent } from './likes/likes.component';
 import { HackerNewsComponent } from './hacker-news/hacker-news.component';
 import { AddNewsComponent } from './add-news/add-news.component';
+import { FormCreatComponent } from './form-creat/form-creat.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AddNewsComponent } from './add-news/add-news.component';
     CountdownTimerAliasComponent,
     LikesComponent,
     HackerNewsComponent,
-    AddNewsComponent
+    AddNewsComponent,
+    FormCreatComponent
   ],
   imports: [
     BrowserModule,

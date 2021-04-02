@@ -20,7 +20,7 @@
 
 <!--<app-rating-bar [max]="10" (rateChange)="onRateChange($event)"></app-rating-bar>-->
 
-<app-hacker-news></app-hacker-news>
-<app-add-news></app-add-news>
+<app-hacker-news [article]="article"></app-hacker-news>
+<app-add-news (addNewArticle)="addArticle($event)" ></app-add-news>
 
 

@@ -1,7 +1,34 @@
 
-<app-student-list (searchStudent)="searchInStudent($event)"></app-student-list>
-<div *ngIf="hiddenStudent">
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Age</th>
+    <th scope="col">Height</th>
+    <th scope="col">Avatar</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let student of studentList">
+    <th scope="row">{{student.id}}</th>
+    <td>{{student.name}}</td>
+    <td>{{student.age}}</td>
+    <td>{{student.height}}</td>
+    <td><img [src]="[student.avatarImg]" [style.width.px]="student.sizeAvatar/2" alt=""></td>
+    <td><div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-dark" (click)="display(student)">Edit</button>
+      <button type="button" class="btn btn-danger" (click)="delete(student.id)">Delete</button>
+    </div></td>
+  </tr>
+  </tbody>
+</table>
+<hr>
+<div *ngIf="student">
   <app-student [student]="student"></app-student>
   <br>
   <button (click)="hiddenS()" class="btn btn-warning">Hidden</button>
 </div>
+<hr>
+<app-create-form (creatNewStudent)="createStudent($event)"></app-create-form>
