@@ -1,0 +1,110 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "idCustomer": "KH-1231",
+      "customerType": {
+        "idCustomerType": 1,
+        "nameCustomerType": "Diamond"
+      },
+      "nameCustomer": "Dương",
+      "dateOfBirth": "10/07/1998",
+      "idCard": "03522114",
+      "phoneCustomer": "0903291409",
+      "emailCustomer": "maybiluyena@gmail.com",
+      "addressCustomer": "Đà Nẵng"
+    },
+    {
+      "id": 2,
+      "idCustomer": "KH-1232",
+      "customerType": {
+        "idCustomerType": 2,
+        "nameCustomerType": "Platinum"
+      },
+      "nameCustomer": "Minh",
+      "dateOfBirth": "10/07/1998",
+      "idCard": "03522114",
+      "phoneCustomer": "0903291409",
+      "emailCustomer": "maybiluyena@gmail.com",
+      "addressCustomer": "Đà Nẵng"
+    },
+    {
+      "id": 3,
+      "idCustomer": "KH-1233",
+      "customerType": {
+        "idCustomerType": 3,
+        "nameCustomerType": "Gold"
+      },
+      "nameCustomer": "Thư",
+      "dateOfBirth": "10/07/1998",
+      "idCard": "03522114",
+      "phoneCustomer": "0903291409",
+      "emailCustomer": "maybiluyena@gmail.com",
+      "addressCustomer": "Đà Nẵng"
+    },
+    {
+      "id": 4,
+      "idCustomer": "KH-1234",
+      "customerType": {
+        "idCustomerType": 4,
+        "nameCustomerType": "Silver"
+      },
+      "nameCustomer": "Hằng",
+      "dateOfBirth": "10/07/1998",
+      "idCard": "03522114",
+      "phoneCustomer": "0903291409",
+      "emailCustomer": "maybiluyena@gmail.com",
+      "addressCustomer": "Đà Nẵng"
+    },
+    {
+      "id": 5,
+      "idCustomer": "KH-1235",
+      "customerType": {
+        "idCustomerType": 5,
+        "nameCustomerType": "Member"
+      },
+      "nameCustomer": "Ngọc",
+      "dateOfBirth": "10/07/1998",
+      "idCard": "03522114",
+      "phoneCustomer": "0903291409",
+      "emailCustomer": "maybiluyena@gmail.com",
+      "addressCustomer": "Đà Nẵng"
+    },
+    {
+      "idCustomer": "KH-1111",
+      "nameCustomer": "Duong Test",
+      "emailCustomer": "maybiluyena@gmail.com",
+      "dateOfBirth": "2021-03-31T17:00:00.000Z",
+      "customerType": {
+        "idCustomerType": 1,
+        "nameCustomerType": "Diamond"
+      },
+      "idCard": "123456789",
+      "phoneCustomer": "0903291409",
+      "addressCustomer": "Đà nẵng",
+      "id": 6
+    }
+  ],
+  "customerTypes": [
+    {
+      "idCustomerType": 1,
+      "nameCustomerType": "Diamond"
+    },
+    {
+      "idCustomerType": 2,
+      "nameCustomerType": "Platinum"
+    },
+    {
+      "idCustomerType": 3,
+      "nameCustomerType": "Gold"
+    },
+    {
+      "idCustomerType": 4,
+      "nameCustomerType": "Silver"
+    },
+    {
+      "idCustomerType": 5,
+      "nameCustomerType": "Member"
+    }
+  ]
+}

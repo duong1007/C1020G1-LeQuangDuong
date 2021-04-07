@@ -1,0 +1,73 @@
+<div id="body">
+  <div class="signup-form">
+    <form (ngSubmit)="submit()" [formGroup]="formEditCustomer" >
+      <h2>Edit</h2>
+      <p class="hint-text">Edit a customer. It's free and only takes a minute.</p>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-6">
+            <input type="text" class="form-control" formControlName="idCustomer" placeholder="Id">
+            <p *ngIf="formEditCustomer.get('idCustomer').errors?.required &&
+          formEditCustomer.get('idCustomer').touched">Id is required</p>
+            <p *ngIf="formEditCustomer.get('idCustomer').errors?.pattern">KH-XXXX with x is number</p>
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control" formControlName="nameCustomer" placeholder="Name">
+            <p *ngIf="formEditCustomer.get('nameCustomer').errors?.required &&
+          formEditCustomer.get('nameCustomer').touched">Name is required</p>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" formControlName="emailCustomer" placeholder="Email" >
+        <p *ngIf="formEditCustomer.get('emailCustomer').errors?.required &&
+          formEditCustomer.get('emailCustomer').touched">Id is required</p>
+        <p *ngIf="formEditCustomer.get('emailCustomer').errors?.email">abc@abc.abc</p>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <input [max]="maxDate" [min]="minDate" class="form-control" formControlName="dateOfBirth" placeholder="Date of Birth"
+                 matInput [matDatepicker]="myDatepicker" >
+          <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+          <mat-datepicker #myDatepicker></mat-datepicker>
+        </mat-form-field>
+        <p *ngIf="formEditCustomer.get('dateOfBirth').errors?.required &&
+          formEditCustomer.get('dateOfBirth').touched">Date is required</p>
+      </div>
+      <div class="form-group">
+        <select class="form-control" formControlName="customerType" [compareWith]="compareFn">
+          <option [ngValue]="customerType" *ngFor="let customerType of customerTypes">
+            {{customerType.nameCustomerType}}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-6">
+            <input type="text" class="form-control" formControlName="idCard" placeholder="Card">
+            <p *ngIf="formEditCustomer.get('idCard').errors?.required &&
+          formEditCustomer.get('idCard').touched">Id card is required</p>
+            <p *ngIf="formEditCustomer.get('idCard').errors?.pattern">xxxxxxxxx with x is number</p>
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control" formControlName="phoneCustomer" placeholder="Phone">
+            <p *ngIf="formEditCustomer.get('phoneCustomer').errors?.required &&
+          formEditCustomer.get('phoneCustomer').touched">Phone is required</p>
+            <p *ngIf="formEditCustomer.get('phoneCustomer').errors?.pattern">phone start wit 090/(+84)</p></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="addressCustomer" placeholder="Address">
+        <p *ngIf="formEditCustomer.get('addressCustomer').errors?.required &&
+          formEditCustomer.get('addressCustomer').touched">Address is required</p>
+      </div>
+      <div class="form-group">
+        <label class="checkbox-inline"><input type="checkbox"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success btn-lg btn-block" [disabled]="!formEditCustomer.valid">Edit Now</button>
+      </div>
+    </form>
+    <div class="text-center">Already have an account? <a href="#">Sign in</a></div>
+  </div>
+</div>
